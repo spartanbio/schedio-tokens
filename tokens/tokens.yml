@@ -1,6 +1,7 @@
 imports:
   - ./colors.yml
   - ./duration.yml
+  - ./easing.yml
   - ./font.yml
   - ./font-size.yml
   - ./spacing.yml

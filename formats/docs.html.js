@@ -285,6 +285,14 @@ class Styleguide {
     })
   }
 
+  renderEasing (props) {
+    props = props.sort(byPropName)
+    return props.map((prop) => {
+      const example = '<td></td>'
+      return this.renderRow(prop, example)
+    })
+  }
+
   renderMediaQuery (props) {
     return props.map((prop) => {
       const example = '<td></td>'
@@ -381,6 +389,7 @@ class Styleguide {
       ${this.renderSection('text-color', 'Text Colors')}
       ${this.renderSection('text-shadow', 'Text Shadows')}
       ${this.renderSection('time', 'Time')}
+      ${this.renderSection('easing', 'Easing')}
       ${this.renderSection('media-query', 'Media Queries')}
     </main>
   </div>
