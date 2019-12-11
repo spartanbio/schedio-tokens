@@ -7,7 +7,7 @@ image: node:lts
 
 stages:
   - build
-  - publish
+  - deploy
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -30,7 +30,7 @@ build:
       - dist/
 
 pages:
-  stage: publish
+  stage: deploy
   script:
     - yarn docs
   artifacts:
