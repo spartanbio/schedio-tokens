@@ -1,10 +1,5 @@
 image: node:lts
 
-.except_release_commits:
-  except: &except_release_definition
-    variables:
-      - $CI_COMMIT_MESSAGE =~ /^chore(release).*/
-
 stages:
   - build
   - deploy
@@ -14,25 +9,23 @@ cache:
   paths:
     - node_modules/
 
-before_script:
-  - yarn --frozen-lockfile --non-interactive
-
 build:
   stage: build
   only:
-    - merge_requests
-    - master@spartanbio-ux/schedio
-  except: *except_release_definition
+    - master
   script:
+    - yarn --frozen-lockfile --non-interactive
     - yarn build
   artifacts:
     paths:
       - dist/
+      - public/
+    expire_in: 1 week
 
 pages:
   stage: deploy
   script:
-    - yarn docs
+    - echo "publish"
   artifacts:
     paths:
       - public/
