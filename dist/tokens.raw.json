@@ -1,0 +1,560 @@
+{
+  "aliases": {},
+  "props": {
+    "green-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(3, 99, 41)",
+      "paletteType": "accent",
+      "originalValue": "hsla(144, 94%, 20%, 1)",
+      "name": "green-dark"
+    },
+    "gold": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(252, 186, 54)",
+      "paletteType": "accent",
+      "originalValue": "hsla(40, 97%, 60%, 1)",
+      "name": "gold"
+    },
+    "turquoise": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 180, 240)",
+      "paletteType": "accent",
+      "originalValue": "hsla(195, 100%, 47%, 1)",
+      "name": "turquoise"
+    },
+    "night-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(64, 84, 104)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 24%, 33%, 1)",
+      "name": "night-light"
+    },
+    "turquoise-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 122, 163)",
+      "paletteType": "accent",
+      "originalValue": "hsla(195, 100%, 32%, 1)",
+      "name": "turquoise-dark"
+    },
+    "gold-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(255, 170, 0)",
+      "paletteType": "accent",
+      "originalValue": "hsla(40, 100%, 50%, 1)",
+      "name": "gold-dark"
+    },
+    "green": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(6, 137, 58)",
+      "paletteType": "accent",
+      "originalValue": "hsla(144, 92%, 28%, 1)",
+      "name": "green"
+    },
+    "grey-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(139, 153, 167)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 14%, 60%, 1)",
+      "name": "grey-dark"
+    },
+    "night-lightest": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(151, 168, 186)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 20%, 66%, 1)",
+      "name": "night-lightest"
+    },
+    "spartan_blue": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 76, 153)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 100%, 30%, 1)",
+      "name": "spartan_blue"
+    },
+    "magenta-darker": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(82, 0, 41)",
+      "paletteType": "accent",
+      "originalValue": "hsla(330, 100%, 16%, 1)",
+      "name": "magenta-darker"
+    },
+    "red-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(250, 179, 179)",
+      "paletteType": "accent",
+      "originalValue": "hsla(0, 87%, 84%, 1)",
+      "name": "red-lighter"
+    },
+    "grey-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(214, 219, 225)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 16%, 86%, 1)",
+      "name": "grey-light"
+    },
+    "white": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(255, 255, 255)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 12%, 100%, 1)",
+      "name": "white"
+    },
+    "magenta": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(230, 0, 115)",
+      "paletteType": "accent",
+      "originalValue": "hsla(330, 100%, 45%, 1)",
+      "name": "magenta"
+    },
+    "gold-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(253, 208, 119)",
+      "paletteType": "accent",
+      "originalValue": "hsla(40, 97%, 73%, 1)",
+      "name": "gold-light"
+    },
+    "turquoise-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(71, 202, 245)",
+      "paletteType": "accent",
+      "originalValue": "hsla(195, 90%, 62%, 1)",
+      "name": "turquoise-light"
+    },
+    "night-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(14, 18, 22)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 24%, 7%, 1)",
+      "name": "night-dark"
+    },
+    "ice": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(242, 245, 247)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 23%, 96%, 1)",
+      "name": "ice"
+    },
+    "green-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(25, 169, 83)",
+      "paletteType": "accent",
+      "originalValue": "hsla(144, 74%, 38%, 1)",
+      "name": "green-light"
+    },
+    "green-darker": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(1, 60, 25)",
+      "paletteType": "accent",
+      "originalValue": "hsla(144, 96%, 12%, 1)",
+      "name": "green-darker"
+    },
+    "night-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(98, 122, 147)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 20%, 48%, 1)",
+      "name": "night-lighter"
+    },
+    "spartan_blue-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 107, 214)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 100%, 42%, 1)",
+      "name": "spartan_blue-light"
+    },
+    "turquoise-darker": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 69, 92)",
+      "paletteType": "accent",
+      "originalValue": "hsla(195, 100%, 18%, 1)",
+      "name": "turquoise-darker"
+    },
+    "gold-darker": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(204, 129, 0)",
+      "paletteType": "accent",
+      "originalValue": "hsla(38, 100%, 40%, 1)",
+      "name": "gold-darker"
+    },
+    "red": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(234, 16, 16)",
+      "paletteType": "accent",
+      "originalValue": "hsla(0, 87%, 49%, 1)",
+      "name": "red"
+    },
+    "grey-darker": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(101, 117, 134)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 14%, 46%, 1)",
+      "name": "grey-darker"
+    },
+    "magenta-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(250, 97, 173)",
+      "paletteType": "accent",
+      "originalValue": "hsla(330, 94%, 68%, 1)",
+      "name": "magenta-light"
+    },
+    "red-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(148, 10, 10)",
+      "paletteType": "accent",
+      "originalValue": "hsla(0, 87%, 31%, 1)",
+      "name": "red-dark"
+    },
+    "grey-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(231, 235, 238)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 16%, 92%, 1)",
+      "name": "grey-lighter"
+    },
+    "gold-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(254, 226, 170)",
+      "paletteType": "accent",
+      "originalValue": "hsla(40, 97%, 83%, 1)",
+      "name": "gold-lighter"
+    },
+    "turquoise-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(148, 224, 249)",
+      "paletteType": "accent",
+      "originalValue": "hsla(195, 90%, 78%, 1)",
+      "name": "turquoise-lighter"
+    },
+    "spartan_blue-lightest": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(100, 173, 247)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 90%, 68%, 1)",
+      "name": "spartan_blue-lightest"
+    },
+    "night": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(33, 43, 54)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 24%, 17%, 1)",
+      "name": "night"
+    },
+    "green-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(41, 214, 110)",
+      "paletteType": "accent",
+      "originalValue": "hsla(144, 68%, 50%, 1)",
+      "name": "green-lighter"
+    },
+    "red-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(244, 102, 102)",
+      "paletteType": "accent",
+      "originalValue": "hsla(0, 87%, 68%, 1)",
+      "name": "red-light"
+    },
+    "magenta-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(158, 0, 79)",
+      "paletteType": "accent",
+      "originalValue": "hsla(330, 100%, 31%, 1)",
+      "name": "magenta-dark"
+    },
+    "spartan_blue-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(37, 138, 239)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 86%, 54%, 1)",
+      "name": "spartan_blue-lighter"
+    },
+    "spartan_blue-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 36, 71)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 100%, 14%, 1)",
+      "name": "spartan_blue-dark"
+    },
+    "grey": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(184, 194, 204)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 16%, 76%, 1)",
+      "name": "grey"
+    },
+    "magenta-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(250, 178, 214)",
+      "paletteType": "accent",
+      "originalValue": "hsla(330, 88%, 84%, 1)",
+      "name": "magenta-lighter"
+    },
+    "red-darker": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(76, 5, 5)",
+      "paletteType": "accent",
+      "originalValue": "hsla(0, 87%, 16%, 1)",
+      "name": "red-darker"
+    },
+    "duration-none": {
+      "type": "time",
+      "category": "time",
+      "value": 0,
+      "originalValue": 0,
+      "name": "duration-none"
+    },
+    "duration-fast": {
+      "type": "time",
+      "category": "time",
+      "value": "100ms",
+      "originalValue": "100ms",
+      "name": "duration-fast"
+    },
+    "duration-base": {
+      "type": "time",
+      "category": "time",
+      "value": "200ms",
+      "originalValue": "200ms",
+      "name": "duration-base"
+    },
+    "duration-slow": {
+      "type": "time",
+      "category": "time",
+      "value": "300ms",
+      "originalValue": "300ms",
+      "name": "duration-slow"
+    },
+    "duration-slower": {
+      "type": "time",
+      "category": "time",
+      "value": "400ms",
+      "originalValue": "400ms",
+      "name": "duration-slower"
+    },
+    "duration-slowest": {
+      "type": "time",
+      "category": "time",
+      "value": "500ms",
+      "originalValue": "500ms",
+      "name": "duration-slowest"
+    },
+    "font-family-sans-serif": {
+      "type": "...",
+      "category": "font",
+      "value": "'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "categor": "font-family",
+      "originalValue": "'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "name": "font-family-sans-serif"
+    },
+    "font-family-monospaced": {
+      "type": "...",
+      "category": "font",
+      "value": "'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace",
+      "categor": "font-family",
+      "originalValue": "'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace",
+      "name": "font-family-monospaced"
+    },
+    "font-weight-bold": {
+      "type": "...",
+      "category": "font-weight",
+      "value": "700",
+      "originalValue": "700",
+      "name": "font-weight-bold"
+    },
+    "font-weight-demi": {
+      "type": "...",
+      "category": "font-weight",
+      "value": "600",
+      "originalValue": "600",
+      "name": "font-weight-demi"
+    },
+    "font-weight-light": {
+      "type": "...",
+      "category": "font-weight",
+      "value": "300",
+      "originalValue": "300",
+      "name": "font-weight-light"
+    },
+    "font-weight-regular": {
+      "type": "...",
+      "category": "font-weight",
+      "value": "400",
+      "originalValue": "400",
+      "name": "font-weight-regular"
+    },
+    "font-size-1": {
+      "type": "number",
+      "category": "font-size",
+      "value": "5rem",
+      "originalValue": "5rem",
+      "name": "font-size-1"
+    },
+    "base-font-size": {
+      "type": "number",
+      "category": "font-size",
+      "value": "16px",
+      "originalValue": "16px",
+      "name": "base-font-size"
+    },
+    "base-line-height": {
+      "type": "number",
+      "category": "line-height",
+      "value": "1.5",
+      "originalValue": "1.5",
+      "name": "base-line-height"
+    },
+    "font-size-2": {
+      "type": "number",
+      "category": "font-size",
+      "value": "3.375rem",
+      "originalValue": "3.375rem",
+      "name": "font-size-2"
+    },
+    "font-size-3": {
+      "type": "number",
+      "category": "font-size",
+      "value": "2.25rem",
+      "originalValue": "2.25rem",
+      "name": "font-size-3"
+    },
+    "font-size-4": {
+      "type": "number",
+      "category": "font-size",
+      "value": "1.5rem",
+      "originalValue": "1.5rem",
+      "name": "font-size-4"
+    },
+    "font-size-5": {
+      "type": "number",
+      "category": "font-size",
+      "value": "1rem",
+      "originalValue": "1rem",
+      "name": "font-size-5"
+    },
+    "font-size-6": {
+      "type": "number",
+      "category": "font-size",
+      "value": "0.75rem",
+      "originalValue": "0.75rem",
+      "name": "font-size-6"
+    },
+    "font-size-7": {
+      "type": "number",
+      "category": "font-size",
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
+      "name": "font-size-7"
+    },
+    "large-text-line-height": {
+      "type": "number",
+      "category": "line-height",
+      "value": "1.25",
+      "originalValue": "1.25",
+      "name": "large-text-line-height"
+    },
+    "spacing-none": {
+      "type": "number",
+      "category": "spacing",
+      "value": 0,
+      "originalValue": 0,
+      "name": "spacing-none"
+    },
+    "spacing-quarter": {
+      "type": "number",
+      "category": "spacing",
+      "value": "0.25em",
+      "originalValue": "0.25em",
+      "name": "spacing-quarter"
+    },
+    "spacing-triple": {
+      "type": "number",
+      "category": "spacing",
+      "value": "3em",
+      "originalValue": "3em",
+      "name": "spacing-triple"
+    },
+    "spacing-4x": {
+      "type": "number",
+      "category": "spacing",
+      "value": "4em",
+      "originalValue": "4em",
+      "name": "spacing-4x"
+    },
+    "spacing-loose": {
+      "type": "number",
+      "category": "spacing",
+      "value": "1.5em",
+      "originalValue": "1.5em",
+      "name": "spacing-loose"
+    },
+    "spacing-tight": {
+      "type": "number",
+      "category": "spacing",
+      "value": "0.75em",
+      "originalValue": "0.75em",
+      "name": "spacing-tight"
+    },
+    "spacing-double": {
+      "type": "number",
+      "category": "spacing",
+      "value": "2em",
+      "originalValue": "2em",
+      "name": "spacing-double"
+    },
+    "spacing-base": {
+      "type": "number",
+      "category": "spacing",
+      "value": "1em",
+      "originalValue": "1em",
+      "name": "spacing-base"
+    },
+    "spacing-half": {
+      "type": "number",
+      "category": "spacing",
+      "value": "0.5em",
+      "originalValue": "0.5em",
+      "name": "spacing-half"
+    }
+  }
+}

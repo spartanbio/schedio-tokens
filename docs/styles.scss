@@ -1,0 +1,113 @@
+@import '../dist/tokens';
+
+html,
+body {
+  background: $ice;
+  box-sizing: border-box;
+  color: $night;
+  font-family: $font-family-sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.banner,
+.contentinfo {
+  background: $ice;
+}
+
+.banner {
+  padding: $spacing-base 0;
+}
+
+.container {
+  margin: 0 auto;
+  margin-bottom: $spacing-double;
+  max-width: 80rem;
+  padding: $spacing-half $spacing-base;
+
+  &--card {
+    background-color: $white;
+    border-radius: $spacing-half;
+    box-shadow: 0 $spacing-half $spacing-base rgba($night, 0.15);
+  }
+}
+
+h1 {
+  font-weight: $font-weight-bold;
+  margin: 0;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: $spacing-base;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th,
+td {
+  hyphens: auto;
+  vertical-align: baseline;
+  word-break: break-word;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+}
+
+thead th {
+  border-bottom: 1px solid $grey-lighter;
+  font-weight: $font-weight-demi;
+  padding-bottom: $spacing-half;
+
+  &:first-child {
+    font-size: $font-size-4;
+  }
+}
+
+code {
+  font-family: $font-family-monospaced;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $grey-lighter;
+  display: block;
+  height: 1px;
+  margin: $spacing-double 0;
+  padding: 0;
+
+  &:last-child {
+    display: none;
+  }
+}
+
+.metric-box,
+.radius-box {
+  background: $spartan-blue;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radius-box {
+  height: $spacing-triple;
+  width: 100%;
+}
+
+.radius-box.borderRadiusCircle {
+  width: $spacing-triple;
+}
+
+.line-height-example {
+  background-image: -webkit-linear-gradient($grey-lighter 1px, transparent 1px);
+  background-image: linear-gradient($grey-lighter 1px, transparent 1px);
+  background-size: 100% $spacing-base;
+  border-bottom: 1px solid $grey-lighter;
+}

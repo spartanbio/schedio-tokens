@@ -1,0 +1,148 @@
+props:
+  # Spartan blue
+  spartan_blue-dark:
+    value: 'hsla(210, 100%, 14%, 1)'
+    paletteType: 'main'
+  spartan_blue:
+    value: 'hsla(210, 100%, 30%, 1)'
+    paletteType: 'main'
+  spartan_blue-light:
+    value: 'hsla(210, 100%, 42%, 1)'
+    paletteType: 'main'
+  spartan_blue-lighter:
+    value: 'hsla(210, 86%, 54%, 1)'
+    paletteType: 'main'
+  spartan_blue-lightest:
+    value: 'hsla(210, 90%, 68%, 1)'
+    paletteType: 'main'
+
+  # Grey
+  grey-dark:
+    value: 'hsla(210, 14%, 60%, 1)'
+    paletteType: 'main'
+  grey-darker:
+    value: 'hsla(210, 14%, 46%, 1)'
+    paletteType: 'main'
+  grey:
+    value: 'hsla(210, 16%, 76%, 1)'
+    paletteType: 'main'
+  grey-light:
+    value: 'hsla(210, 16%, 86%, 1)'
+    paletteType: 'main'
+  grey-lighter:
+    value: 'hsla(210, 16%, 92%, 1)'
+    paletteType: 'main'
+
+  # Night
+  night-dark:
+    value: 'hsla(210, 24%, 7%, 1)'
+    paletteType: 'main'
+  night:
+    value: 'hsla(210, 24%, 17%, 1)'
+    paletteType: 'main'
+  night-light:
+    value: 'hsla(210, 24%, 33%, 1)'
+    paletteType: 'main'
+  night-lighter:
+    value: 'hsla(210, 20%, 48%, 1)'
+    paletteType: 'main'
+  night-lightest:
+    value: 'hsla(210, 20%, 66%, 1)'
+    paletteType: 'main'
+
+  # Ice + White
+  ice:
+    value: 'hsla(210, 23%, 96%, 1)'
+    paletteType: 'main'
+  white:
+    value: 'hsla(210, 12%, 100%, 1)'
+    paletteType: 'main'
+
+  # Green
+  green-darker:
+    value: 'hsla(144, 96%, 12%, 1)'
+    paletteType: 'accent'
+  green-dark:
+    value: 'hsla(144, 94%, 20%, 1)'
+    paletteType: 'accent'
+  green:
+    value: 'hsla(144, 92%, 28%, 1)'
+    paletteType: 'accent'
+  green-light:
+    value: 'hsla(144, 74%, 38%, 1)'
+    paletteType: 'accent'
+  green-lighter:
+    value: 'hsla(144, 68%, 50%, 1)'
+    paletteType: 'accent'
+
+  # Gold
+  gold-darker:
+    value: 'hsla(38, 100%, 40%, 1)'
+    paletteType: 'accent'
+  gold-dark:
+    value: 'hsla(40, 100%, 50%, 1)'
+    paletteType: 'accent'
+  gold:
+    value: 'hsla(40, 97%, 60%, 1)'
+    paletteType: 'accent'
+  gold-light:
+    value: 'hsla(40, 97%, 73%, 1)'
+    paletteType: 'accent'
+  gold-lighter:
+    value: 'hsla(40, 97%, 83%, 1)'
+    paletteType: 'accent'
+
+  # Turqoise
+  turquoise-darker:
+    value: 'hsla(195, 100%, 18%, 1)'
+    paletteType: 'accent'
+  turquoise-dark:
+    value: 'hsla(195, 100%, 32%, 1)'
+    paletteType: 'accent'
+  turquoise:
+    value: 'hsla(195, 100%, 47%, 1)'
+    paletteType: 'accent'
+  turquoise-light:
+    value: 'hsla(195, 90%, 62%, 1)'
+    paletteType: 'accent'
+  turquoise-lighter:
+    value: 'hsla(195, 90%, 78%, 1)'
+    paletteType: 'accent'
+
+  # Red
+  red-darker:
+    value: 'hsla(0, 87%, 16%, 1)'
+    paletteType: 'accent'
+  red-dark:
+    value: 'hsla(0, 87%, 31%, 1)'
+    paletteType: 'accent'
+  red:
+    value: 'hsla(0, 87%, 49%, 1)'
+    paletteType: 'accent'
+  red-light:
+    value: 'hsla(0, 87%, 68%, 1)'
+    paletteType: 'accent'
+  red-lighter:
+    value: 'hsla(0, 87%, 84%, 1)'
+    paletteType: 'accent'
+
+  # Magenta
+  magenta-darker:
+    value: 'hsla(330, 100%, 16%, 1)'
+    paletteType: 'accent'
+  magenta-dark:
+    value: 'hsla(330, 100%, 31%, 1)'
+    paletteType: 'accent'
+  magenta:
+    value: 'hsla(330, 100%, 45%, 1)'
+    paletteType: 'accent'
+  magenta-light:
+    value: 'hsla(330, 94%, 68%, 1)'
+    paletteType: 'accent'
+  magenta-lighter:
+    value: 'hsla(330, 88%, 84%, 1)'
+    paletteType: 'accent'
+
+global:
+  type: color
+  category: background-color

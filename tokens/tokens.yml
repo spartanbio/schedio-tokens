@@ -1,0 +1,9 @@
+imports:
+  - ./colors.yml
+  - ./duration.yml
+  - ./font.yml
+  - ./font-size.yml
+  - ./spacing.yml
+global:
+  type: global
+  category: all

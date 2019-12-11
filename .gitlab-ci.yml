@@ -1,0 +1,29 @@
+image: node:lts
+
+.except_release_commits:
+  except: &except_release_definition
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /^chore(release).*/
+
+stages:
+  - build
+  - test
+  - publish
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  only:
+    - merge_requests
+    - master@spartanbio-ux/schedio
+  except: *except_release_definition
+  script:
+    - yarn --frozen-lockfile --non-interactive
+    - yarn build
+  artifacts:
+    paths:
+      - dist/

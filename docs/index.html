@@ -1,0 +1,1155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  />
+  <title>Design Tokens</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  />
+</head>
+
+<body>
+  <header
+    role="banner"
+    class="banner"
+  >
+    <div class="container">
+      <h1>Design Tokens</h1>
+    </div>
+  </header>
+  <div class="container container--card">
+    <main role="main">
+      
+      
+<section>
+  <table>
+    
+<thead>
+  <tr id=spacing>
+    <th scope="col">Spacing</th>
+    <th scope="col">Value</th>
+    <th scope="col">Examples</th>
+    <th scope="col">Usage</th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+  <th scope="row">
+    <code>spacing-none</code>
+  </th>
+  <td>
+    <code>0</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 0; height: 0;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-quarter</code>
+  </th>
+  <td>
+    <code>0.25em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 0.25em; height: 0.25em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-half</code>
+  </th>
+  <td>
+    <code>0.5em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 0.5em; height: 0.5em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-tight</code>
+  </th>
+  <td>
+    <code>0.75em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 0.75em; height: 0.75em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-base</code>
+  </th>
+  <td>
+    <code>1em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 1em; height: 1em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-loose</code>
+  </th>
+  <td>
+    <code>1.5em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 1.5em; height: 1.5em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-double</code>
+  </th>
+  <td>
+    <code>2em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 2em; height: 2em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-triple</code>
+  </th>
+  <td>
+    <code>3em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 3em; height: 3em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spacing-4x</code>
+  </th>
+  <td>
+    <code>4em</code>
+  </td>
+  
+<td>
+  <div
+    class="metric-box"
+    style="width: 4em; height: 4em;"
+  ></div>
+</td>
+
+  <td></td>
+</tr>
+    </tbody>
+  </table>
+  <hr />
+</section>
+
+      
+<section>
+  <table>
+    
+<thead>
+  <tr id=font>
+    <th scope="col">Fonts</th>
+    <th scope="col">Value</th>
+    <th scope="col">Examples</th>
+    <th scope="col">Usage</th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+  <th scope="row">
+    <code>font-family-monospaced</code>
+  </th>
+  <td>
+    <code>'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace</code>
+  </td>
+  
+<td>
+  <div style="font-family: 'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-family-sans-serif</code>
+  </th>
+  <td>
+    <code>'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif</code>
+  </td>
+  
+<td>
+  <div style="font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+    </tbody>
+  </table>
+  <hr />
+</section>
+
+      
+      
+<section>
+  <table>
+    
+<thead>
+  <tr id=font-weight>
+    <th scope="col">Font Weights</th>
+    <th scope="col">Value</th>
+    <th scope="col">Examples</th>
+    <th scope="col">Usage</th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+  <th scope="row">
+    <code>font-weight-light</code>
+  </th>
+  <td>
+    <code>300</code>
+  </td>
+  
+<td>
+  <div style="font-weight: 300;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-weight-regular</code>
+  </th>
+  <td>
+    <code>400</code>
+  </td>
+  
+<td>
+  <div style="font-weight: 400;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-weight-demi</code>
+  </th>
+  <td>
+    <code>600</code>
+  </td>
+  
+<td>
+  <div style="font-weight: 600;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-weight-bold</code>
+  </th>
+  <td>
+    <code>700</code>
+  </td>
+  
+<td>
+  <div style="font-weight: 700;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+    </tbody>
+  </table>
+  <hr />
+</section>
+
+      
+<section>
+  <table>
+    
+<thead>
+  <tr id=font-size>
+    <th scope="col">Font Sizes</th>
+    <th scope="col">Value</th>
+    <th scope="col">Examples</th>
+    <th scope="col">Usage</th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+  <th scope="row">
+    <code>base-font-size</code>
+  </th>
+  <td>
+    <code>16px</code>
+  </td>
+  
+<td>
+  <div style="font-size: 16px;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-size-1</code>
+  </th>
+  <td>
+    <code>5rem</code>
+  </td>
+  
+<td>
+  <div style="font-size: 5rem;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-size-2</code>
+  </th>
+  <td>
+    <code>3.375rem</code>
+  </td>
+  
+<td>
+  <div style="font-size: 3.375rem;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-size-3</code>
+  </th>
+  <td>
+    <code>2.25rem</code>
+  </td>
+  
+<td>
+  <div style="font-size: 2.25rem;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-size-4</code>
+  </th>
+  <td>
+    <code>1.5rem</code>
+  </td>
+  
+<td>
+  <div style="font-size: 1.5rem;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-size-5</code>
+  </th>
+  <td>
+    <code>1rem</code>
+  </td>
+  
+<td>
+  <div style="font-size: 1rem;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-size-6</code>
+  </th>
+  <td>
+    <code>0.75rem</code>
+  </td>
+  
+<td>
+  <div style="font-size: 0.75rem;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>font-size-7</code>
+  </th>
+  <td>
+    <code>0.5rem</code>
+  </td>
+  
+<td>
+  <div style="font-size: 0.5rem;">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+    </tbody>
+  </table>
+  <hr />
+</section>
+
+      
+<section>
+  <table>
+    
+<thead>
+  <tr id=line-height>
+    <th scope="col">Line Heights</th>
+    <th scope="col">Value</th>
+    <th scope="col">Examples</th>
+    <th scope="col">Usage</th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+  <th scope="row">
+    <code>base-line-height</code>
+  </th>
+  <td>
+    <code>1.5</code>
+  </td>
+  
+<td>
+  <div
+    class="line-height-example"
+    style="line-height: 1.5; background-size: 100% 1.5em;"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+    elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+    id feugiat at, venenatis quis erat.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>large-text-line-height</code>
+  </th>
+  <td>
+    <code>1.25</code>
+  </td>
+  
+<td>
+  <div
+    class="line-height-example"
+    style="line-height: 1.25; background-size: 100% 1.25em;"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+    elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+    id feugiat at, venenatis quis erat.
+  </div>
+</td>
+
+  <td></td>
+</tr>
+    </tbody>
+  </table>
+  <hr />
+</section>
+
+      
+      
+      
+      
+      
+      
+      
+<section>
+  <table>
+    
+<thead>
+  <tr id=background-color>
+    <th scope="col">Background Colors</th>
+    <th scope="col">Value</th>
+    <th scope="col">Examples</th>
+    <th scope="col">Usage</th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+  <th scope="row">
+    <code>gold</code>
+  </th>
+  <td>
+    <code>#fcba36</code>
+  </td>
+  <td style="background-color: #fcba36; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>gold-dark</code>
+  </th>
+  <td>
+    <code>#fa0</code>
+  </td>
+  <td style="background-color: #fa0; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>gold-darker</code>
+  </th>
+  <td>
+    <code>#cc8100</code>
+  </td>
+  <td style="background-color: #cc8100; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>gold-light</code>
+  </th>
+  <td>
+    <code>#fdd077</code>
+  </td>
+  <td style="background-color: #fdd077; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>gold-lighter</code>
+  </th>
+  <td>
+    <code>#fee2aa</code>
+  </td>
+  <td style="background-color: #fee2aa; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>green</code>
+  </th>
+  <td>
+    <code>#06893a</code>
+  </td>
+  <td style="background-color: #06893a; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>green-dark</code>
+  </th>
+  <td>
+    <code>#036329</code>
+  </td>
+  <td style="background-color: #036329; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>green-darker</code>
+  </th>
+  <td>
+    <code>#013c19</code>
+  </td>
+  <td style="background-color: #013c19; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>green-light</code>
+  </th>
+  <td>
+    <code>#19a953</code>
+  </td>
+  <td style="background-color: #19a953; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>green-lighter</code>
+  </th>
+  <td>
+    <code>#29d66e</code>
+  </td>
+  <td style="background-color: #29d66e; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>grey</code>
+  </th>
+  <td>
+    <code>#b8c2cc</code>
+  </td>
+  <td style="background-color: #b8c2cc; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>grey-dark</code>
+  </th>
+  <td>
+    <code>#8b99a7</code>
+  </td>
+  <td style="background-color: #8b99a7; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>grey-darker</code>
+  </th>
+  <td>
+    <code>#657586</code>
+  </td>
+  <td style="background-color: #657586; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>grey-light</code>
+  </th>
+  <td>
+    <code>#d6dbe1</code>
+  </td>
+  <td style="background-color: #d6dbe1; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>grey-lighter</code>
+  </th>
+  <td>
+    <code>#e7ebee</code>
+  </td>
+  <td style="background-color: #e7ebee; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>ice</code>
+  </th>
+  <td>
+    <code>#f2f5f7</code>
+  </td>
+  <td style="background-color: #f2f5f7; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>magenta</code>
+  </th>
+  <td>
+    <code>#e60073</code>
+  </td>
+  <td style="background-color: #e60073; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>magenta-dark</code>
+  </th>
+  <td>
+    <code>#9e004f</code>
+  </td>
+  <td style="background-color: #9e004f; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>magenta-darker</code>
+  </th>
+  <td>
+    <code>#520029</code>
+  </td>
+  <td style="background-color: #520029; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>magenta-light</code>
+  </th>
+  <td>
+    <code>#fa61ad</code>
+  </td>
+  <td style="background-color: #fa61ad; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>magenta-lighter</code>
+  </th>
+  <td>
+    <code>#fab2d6</code>
+  </td>
+  <td style="background-color: #fab2d6; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>night</code>
+  </th>
+  <td>
+    <code>#212b36</code>
+  </td>
+  <td style="background-color: #212b36; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>night-dark</code>
+  </th>
+  <td>
+    <code>#0e1216</code>
+  </td>
+  <td style="background-color: #0e1216; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>night-light</code>
+  </th>
+  <td>
+    <code>#405468</code>
+  </td>
+  <td style="background-color: #405468; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>night-lighter</code>
+  </th>
+  <td>
+    <code>#627a93</code>
+  </td>
+  <td style="background-color: #627a93; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>night-lightest</code>
+  </th>
+  <td>
+    <code>#97a8ba</code>
+  </td>
+  <td style="background-color: #97a8ba; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>red</code>
+  </th>
+  <td>
+    <code>#ea1010</code>
+  </td>
+  <td style="background-color: #ea1010; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>red-dark</code>
+  </th>
+  <td>
+    <code>#940a0a</code>
+  </td>
+  <td style="background-color: #940a0a; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>red-darker</code>
+  </th>
+  <td>
+    <code>#4c0505</code>
+  </td>
+  <td style="background-color: #4c0505; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>red-light</code>
+  </th>
+  <td>
+    <code>#f46666</code>
+  </td>
+  <td style="background-color: #f46666; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>red-lighter</code>
+  </th>
+  <td>
+    <code>#fab3b3</code>
+  </td>
+  <td style="background-color: #fab3b3; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spartan_blue</code>
+  </th>
+  <td>
+    <code>#004c99</code>
+  </td>
+  <td style="background-color: #004c99; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spartan_blue-dark</code>
+  </th>
+  <td>
+    <code>#002447</code>
+  </td>
+  <td style="background-color: #002447; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spartan_blue-light</code>
+  </th>
+  <td>
+    <code>#006bd6</code>
+  </td>
+  <td style="background-color: #006bd6; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spartan_blue-lighter</code>
+  </th>
+  <td>
+    <code>#258aef</code>
+  </td>
+  <td style="background-color: #258aef; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>spartan_blue-lightest</code>
+  </th>
+  <td>
+    <code>#64adf7</code>
+  </td>
+  <td style="background-color: #64adf7; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>turquoise</code>
+  </th>
+  <td>
+    <code>#00b4f0</code>
+  </td>
+  <td style="background-color: #00b4f0; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>turquoise-dark</code>
+  </th>
+  <td>
+    <code>#007aa3</code>
+  </td>
+  <td style="background-color: #007aa3; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>turquoise-darker</code>
+  </th>
+  <td>
+    <code>#00455c</code>
+  </td>
+  <td style="background-color: #00455c; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>turquoise-light</code>
+  </th>
+  <td>
+    <code>#47caf5</code>
+  </td>
+  <td style="background-color: #47caf5; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>turquoise-lighter</code>
+  </th>
+  <td>
+    <code>#94e0f9</code>
+  </td>
+  <td style="background-color: #94e0f9; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>white</code>
+  </th>
+  <td>
+    <code>#fff</code>
+  </td>
+  <td style="background-color: #fff; border: 1px solid #f6f6f6;"></td>
+  <td></td>
+</tr>
+    </tbody>
+  </table>
+  <hr />
+</section>
+
+      
+      
+      
+      
+      
+      
+      
+      
+<section>
+  <table>
+    
+<thead>
+  <tr id=time>
+    <th scope="col">Time</th>
+    <th scope="col">Value</th>
+    <th scope="col">Examples</th>
+    <th scope="col">Usage</th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+  <th scope="row">
+    <code>duration-none</code>
+  </th>
+  <td>
+    <code>0</code>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>duration-fast</code>
+  </th>
+  <td>
+    <code>100ms</code>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>duration-base</code>
+  </th>
+  <td>
+    <code>200ms</code>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>duration-slow</code>
+  </th>
+  <td>
+    <code>300ms</code>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>duration-slower</code>
+  </th>
+  <td>
+    <code>400ms</code>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <th scope="row">
+    <code>duration-slowest</code>
+  </th>
+  <td>
+    <code>500ms</code>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+    </tbody>
+  </table>
+  <hr />
+</section>
+
+      
+    </main>
+  </div>
+</body>
+
+</html>
