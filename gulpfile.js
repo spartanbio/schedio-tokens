@@ -129,7 +129,7 @@ function serve (done) {
   browserSync.init({
     open: false,
     notify: false,
-    server: 'docs',
+    server: 'public',
   })
 
   done()
