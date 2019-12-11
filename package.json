@@ -8,11 +8,11 @@
   "license": "MIT",
   "scripts": {
     "build": "run-s clean build:*",
-    "clean": "rimraf ./dist",
     "build:theo": "gulp",
-    "build:docs": "gulp docs",
     "build:format": "run-s lintfix:*",
     "build:ase": "node ./scripts/ase-encode.js",
+    "clean": "rimraf ./dist",
+    "docs": "gulp docs",
     "lint:js": "eslint .",
     "lint:style": "stylelint ./**/*.{scss,css}",
     "lintfix:js": "yarn lint:js --fix",

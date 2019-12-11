@@ -7,13 +7,15 @@ image: node:lts
 
 stages:
   - build
-  - test
   - publish
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
+
+before_script:
+  - yarn --frozen-lockfile --non-interactive
 
 build:
   stage: build
@@ -22,8 +24,18 @@ build:
     - master@spartanbio-ux/schedio
   except: *except_release_definition
   script:
-    - yarn --frozen-lockfile --non-interactive
     - yarn build
   artifacts:
     paths:
       - dist/
+
+pages:
+  stage: publish
+  script:
+    - yarn docs
+  artifacts:
+    paths:
+      - docs/
+    expire_in: 1 week
+  only:
+    - master
