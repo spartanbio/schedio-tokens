@@ -29,16 +29,16 @@ Common JS:
 // camelCase tokens
 const schedioTokens = require('@spartanbio/schedio-tokens');
 // kebab-case tokens with meta data
-const { props: schedioTokens } = require('@/spartanbio/schedio-tokens/dist/tokens.raw.json');
+const { props: schedioTokens } = require('@spartanbio/schedio-tokens/dist/tokens.raw.json');
 ```
 
 ES6 Modules:
 
 ```js
 // camelCase tokens
-import * as schedioTokens from '@spartnabio/scedio-tokens';
+import * as schedioTokens from '@spartanbio/scedio-tokens';
 // kebab-case tokens with meta data
-import { props as schedioTokens } from '@/spartanbio/schedio-tokens/dist/tokens.raw.json';
+import { props as schedioTokens } from '@spartanbio/schedio-tokens/dist/tokens.raw.json';
 ```
 
 ### SCSS
