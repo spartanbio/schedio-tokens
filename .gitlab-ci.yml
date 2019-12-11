@@ -19,13 +19,13 @@ build:
   artifacts:
     paths:
       - dist/
-      - public/
+      - docs/
     expire_in: 1 week
 
 pages:
   stage: deploy
   script:
-    - echo "publish"
+    - cp -R docs/ public/
   artifacts:
     paths:
       - public/
