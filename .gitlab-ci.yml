@@ -1,10 +1,5 @@
 image: node:lts
 
-.except_release_commits:
-  except: &except_release_definition
-    variables:
-      - $CI_COMMIT_MESSAGE =~ /^chore(release).*/
-
 stages:
   - build
   - deploy
@@ -18,7 +13,6 @@ build:
   stage: build
   only:
     - master
-  except: *except_release_definition
   script:
     - yarn --frozen-lockfile --non-interactive
     - yarn build
@@ -32,23 +26,22 @@ npm:
   stage: deploy
   only:
     - master
-  except: *except_release_definition
   script:
     - yarn semantic-release
   artifacts:
     paths:
+      - docs/
       - dist/
     expire_in: 1 week
 
 pages:
   stage: deploy
+  only:
+    refs:
+      - master
   script:
     - cp -R docs/ public/
   artifacts:
     paths:
       - public/
     expire_in: 1 week
-  only:
-    <<: *except_release_definition
-    refs:
-      - master
