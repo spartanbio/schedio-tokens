@@ -14,7 +14,7 @@
     "build:format:style": "stylelint ./{docs,dist}/*.{scss,css} --fix",
     "build:format:js": "eslint ./{docs,dist}/*.js --fix",
     "clean": "rimraf ./dist",
-    "docs": "run-s build:docs build:format",
+    "docs": "run-s build:docs build:format:js build:format:style",
     "lint:js": "eslint .",
     "lint:style": "stylelint ./**/*.{scss,css}",
     "semantic-release": "semantic-release",
