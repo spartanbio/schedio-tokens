@@ -1,0 +1,12 @@
+props:
+  font-weight-bold:
+    value: 700
+  font-weight-demi:
+    value: 600
+  font-weight-light:
+    value: 300
+  font-weight-regular:
+    value: 400
+global:
+  type: number
+  category: font-weight

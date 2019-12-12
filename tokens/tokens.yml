@@ -4,6 +4,7 @@ imports:
   - ./easing.yml
   - ./font.yml
   - ./font-size.yml
+  - ./font-weight.yml
   - ./line-height.yml
   - ./spacing.yml
 global:
