@@ -15,6 +15,7 @@ const webFormats = [
 ]
 
 // Setup and register custom formats
+theo.registerFormat('map.scss', require('./formats/map.scss.js'))
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
 theo.registerFormat('ase.json', require('./formats/ase.json.js'))
 

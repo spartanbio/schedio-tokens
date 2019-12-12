@@ -55,7 +55,10 @@ All variables and keys are kebab-case.
 // All tokens as custom properties (works for CSS too)
 @import '~@spartanbio/schedio/dist/tokens.custom-properties';
 
-// Specific maps
+// Unprefixed maps of specific token categories
+@import '~@spartanbio/schedio/dist/<token-category>.map';
+
+// Colors, grouped by hue
 @import '~@spartanbio/schedio/dist/colors.color-map';
 ```
 
