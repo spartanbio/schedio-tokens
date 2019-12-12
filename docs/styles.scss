@@ -2,9 +2,9 @@
 
 html,
 body {
-  background: $ice;
+  background: $color-ice;
   box-sizing: border-box;
-  color: $night;
+  color: $color-night;
   font-family: $font-family-sans-serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -18,7 +18,7 @@ body {
 
 .banner,
 .contentinfo {
-  background: $ice;
+  background: $color-ice;
 }
 
 .banner {
@@ -32,9 +32,9 @@ body {
   padding: $spacing-half $spacing-base;
 
   &--card {
-    background-color: $white;
+    background-color: $color-white;
     border-radius: $spacing-half;
-    box-shadow: 0 $spacing-half $spacing-base rgba($night, 0.15);
+    box-shadow: 0 $spacing-half $spacing-base rgba($color-night, 0.15);
   }
 }
 
@@ -63,7 +63,7 @@ th {
 }
 
 thead th {
-  border-bottom: 1px solid $grey-lighter;
+  border-bottom: 1px solid $color-grey-lighter;
   font-weight: $font-weight-demi;
   padding-bottom: $spacing-half;
 
@@ -78,7 +78,7 @@ code {
 
 hr {
   border: 0;
-  border-top: 1px solid $grey-lighter;
+  border-top: 1px solid $color-grey-lighter;
   display: block;
   height: 1px;
   margin: $spacing-double 0;
@@ -91,7 +91,7 @@ hr {
 
 .metric-box,
 .radius-box {
-  background: $spartan-blue;
+  background: $color-spartan-blue;
   display: inline-block;
   vertical-align: middle;
 }
@@ -106,8 +106,8 @@ hr {
 }
 
 .line-height-example {
-  background-image: -webkit-linear-gradient($grey-lighter 1px, transparent 1px);
-  background-image: linear-gradient($grey-lighter 1px, transparent 1px);
+  background-image: -webkit-linear-gradient($color-grey-lighter 1px, transparent 1px);
+  background-image: linear-gradient($color-grey-lighter 1px, transparent 1px);
   background-size: 100% $spacing-base;
-  border-bottom: 1px solid $grey-lighter;
+  border-bottom: 1px solid $color-grey-lighter;
 }

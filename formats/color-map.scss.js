@@ -1,8 +1,8 @@
 const groupBy = require('lodash/groupBy')
 
 const getShade = (name) => {
-  const shade = name.split('-').pop()
-  return shade === name ? 'base' : shade
+  const [, , shade] = name.split('-')
+  return shade || 'base'
 }
 
 class ColorMap {
@@ -10,7 +10,8 @@ class ColorMap {
     const propsWithPalette = props.reduce((palettes, prop) => {
       if (prop.type !== 'color') return palettes
 
-      prop.palette = prop.name.split('-').shift()
+      const [, color] = prop.name.split('-')
+      prop.palette = color
       palettes.push(prop)
 
       return palettes
