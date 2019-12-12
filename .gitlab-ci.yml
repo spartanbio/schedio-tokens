@@ -39,9 +39,16 @@ pages:
   only:
     refs:
       - master
+    changes:
+      # only run update documentation when project has changed materially
+      - index.js
+      - tokens/**/*
+      - formats/**/*
+      - dist/**/*
+      - docs/styles.{css,scss}
   script:
+    # deploys docs to pages
     - cp -R docs/ public/
   artifacts:
     paths:
       - public/
-    expire_in: 1 week

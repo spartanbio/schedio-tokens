@@ -29,7 +29,7 @@ gulp.task('color-formats', buildFormats(colorFormats, 'tokens/colors.yml'))
 
 // Build docs and styles
 gulp.task('docs:styles', (done) => {
-  gulp.src('public/*.scss')
+  gulp.src('docs/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe(
@@ -38,7 +38,7 @@ gulp.task('docs:styles', (done) => {
       }).on('error', $.sass.logError),
     )
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('public'))
+    .pipe(gulp.dest('docs'))
 
   done()
 })
@@ -105,7 +105,7 @@ function buildDocs (done) {
     )
     .pipe($.rename('index.html'))
     .on('error', logError)
-    .pipe(gulp.dest('public'))
+    .pipe(gulp.dest('docs'))
 
   done()
 }
@@ -117,9 +117,9 @@ function logError (err) {
 // `gulp watch` setup
 function watch () {
   gulp.watch(['tokens/*.yml'], gulp.series(runOnWatch))
-  gulp.watch('public/**/*.scss', gulp.series('docs:styles'))
+  gulp.watch('docs/**/*.scss', gulp.series('docs:styles'))
   gulp.watch(['formats/**/*.*', 'gulpfile.js'], gulp.series($.restart))
-  gulp.watch(['public/**/*.html'], gulp.series(reload))
+  gulp.watch(['docs/**/*.html'], gulp.series(reload))
 }
 
 // BrowserSync setup
@@ -129,7 +129,7 @@ function serve (done) {
   browserSync.init({
     open: false,
     notify: false,
-    server: 'public',
+    server: 'docs',
   })
 
   done()
