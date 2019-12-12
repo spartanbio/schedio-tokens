@@ -1,0 +1,26 @@
+{
+  "aliases": {},
+  "props": {
+    "border-radius-small": {
+      "type": "border-radius",
+      "category": "border-radius",
+      "value": "0.25em",
+      "originalValue": "0.25em",
+      "name": "border-radius-small"
+    },
+    "border-radius-base": {
+      "type": "border-radius",
+      "category": "border-radius",
+      "value": "0.5em",
+      "originalValue": "0.5em",
+      "name": "border-radius-base"
+    },
+    "border-radius-circle": {
+      "type": "border-radius",
+      "category": "border-radius",
+      "value": "50%",
+      "originalValue": "50%",
+      "name": "border-radius-circle"
+    }
+  }
+}

@@ -1,4 +1,10 @@
 module.exports = {
+  borderRadiusSmall: '0.25em',
+  borderRadiusBase: '0.5em',
+  borderRadiusCircle: '50%',
+  borderWidthBase: '1px',
+  borderWidthThick: '2px',
+  borderWidthThickest: '4px',
   colorTurquoiseLight: 'rgb(71, 202, 245)',
   colorGoldLighter: 'rgb(254, 226, 170)',
   colorIce: 'rgb(242, 245, 247)',
@@ -69,6 +75,14 @@ module.exports = {
   fontWeightRegular: 400,
   lineHeightBase: '1.5',
   lineHeightLargeText: '1.25',
+  /* Shadow values are intended to be used with colors added to them */
+  shadowBorder: '0 0 1px',
+  /* Shadow values are intended to be used with colors added to them */
+  shadowLight: '0 0.25em 1em',
+  /* Shadow values are intended to be used with colors added to them */
+  shadowBase: '0 0.25em 1em',
+  /* Shadow values are intended to be used with colors added to them */
+  shadowHeavy: '0 0.5em 1.5em 0.25em',
   spacingNone: 0,
   spacingQuarter: '0.25em',
   spacingTriple: '3em',

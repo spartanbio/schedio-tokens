@@ -1,0 +1,10 @@
+props:
+  border-width-base:
+    value: 1px
+  border-width-thick:
+    value: 2px
+  border-width-thickest:
+    value: 4px
+global:
+  type: border-width
+  category: border-width

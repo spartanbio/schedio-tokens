@@ -1,0 +1,10 @@
+props:
+  border-radius-small:
+    value: 0.25em
+  border-radius-base:
+    value: 0.5em
+  border-radius-circle:
+    value: 50%
+global:
+  type: border-radius
+  category: border-radius

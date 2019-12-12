@@ -1,6 +1,48 @@
 {
   "aliases": {},
   "props": {
+    "border-radius-small": {
+      "type": "border-radius",
+      "category": "border-radius",
+      "value": "0.25em",
+      "originalValue": "0.25em",
+      "name": "border-radius-small"
+    },
+    "border-radius-base": {
+      "type": "border-radius",
+      "category": "border-radius",
+      "value": "0.5em",
+      "originalValue": "0.5em",
+      "name": "border-radius-base"
+    },
+    "border-radius-circle": {
+      "type": "border-radius",
+      "category": "border-radius",
+      "value": "50%",
+      "originalValue": "50%",
+      "name": "border-radius-circle"
+    },
+    "border-width-base": {
+      "type": "border-width",
+      "category": "border-width",
+      "value": "1px",
+      "originalValue": "1px",
+      "name": "border-width-base"
+    },
+    "border-width-thick": {
+      "type": "border-width",
+      "category": "border-width",
+      "value": "2px",
+      "originalValue": "2px",
+      "name": "border-width-thick"
+    },
+    "border-width-thickest": {
+      "type": "border-width",
+      "category": "border-width",
+      "value": "4px",
+      "originalValue": "4px",
+      "name": "border-width-thickest"
+    },
     "color-turquoise-light": {
       "type": "color",
       "category": "background-color",
@@ -532,6 +574,38 @@
       "value": "1.25",
       "originalValue": "1.25",
       "name": "line-height-large-text"
+    },
+    "shadow-border": {
+      "type": "box-shadow",
+      "category": "box-shadow",
+      "comment": "Shadow values are intended to be used with colors added to them",
+      "value": "0 0 1px",
+      "originalValue": "0 0 1px",
+      "name": "shadow-border"
+    },
+    "shadow-light": {
+      "type": "box-shadow",
+      "category": "box-shadow",
+      "comment": "Shadow values are intended to be used with colors added to them",
+      "value": "0 0.25em 1em",
+      "originalValue": "0 0.25em 1em",
+      "name": "shadow-light"
+    },
+    "shadow-base": {
+      "type": "box-shadow",
+      "category": "box-shadow",
+      "comment": "Shadow values are intended to be used with colors added to them",
+      "value": "0 0.25em 1em",
+      "originalValue": "0 0.25em 1em",
+      "name": "shadow-base"
+    },
+    "shadow-heavy": {
+      "type": "box-shadow",
+      "category": "box-shadow",
+      "comment": "Shadow values are intended to be used with colors added to them",
+      "value": "0 0.5em 1.5em 0.25em",
+      "originalValue": "0 0.5em 1.5em 0.25em",
+      "name": "shadow-heavy"
     },
     "spacing-none": {
       "type": "number",

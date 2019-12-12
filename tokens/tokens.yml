@@ -1,4 +1,6 @@
 imports:
+  - ./border-radius.yml
+  - ./border-width.yml
   - ./colors.yml
   - ./duration.yml
   - ./easing.yml
@@ -6,6 +8,7 @@ imports:
   - ./font-size.yml
   - ./font-weight.yml
   - ./line-height.yml
+  - ./shadow.yml
   - ./spacing.yml
 global:
   type: global

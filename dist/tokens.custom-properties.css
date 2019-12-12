@@ -1,5 +1,11 @@
 
 :root {
+  --border-radius-small: 0.25em;
+  --border-radius-base: 0.5em;
+  --border-radius-circle: 50%;
+  --border-width-base: 1px;
+  --border-width-thick: 2px;
+  --border-width-thickest: 4px;
   --color-turquoise-light: rgb(71, 202, 245);
   --color-gold-lighter: rgb(254, 226, 170);
   --color-ice: rgb(242, 245, 247);
@@ -70,6 +76,18 @@
   --font-weight-regular: 400;
   --line-height-base: 1.5;
   --line-height-large-text: 1.25;
+
+  /* Shadow values are intended to be used with colors added to them */
+  --shadow-border: 0 0 1px;
+
+  /* Shadow values are intended to be used with colors added to them */
+  --shadow-light: 0 0.25em 1em;
+
+  /* Shadow values are intended to be used with colors added to them */
+  --shadow-base: 0 0.25em 1em;
+
+  /* Shadow values are intended to be used with colors added to them */
+  --shadow-heavy: 0 0.5em 1.5em 0.25em;
   --spacing-none: 0;
   --spacing-quarter: 0.25em;
   --spacing-triple: 3em;
