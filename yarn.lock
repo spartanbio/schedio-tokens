@@ -513,19 +513,19 @@
   resolved "https://registry.yarnpkg.com/@spartanbio/eslint-config/-/eslint-config-1.0.14.tgz#ced35221cbb6e69ce7dba326e7f53c8705b68fa6"
   integrity sha512-NCz3vuTqxl6jByPXGnxXMcddQY9c6ZUAMY9o1yFdcDbWr+HPmp1zY7fFTsvM6p8Dw/EeaT7MMu+RbvxxllxW2g==
 
-"@spartanbio/stylelint-config-scss@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config-scss/-/stylelint-config-scss-1.0.7.tgz#ac2bca848008f26c718fcf062e283abf5ac3870d"
-  integrity sha512-9dRGoRmzoRgR17sh8iN6QAIAdo3bmv1BYAJzI7EOwC/TwttECcXQPLei6bGwhFMuMXEDkd5ShyMQhAL74pL6nQ==
+"@spartanbio/stylelint-config-scss@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config-scss/-/stylelint-config-scss-1.0.8.tgz#b46d546041737a39bc06ccad55e403883f4c8262"
+  integrity sha512-IfFG2hhm+1lwBJ9Y3ai3WUIMYh4a5LK3BIHC/jDneQRnI8wY5W+ssD25PPTUM5A1khPeoBuKFNGQNXDpVLyJjQ==
   dependencies:
-    "@spartanbio/stylelint-config" "^1.0.4"
+    "@spartanbio/stylelint-config" "^1.0.5"
     stylelint-config-standard-scss "^1.1.0"
     stylelint-scss "^3.10.0"
 
-"@spartanbio/stylelint-config@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config/-/stylelint-config-1.0.4.tgz#35a08ddda283a65ec1acfe2048a9d6159cf9c387"
-  integrity sha512-KttyXRq+gjTBz5FOvPXJmO6DWm6yG9j5zUvS8qDK5hDUr4DmgWMML3PK3e7qG4YytJWJu4bzrNBt5qVJb4wImA==
+"@spartanbio/stylelint-config@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config/-/stylelint-config-1.0.5.tgz#3445cbed4d499f3534907064e2986cf9965d218b"
+  integrity sha512-btsvxHS/gfqLLOjMwd+oBRy+x4EXM5W4yVAEj65JRe0uaMovmuMv+8+G1txnEKCmKb4CXzZKdHfmtCNwdJVJNA==
   dependencies:
     stylelint-config-standard "^19.0.0"
     stylelint-order "^3.0.1"
