@@ -1,6 +1,9 @@
+const path = require('path')
+
 class TokenMap {
   constructor ({ meta, props }) {
-    const _label = meta.file.split('\\').pop().split('.').shift()
+    const _label = path.basename(meta.file, '.yml')
+    console.log(_label)
     this.label = _label === 'colors' ? 'color' : _label
     this.props = props
   }
