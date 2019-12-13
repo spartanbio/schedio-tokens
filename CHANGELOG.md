@@ -1,3 +1,10 @@
+## [1.1.1](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.1.0...v1.1.1) (2019-12-13)
+
+
+### Bug Fixes
+
+* corrects map name generation ([b21b2fe](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/b21b2fedaa11ba94ab197cc408529e9e4252f818))
+
 # [1.1.0](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.0.0...v1.1.0) (2019-12-12)
 
 
