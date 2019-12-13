@@ -386,7 +386,7 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@semantic-release/changelog@^3.0.6":
+"@semantic-release/changelog@3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-3.0.6.tgz#9d68d68bf732cbba1034c028bb6720091f783b2a"
   integrity sha512-9TqPL/VarLLj6WkUqbIqFiY3nwPmLuKFHy9fe/LamAW5s4MEW/ig9zW9vzYGOUVtWdErGJ1J62E3Edkamh3xaQ==
@@ -396,7 +396,7 @@
     fs-extra "^8.0.0"
     lodash "^4.17.4"
 
-"@semantic-release/commit-analyzer@^6.1.0", "@semantic-release/commit-analyzer@^6.3.3":
+"@semantic-release/commit-analyzer@6.3.3", "@semantic-release/commit-analyzer@^6.1.0":
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/@semantic-release/commit-analyzer/-/commit-analyzer-6.3.3.tgz#885f7e46e2f0aef23a23be0904dbf18d6ece45ca"
   integrity sha512-Pyv1ZL2u5AIOY4YbxFCAB5J1PEh5yON8ylbfiPiriDGGW6Uu1U3Y8lysMtWu+FUD5x7tSnyIzhqx0+fxPxqbgw==
@@ -413,7 +413,7 @@
   resolved "https://registry.yarnpkg.com/@semantic-release/error/-/error-2.2.0.tgz#ee9d5a09c9969eade1ec864776aeda5c5cddbbf0"
   integrity sha512-9Tj/qn+y2j+sjCI3Jd+qseGtHjOAeg7dU2/lVcqIQ9TV3QDaDXDYXcoOHU+7o2Hwh8L8ymL4gfuO7KxDs3q2zg==
 
-"@semantic-release/git@^7.0.18":
+"@semantic-release/git@7.0.18":
   version "7.0.18"
   resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-7.0.18.tgz#f37c076bc094762cb343dab49ab893d31de961e8"
   integrity sha512-VwnsGUXpNdvPcsq05BQyLBZxGUlEiJCMKNi8ttLvZZAhjI1mAp9dwypOeyxSJ5eFQ+iGMBLdoKF1LL0pmA/d0A==
@@ -451,7 +451,7 @@
     p-retry "^4.0.0"
     url-join "^4.0.0"
 
-"@semantic-release/gitlab@^4.0.4":
+"@semantic-release/gitlab@4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@semantic-release/gitlab/-/gitlab-4.0.4.tgz#f4a9c7138692a6410a8f6bf7fe7e110ab1b9ef9b"
   integrity sha512-yKPat3UM7QUH7tqPAW1SJvP3blu4KV2GrzhN2+NYm9bRuaCgTztD9O8Hivue+fzm5rIqW7LZ/0IDvHIII12tMg==
@@ -487,7 +487,7 @@
     registry-auth-token "^4.0.0"
     tempy "^0.3.0"
 
-"@semantic-release/release-notes-generator@^7.1.2", "@semantic-release/release-notes-generator@^7.3.5":
+"@semantic-release/release-notes-generator@7.3.5", "@semantic-release/release-notes-generator@^7.1.2":
   version "7.3.5"
   resolved "https://registry.yarnpkg.com/@semantic-release/release-notes-generator/-/release-notes-generator-7.3.5.tgz#ed0941d5b594f18fa1d2667493c03e811f97c0ff"
   integrity sha512-LGjgPBGjjmjap/76O0Md3wc04Y7IlLnzZceLsAkcYRwGQdRPTTFUJKqDQTuieWTs7zfHzQoZqsqPfFxEN+g2+Q==
@@ -513,19 +513,19 @@
   resolved "https://registry.yarnpkg.com/@spartanbio/eslint-config/-/eslint-config-1.0.14.tgz#ced35221cbb6e69ce7dba326e7f53c8705b68fa6"
   integrity sha512-NCz3vuTqxl6jByPXGnxXMcddQY9c6ZUAMY9o1yFdcDbWr+HPmp1zY7fFTsvM6p8Dw/EeaT7MMu+RbvxxllxW2g==
 
-"@spartanbio/stylelint-config-scss@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config-scss/-/stylelint-config-scss-1.0.7.tgz#ac2bca848008f26c718fcf062e283abf5ac3870d"
-  integrity sha512-9dRGoRmzoRgR17sh8iN6QAIAdo3bmv1BYAJzI7EOwC/TwttECcXQPLei6bGwhFMuMXEDkd5ShyMQhAL74pL6nQ==
+"@spartanbio/stylelint-config-scss@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config-scss/-/stylelint-config-scss-1.0.8.tgz#b46d546041737a39bc06ccad55e403883f4c8262"
+  integrity sha512-IfFG2hhm+1lwBJ9Y3ai3WUIMYh4a5LK3BIHC/jDneQRnI8wY5W+ssD25PPTUM5A1khPeoBuKFNGQNXDpVLyJjQ==
   dependencies:
-    "@spartanbio/stylelint-config" "^1.0.4"
+    "@spartanbio/stylelint-config" "^1.0.5"
     stylelint-config-standard-scss "^1.1.0"
     stylelint-scss "^3.10.0"
 
-"@spartanbio/stylelint-config@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config/-/stylelint-config-1.0.4.tgz#35a08ddda283a65ec1acfe2048a9d6159cf9c387"
-  integrity sha512-KttyXRq+gjTBz5FOvPXJmO6DWm6yG9j5zUvS8qDK5hDUr4DmgWMML3PK3e7qG4YytJWJu4bzrNBt5qVJb4wImA==
+"@spartanbio/stylelint-config@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@spartanbio/stylelint-config/-/stylelint-config-1.0.5.tgz#3445cbed4d499f3534907064e2986cf9965d218b"
+  integrity sha512-btsvxHS/gfqLLOjMwd+oBRy+x4EXM5W4yVAEj65JRe0uaMovmuMv+8+G1txnEKCmKb4CXzZKdHfmtCNwdJVJNA==
   dependencies:
     stylelint-config-standard "^19.0.0"
     stylelint-order "^3.0.1"
@@ -8823,7 +8823,7 @@ self-closing-tags@^1.0.1:
   resolved "https://registry.yarnpkg.com/self-closing-tags/-/self-closing-tags-1.0.1.tgz#6c5fa497994bb826b484216916371accee490a5d"
   integrity sha512-7t6hNbYMxM+VHXTgJmxwgZgLGktuXtVVD5AivWzNTdJBM4DBjnDKDzkf2SrNjihaArpeJYNjxkELBu1evI4lQA==
 
-semantic-release@^15.13.31:
+semantic-release@15.13.31:
   version "15.13.31"
   resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.13.31.tgz#75560e61562b5b7aa3e66256fd3454683c6508a6"
   integrity sha512-mrtYkH4p0FvXIRFCsr2r5il/A+Uj7oeeq+dgyojAbr4Tzywv9AlCYHeE3A8U3eE4bMJPiBV4YnQRsk1QS8yDDw==
