@@ -60,7 +60,7 @@
     "rimraf": "3.0.0",
     "semantic-release": "16.0.3",
     "stylelint": "13.0.0",
-    "theo": "8.1.4",
+    "theo": "8.1.5",
     "tinycolor2": "1.4.1"
   }
 }
