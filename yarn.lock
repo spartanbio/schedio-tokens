@@ -495,10 +495,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
-"@spartanbio/eslint-config@1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@spartanbio/eslint-config/-/eslint-config-1.0.14.tgz#ced35221cbb6e69ce7dba326e7f53c8705b68fa6"
-  integrity sha512-NCz3vuTqxl6jByPXGnxXMcddQY9c6ZUAMY9o1yFdcDbWr+HPmp1zY7fFTsvM6p8Dw/EeaT7MMu+RbvxxllxW2g==
+"@spartanbio/eslint-config@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@spartanbio/eslint-config/-/eslint-config-1.1.0.tgz#0092755f7a8d202c80fdbe147ce43d4763dd87a5"
+  integrity sha512-cRFZvtrajOo+r3OrB0pvTTW7v91lNDBnkiMSHpHNbSvK5uh0Jkl0rBH5SpsbiDRk3ZgGJ5cAjgeLhgA9AO7sIA==
 
 "@spartanbio/stylelint-config-scss@1.0.9":
   version "1.0.9"
