@@ -437,10 +437,10 @@
     p-retry "^4.0.0"
     url-join "^4.0.0"
 
-"@semantic-release/gitlab@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@semantic-release/gitlab/-/gitlab-6.0.0.tgz#e81e199f379919981c5e5e4a17737327e88585a9"
-  integrity sha512-tRTBA5OAcIQGmbYbo2rMsreyi0fCBP3WEBF9ZPaxcKwN9pmVsI8HIAVRd52eXlkqt5BAVZrCl0sCypRrhTd1Jg==
+"@semantic-release/gitlab@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@semantic-release/gitlab/-/gitlab-6.0.1.tgz#52dd315aa210aea54a5e0c508e4c1155866fb1c5"
+  integrity sha512-kiOU5c6evgeNXkMkRqxeMhTxfvz7AG9WowGE9ZgliKKqBO935jYrVylXZy7N87W1P0N9V+7JAzhcdwvy1u5T7g==
   dependencies:
     "@semantic-release/error" "^2.2.0"
     aggregate-error "^3.0.0"
