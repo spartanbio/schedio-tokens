@@ -1,9 +1,5 @@
+const { getShade } = require('../utils')
 const groupBy = require('lodash/groupBy')
-
-const getShade = (name) => {
-  const [, , shade] = name.split('-')
-  return shade || 'base'
-}
 
 class ColorMap {
   constructor ({ props }) {

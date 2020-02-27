@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const gulpLoadPlugins = require('gulp-load-plugins')
 const theo = require('theo')
+const transforms = require('./transforms/color')
 
 const $ = gulpLoadPlugins()
 
@@ -14,12 +15,18 @@ const webFormats = [
   { transformType: 'web', formatType: 'raw.json' },
 ]
 
-// Setup and register custom formats
+// Setup and register custom formats/transforms
+Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
+  theo.registerValueTransform(name, predicate, transform)
+})
+theo.registerTransform('flutter', ['color/dartHex8argb'])
 theo.registerFormat('map.scss', require('./formats/map.scss.js'))
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
+theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
 theo.registerFormat('ase.json', require('./formats/ase.json.js'))
 
 const colorFormats = [
+  { transformType: 'flutter', formatType: 'color-swatches.dart' },
   { transformType: 'web', formatType: 'color-map.scss' },
   { transformType: 'web', formatType: 'ase.json' },
 ]
