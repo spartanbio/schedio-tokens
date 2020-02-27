@@ -1,3 +1,10 @@
+# [1.2.0](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.1.1...v1.2.0) (2020-02-27)
+
+
+### Features
+
+* adds flutter color generation ([64edb0b](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/64edb0b8c6b7a97db20edc11d2032054b9abcee2))
+
 ## [1.1.1](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.1.0...v1.1.1) (2019-12-13)
 
 
