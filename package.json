@@ -33,7 +33,7 @@
     "@semantic-release/gitlab": "6.0.3",
     "@semantic-release/release-notes-generator": "9.0.1",
     "@spartanbio/eslint-config": "1.1.0",
-    "@spartanbio/stylelint-config-scss": "1.0.9",
+    "@spartanbio/stylelint-config-scss": "1.0.10",
     "ase-utils": "0.1.1",
     "browser-sync": "2.26.7",
     "chalk": "3.0.0",
