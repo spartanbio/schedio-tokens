@@ -36,7 +36,7 @@
     "@spartanbio/stylelint-config-scss": "1.0.10",
     "ase-utils": "0.1.1",
     "browser-sync": "2.26.7",
-    "chalk": "3.0.0",
+    "chalk": "4.0.0",
     "eslint": "6.8.0",
     "eslint-config-standard": "14.1.1",
     "eslint-plugin-import": "2.20.2",
