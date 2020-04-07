@@ -450,16 +450,16 @@
     p-retry "^4.0.0"
     url-join "^4.0.0"
 
-"@semantic-release/gitlab@6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@semantic-release/gitlab/-/gitlab-6.0.3.tgz#f8e4298d8f48be25c034a1d95e9607ac16be2474"
-  integrity sha512-ykLwCdc2pQtprYHtRaWjcD0oVrO/ttqwarotub1nl8BoD4Omkcmt8o/QtWVY6YxT7d1simV/3uYVuHARXtJu1A==
+"@semantic-release/gitlab@6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@semantic-release/gitlab/-/gitlab-6.0.4.tgz#5403ed17ca151f950e576cfced3b5a337bf2faf7"
+  integrity sha512-osEXfW8p1G6dhD//5s0DccfjyST/VETSIIndR/WKuDNFU5uv1NKJ/3TJhdXqioqZQe9oo4T9EkKkx+7+Yptzxg==
   dependencies:
     "@semantic-release/error" "^2.2.0"
     aggregate-error "^3.0.0"
     debug "^4.0.0"
     dir-glob "^3.0.0"
-    escape-string-regexp "^2.0.0"
+    escape-string-regexp "^3.0.0"
     form-data "^3.0.0"
     fs-extra "^9.0.0"
     globby "^11.0.0"
@@ -3151,10 +3151,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-escape-string-regexp@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz#a30304e99daa32e23b2fd20f51babd07cffca344"
-  integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
+escape-string-regexp@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-3.0.0.tgz#1dad9cc28aed682be0de197280f79911a5fccd61"
+  integrity sha512-11dXIUC3umvzEViLP117d0KN6LJzZxh5+9F4E/7WLAAw7GrHk8NpUR+g9iJi/pe9C0py4F8rs0hreyRCwlAuZg==
 
 eslint-config-standard@14.1.1:
   version "14.1.1"
