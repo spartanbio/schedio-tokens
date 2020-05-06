@@ -1,3 +1,10 @@
+# [2.0.0-alpha.3](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.2...v2.0.0-alpha.3) (2020-05-06)
+
+
+### Bug Fixes
+
+* **flutter:** updates whitespace ([9d27afa](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/9d27afae03e1586204c77c4ec0253c887d07b0c4))
+
 # [2.0.0-alpha.2](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2020-05-06)
 
 
