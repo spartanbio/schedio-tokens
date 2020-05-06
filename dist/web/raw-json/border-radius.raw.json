@@ -4,15 +4,15 @@
     "border-radius-small": {
       "type": "border-radius",
       "category": "border-radius",
-      "value": "0.25em",
-      "originalValue": "0.25em",
+      "value": "0.25rem",
+      "originalValue": "0.25rem",
       "name": "border-radius-small"
     },
     "border-radius-base": {
       "type": "border-radius",
       "category": "border-radius",
-      "value": "0.5em",
-      "originalValue": "0.5em",
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
       "name": "border-radius-base"
     },
     "border-radius-circle": {

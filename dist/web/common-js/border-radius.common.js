@@ -1,5 +1,5 @@
 module.exports = {
-  borderRadiusSmall: '0.25em',
-  borderRadiusBase: '0.5em',
+  borderRadiusSmall: '0.25rem',
+  borderRadiusBase: '0.5rem',
   borderRadiusCircle: '50%',
 }

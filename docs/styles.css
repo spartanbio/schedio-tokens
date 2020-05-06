@@ -27,20 +27,20 @@ body {
 }
 
 .banner {
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 
 .container {
   margin: 0 auto;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   max-width: 80rem;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
 }
 
 .container--card {
   background-color: white;
-  border-radius: 0.5em;
-  box-shadow: 0 0.5em 1em rgba(33, 43, 54, 0.15);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(33, 43, 54, 0.15);
 }
 
 h1 {
@@ -50,7 +50,7 @@ h1 {
 
 table {
   border-collapse: separate;
-  border-spacing: 1em;
+  border-spacing: 1rem;
   table-layout: fixed;
   width: 100%;
 }
@@ -70,7 +70,7 @@ th {
 thead th {
   border-bottom: 1px solid #e7ebee;
   font-weight: 600;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 }
 
 thead th:first-child {
@@ -86,7 +86,7 @@ hr {
   border-top: 1px solid #e7ebee;
   display: block;
   height: 1px;
-  margin: 2em 0;
+  margin: 2rem 0;
   padding: 0;
 }
 
@@ -102,17 +102,17 @@ hr:last-child {
 }
 
 .radius-box {
-  height: 3em;
+  height: 3rem;
   width: 100%;
 }
 
 .radius-box.borderRadiusCircle {
-  width: 3em;
+  width: 3rem;
 }
 
 .line-height-example {
   background-image: -webkit-linear-gradient(#e7ebee 1px, transparent 1px);
   background-image: linear-gradient(#e7ebee 1px, transparent 1px);
-  background-size: 100% 1em;
+  background-size: 100% 1rem;
   border-bottom: 1px solid #e7ebee;
 }

@@ -4,15 +4,15 @@
     "border-radius-small": {
       "type": "border-radius",
       "category": "border-radius",
-      "value": "0.25em",
-      "originalValue": "0.25em",
+      "value": "0.25rem",
+      "originalValue": "0.25rem",
       "name": "border-radius-small"
     },
     "border-radius-base": {
       "type": "border-radius",
       "category": "border-radius",
-      "value": "0.5em",
-      "originalValue": "0.5em",
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
       "name": "border-radius-base"
     },
     "border-radius-circle": {
@@ -564,15 +564,15 @@
     "line-height-base": {
       "type": "number",
       "category": "line-height",
-      "value": "1.5",
-      "originalValue": "1.5",
+      "value": 1.5,
+      "originalValue": 1.5,
       "name": "line-height-base"
     },
     "line-height-large-text": {
       "type": "number",
       "category": "line-height",
-      "value": "1.25",
-      "originalValue": "1.25",
+      "value": 1.25,
+      "originalValue": 1.25,
       "name": "line-height-large-text"
     },
     "shadow-border": {
@@ -587,24 +587,24 @@
       "type": "box-shadow",
       "category": "box-shadow",
       "comment": "Shadow values are intended to be used with colors added to them",
-      "value": "0 0.25em 1em",
-      "originalValue": "0 0.25em 1em",
+      "value": "0 0.25rem 1rem",
+      "originalValue": "0 0.25rem 1rem",
       "name": "shadow-light"
     },
     "shadow-base": {
       "type": "box-shadow",
       "category": "box-shadow",
       "comment": "Shadow values are intended to be used with colors added to them",
-      "value": "0 0.25em 1em",
-      "originalValue": "0 0.25em 1em",
+      "value": "0 0.25rem 1rem",
+      "originalValue": "0 0.25rem 1rem",
       "name": "shadow-base"
     },
     "shadow-heavy": {
       "type": "box-shadow",
       "category": "box-shadow",
       "comment": "Shadow values are intended to be used with colors added to them",
-      "value": "0 0.5em 1.5em 0.25em",
-      "originalValue": "0 0.5em 1.5em 0.25em",
+      "value": "0 0.5rem 1.5rem 0.25rem",
+      "originalValue": "0 0.5rem 1.5rem 0.25rem",
       "name": "shadow-heavy"
     },
     "spacing-none": {
@@ -617,57 +617,57 @@
     "spacing-quarter": {
       "type": "number",
       "category": "spacing",
-      "value": "0.25em",
-      "originalValue": "0.25em",
+      "value": "0.25rem",
+      "originalValue": "0.25rem",
       "name": "spacing-quarter"
     },
     "spacing-triple": {
       "type": "number",
       "category": "spacing",
-      "value": "3em",
-      "originalValue": "3em",
+      "value": "3rem",
+      "originalValue": "3rem",
       "name": "spacing-triple"
     },
     "spacing-4x": {
       "type": "number",
       "category": "spacing",
-      "value": "4em",
-      "originalValue": "4em",
+      "value": "4rem",
+      "originalValue": "4rem",
       "name": "spacing-4x"
     },
     "spacing-loose": {
       "type": "number",
       "category": "spacing",
-      "value": "1.5em",
-      "originalValue": "1.5em",
+      "value": "1.5rem",
+      "originalValue": "1.5rem",
       "name": "spacing-loose"
     },
     "spacing-tight": {
       "type": "number",
       "category": "spacing",
-      "value": "0.75em",
-      "originalValue": "0.75em",
+      "value": "0.75rem",
+      "originalValue": "0.75rem",
       "name": "spacing-tight"
     },
     "spacing-double": {
       "type": "number",
       "category": "spacing",
-      "value": "2em",
-      "originalValue": "2em",
+      "value": "2rem",
+      "originalValue": "2rem",
       "name": "spacing-double"
     },
     "spacing-base": {
       "type": "number",
       "category": "spacing",
-      "value": "1em",
-      "originalValue": "1em",
+      "value": "1rem",
+      "originalValue": "1rem",
       "name": "spacing-base"
     },
     "spacing-half": {
       "type": "number",
       "category": "spacing",
-      "value": "0.5em",
-      "originalValue": "0.5em",
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
       "name": "spacing-half"
     }
   }

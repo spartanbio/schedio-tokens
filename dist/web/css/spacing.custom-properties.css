@@ -1,12 +1,12 @@
 
 :root {
   --spacing-none: 0;
-  --spacing-quarter: 0.25em;
-  --spacing-triple: 3em;
-  --spacing-4x: 4em;
-  --spacing-loose: 1.5em;
-  --spacing-tight: 0.75em;
-  --spacing-double: 2em;
-  --spacing-base: 1em;
-  --spacing-half: 0.5em;
+  --spacing-quarter: 0.25rem;
+  --spacing-triple: 3rem;
+  --spacing-4x: 4rem;
+  --spacing-loose: 1.5rem;
+  --spacing-tight: 0.75rem;
+  --spacing-double: 2rem;
+  --spacing-base: 1rem;
+  --spacing-half: 0.5rem;
 }
