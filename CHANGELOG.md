@@ -1,3 +1,11 @@
+# [2.0.0-alpha.2](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2020-05-06)
+
+
+### Features
+
+* **colors:** adds js color map ([cef184f](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/cef184f203ed208079ea97d757001f703b171bcc))
+* **react-native:** adds react native `rem` conversion ([b78fd97](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/b78fd97f929cf8b89683002594f3467aceb78829))
+
 # [2.0.0-alpha.1](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.2.0...v2.0.0-alpha.1) (2020-05-06)
 
 
