@@ -1,3 +1,17 @@
+# [2.0.0-alpha.1](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.2.0...v2.0.0-alpha.1) (2020-05-06)
+
+
+### Features
+
+* organizes dist by platform and language ([4761d46](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/4761d46ad834fda7795eb7a163f46f11ffc2a7e1))
+* uses `rem` ([8e34713](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/8e34713ce06b093a0be7a64576e23f49395e09f8))
+
+
+### BREAKING CHANGES
+
+* new units
+* restructured
+
 # [1.2.0](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.1.1...v1.2.0) (2020-02-27)
 
 
