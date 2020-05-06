@@ -1,6 +1,6 @@
 # Schédio design tokens
 
-Built for with [Theo](https://github.com/salesforce-ux/theo) for [@spartanbio/schedio](https://gitlab.com/spartanbio-ux/schedio).
+Built with [Theo](https://github.com/salesforce-ux/theo) for [@spartanbio/schedio](https://gitlab.com/spartanbio-ux/schedio).
 
 A full list of tokens is available at https://spartanbio-ux.gitlab.io/schedio-tokens/.
 
@@ -10,6 +10,7 @@ A full list of tokens is available at https://spartanbio-ux.gitlab.io/schedio-to
     - [JS](#js)
     - [SCSS](#scss)
     - [Flutter](#flutter)
+    - [React Native](#react-native)
     - [Adobe Creative Cloud Applications](#adobe-creative-cloud-applications)
 
 ## Installation
@@ -18,18 +19,9 @@ A full list of tokens is available at https://spartanbio-ux.gitlab.io/schedio-to
 yarn add @spartanbio/schedio-tokens
 ```
 
-Tokens are organized with the path structure `dist/<platform>/<language>/<token>.<format>.<ext>`
-
 ## Usage
 
-These formats can be applied to every type of token, not just the master list.
-
-i.e.:
-
-```js
-// Importing raw colors from JSON
-import { props as colors } from '@spartanbio/schedio-tokens/dist/web/raw-json/colors.raw.json'
-```
+Tokens are organized with the path structure `dist/<platform>/<language>/<token>.<format>.<ext>`
 
 ### JS
 
@@ -48,11 +40,13 @@ const {
 
 ES6 Modules:
 
-```js
+````js
 // camelCase tokens
 import * as schedioTokens from '@spartanbio/scedio-tokens'
 // kebab-case tokens with meta data
 import { props as schedioTokens } from '@spartanbio/schedio-tokens/dist/web/raw-json/tokens.raw.json'
+// Importing raw colors from JSON
+import { props as colors } from '@spartanbio/schedio-tokens/dist/web/raw-json/colors.raw.json'
 ```
 
 ### SCSS
@@ -74,11 +68,25 @@ All variables and keys are kebab-case.
 
 // Colors, grouped by hue
 @import '~@spartanbio/schedio/dist/web/scss/colors.color-map';
-```
+````
 
 ### Flutter
 
 Only color swatches are supported at this time. Copy `dist/flutter/dart/colors.color-swatches.dart` into your project.
+
+### React Native
+
+All tokens except duration, easing, shadows, line height, work and are available as JSON in `dist/react-native/json`.
+
+Color objects are available as well. Note that these objects are in `PascalCase`.
+
+```js
+// common js
+const colors = require('@spartanbio/schedio-tokens/dist/react-native/common-js/colors.colors-map.common')
+
+// es modules
+import * as colors from '@spartanbio/schedio-tokens/dist/react-native/module-js/colors.colors-map.module')
+```
 
 ### Adobe Creative Cloud Applications
 

@@ -24,6 +24,8 @@ theo.registerTransform('react-native', [
 // Formats
 theo.registerFormat('map.scss', require('./formats/map.scss.js'))
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
+theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'))
+theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'))
 theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
 theo.registerFormat('ase.json', require('./formats/ase.json.js'))
 
@@ -43,9 +45,12 @@ const mobileFormats = [
 
 // Setup token-specific formats
 const colorFormats = [
-  { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
   { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
+  { transformType: 'web', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
+  { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
+  { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
+  { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
 ]
 
 // Build design system artifacts
