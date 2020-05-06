@@ -1,7 +1,10 @@
 const gulp = require('gulp')
 const gulpLoadPlugins = require('gulp-load-plugins')
 const theo = require('theo')
-const transforms = require('./transforms/color')
+const transforms = {
+  ...require('./transforms/color'),
+  ...require('./transforms/unit'),
+}
 
 const $ = gulpLoadPlugins()
 
@@ -12,6 +15,11 @@ Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
 
 // Transforms
 theo.registerTransform('flutter', ['color/dartHex8argb'])
+theo.registerTransform('react-native', [
+  'color/rgb',
+  'unit/rnRelativePixelValue',
+  'unit/rnAbsolutePixelValue',
+])
 
 // Formats
 theo.registerFormat('map.scss', require('./formats/map.scss.js'))
@@ -29,6 +37,10 @@ const webFormats = [
   { transformType: 'web', formatType: 'raw.json', language: 'raw-json' },
 ]
 
+const mobileFormats = [
+  { transformType: 'react-native', formatType: 'json', language: 'json' },
+]
+
 // Setup token-specific formats
 const colorFormats = [
   { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
@@ -38,6 +50,7 @@ const colorFormats = [
 
 // Build design system artifacts
 gulp.task('web-formats', buildFormats(webFormats))
+gulp.task('mobile-formats', buildFormats(mobileFormats))
 gulp.task('color-formats', buildFormats(colorFormats, 'tokens/colors.yml'))
 
 // Build docs and styles
@@ -67,6 +80,7 @@ gulp.task(
 // Setup batched tasks
 const defaultTasks = [
   'web-formats',
+  'mobile-formats',
   'color-formats',
 ]
 
