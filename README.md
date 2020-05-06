@@ -40,7 +40,7 @@ const {
 
 ES6 Modules:
 
-````js
+```js
 // camelCase tokens
 import * as schedioTokens from '@spartanbio/scedio-tokens'
 // kebab-case tokens with meta data
@@ -68,7 +68,7 @@ All variables and keys are kebab-case.
 
 // Colors, grouped by hue
 @import '~@spartanbio/schedio/dist/web/scss/colors.color-map';
-````
+```
 
 ### Flutter
 
