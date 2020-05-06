@@ -5,30 +5,35 @@ const transforms = require('./transforms/color')
 
 const $ = gulpLoadPlugins()
 
-// Setup default `theo` formats
-const webFormats = [
-  { transformType: 'web', formatType: 'scss' },
-  { transformType: 'web', formatType: 'common.js' },
-  { transformType: 'web', formatType: 'json' },
-  { transformType: 'web', formatType: 'custom-properties.css' },
-  { transformType: 'web', formatType: 'map.scss' },
-  { transformType: 'web', formatType: 'raw.json' },
-]
-
 // Setup and register custom formats/transforms
 Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
   theo.registerValueTransform(name, predicate, transform)
 })
+
+// Transforms
 theo.registerTransform('flutter', ['color/dartHex8argb'])
+
+// Formats
 theo.registerFormat('map.scss', require('./formats/map.scss.js'))
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
 theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
 theo.registerFormat('ase.json', require('./formats/ase.json.js'))
 
+// Setup default `theo` formats
+const webFormats = [
+  { transformType: 'web', formatType: 'scss', language: 'scss' },
+  { transformType: 'web', formatType: 'common.js', language: 'common-js' },
+  { transformType: 'web', formatType: 'json', language: 'json' },
+  { transformType: 'web', formatType: 'custom-properties.css', language: 'css' },
+  { transformType: 'web', formatType: 'map.scss', language: 'scss' },
+  { transformType: 'web', formatType: 'raw.json', language: 'raw-json' },
+]
+
+// Setup token-specific formats
 const colorFormats = [
-  { transformType: 'flutter', formatType: 'color-swatches.dart' },
-  { transformType: 'web', formatType: 'color-map.scss' },
-  { transformType: 'web', formatType: 'ase.json' },
+  { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
+  { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
+  { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
 ]
 
 // Build design system artifacts
@@ -84,7 +89,11 @@ gulp.task(
 // Helpers for building design system
 function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) {
   return (done) => {
-    formats.forEach(({ transformType, formatType }) => {
+    formats.forEach(({ transformType, formatType, language }) => {
+      let destPath = `dist/${transformType}`
+
+      if (language) destPath += `/${language}`
+
       gulp
         .src(glob)
         .pipe(
@@ -94,7 +103,7 @@ function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) 
           }),
         )
         .on('error', errorHandler)
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(destPath))
     })
 
     done()
