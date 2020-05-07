@@ -4,6 +4,7 @@ const theo = require('theo')
 const transforms = {
   ...require('./transforms/color'),
   ...require('./transforms/unit'),
+  ...require('./transforms/easing'),
 }
 
 const $ = gulpLoadPlugins()
@@ -17,6 +18,7 @@ Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
 const jsTransforms = [
   'color/rgb',
   'unit/timingUnitless',
+  'easing/array',
 ]
 theo.registerTransform('js', jsTransforms)
 theo.registerTransform('flutter', ['color/dartHex8argb'])
