@@ -76,7 +76,7 @@ Only color swatches are supported at this time. Copy `dist/flutter/dart/color.co
 
 ### React Native
 
-All tokens except duration, easing, shadows, line height, work and are available as JSON in `dist/react-native/json`.
+All tokens except are available in `dist/react-native/`.
 
 Color objects are available as well. Note that these objects are in `PascalCase`.
 
