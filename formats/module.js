@@ -9,7 +9,7 @@ const generateExports = ({ props, meta }) => {
 
     if (comment) result.push(`/* ${comment} */`)
 
-    result.push(`export const ${tokenKey} = ${JSON.stringify(value)};`)
+    result.push(`export const ${tokenKey} = ${JSON.stringify(value, null, 2)};`)
 
     return result.join('\n')
   })

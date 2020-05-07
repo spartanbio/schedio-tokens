@@ -56,12 +56,42 @@ export const durationBase = 200
 export const durationSlow = 300
 export const durationSlower = 400
 export const durationSlowest = 500
-export const easingBase = [0.64, 0, 0.35, 1]
-export const easingEaseIn = [0.36, 0, 1, 1]
-export const easingEaseOut = [0, 0, 0.42, 1]
-export const easingExcite = [0.18, 0.67, 0.6, 1.22]
-export const easingOvershoot = [0.07, 0.28, 0.32, 1.22]
-export const easingAnticipate = [0.38, -0.4, 0.88, 0.65]
+export const easingBase = [
+  0.64,
+  0,
+  0.35,
+  1,
+]
+export const easingEaseIn = [
+  0.36,
+  0,
+  1,
+  1,
+]
+export const easingEaseOut = [
+  0,
+  0,
+  0.42,
+  1,
+]
+export const easingExcite = [
+  0.18,
+  0.67,
+  0.6,
+  1.22,
+]
+export const easingOvershoot = [
+  0.07,
+  0.28,
+  0.32,
+  1.22,
+]
+export const easingAnticipate = [
+  0.38,
+  -0.4,
+  0.88,
+  0.65,
+]
 export const fontFamilySansSerif = "'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
 export const fontFamilyMonospaced = "'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace"
 export const fontSizeBase = 16
@@ -79,13 +109,37 @@ export const fontWeightRegular = 400
 export const lineHeightBase = '150%'
 export const lineHeightLargeText = '125%'
 /* Shadow values are intended to be used with colors added to them */
-export const shadowBorder = { shadowOffset: { width: 0, height: 0 }, shadowRadius: 1 }
+export const shadowBorder = {
+  shadowOffset: {
+    width: 0,
+    height: 0,
+  },
+  shadowRadius: 1,
+}
 /* Shadow values are intended to be used with colors added to them */
-export const shadowLight = { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 }
+export const shadowLight = {
+  shadowOffset: {
+    width: 0,
+    height: 4,
+  },
+  shadowRadius: 16,
+}
 /* Shadow values are intended to be used with colors added to them */
-export const shadowBase = { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 }
+export const shadowBase = {
+  shadowOffset: {
+    width: 0,
+    height: 4,
+  },
+  shadowRadius: 16,
+}
 /* Shadow values are intended to be used with colors added to them */
-export const shadowHeavy = { shadowOffset: { width: 0, height: 8 }, shadowRadius: 24 }
+export const shadowHeavy = {
+  shadowOffset: {
+    width: 0,
+    height: 8,
+  },
+  shadowRadius: 24,
+}
 export const spacingNone = 0
 export const spacingQuarter = 4
 export const spacingTriple = 48

@@ -56,12 +56,42 @@ module.exports = {
   durationSlow: 300,
   durationSlower: 400,
   durationSlowest: 500,
-  easingBase: [0.64, 0, 0.35, 1],
-  easingEaseIn: [0.36, 0, 1, 1],
-  easingEaseOut: [0, 0, 0.42, 1],
-  easingExcite: [0.18, 0.67, 0.6, 1.22],
-  easingOvershoot: [0.07, 0.28, 0.32, 1.22],
-  easingAnticipate: [0.38, -0.4, 0.88, 0.65],
+  easingBase: [
+    0.64,
+    0,
+    0.35,
+    1,
+  ],
+  easingEaseIn: [
+    0.36,
+    0,
+    1,
+    1,
+  ],
+  easingEaseOut: [
+    0,
+    0,
+    0.42,
+    1,
+  ],
+  easingExcite: [
+    0.18,
+    0.67,
+    0.6,
+    1.22,
+  ],
+  easingOvershoot: [
+    0.07,
+    0.28,
+    0.32,
+    1.22,
+  ],
+  easingAnticipate: [
+    0.38,
+    -0.4,
+    0.88,
+    0.65,
+  ],
   fontFamilySansSerif: "'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   fontFamilyMonospaced: "'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace",
   fontSizeBase: 16,
@@ -79,13 +109,37 @@ module.exports = {
   lineHeightBase: '150%',
   lineHeightLargeText: '125%',
   /* Shadow values are intended to be used with colors added to them */
-  shadowBorder: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 1 },
+  shadowBorder: {
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowRadius: 1,
+  },
   /* Shadow values are intended to be used with colors added to them */
-  shadowLight: { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 },
+  shadowLight: {
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowRadius: 16,
+  },
   /* Shadow values are intended to be used with colors added to them */
-  shadowBase: { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 },
+  shadowBase: {
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowRadius: 16,
+  },
   /* Shadow values are intended to be used with colors added to them */
-  shadowHeavy: { shadowOffset: { width: 0, height: 8 }, shadowRadius: 24 },
+  shadowHeavy: {
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowRadius: 24,
+  },
   spacingNone: 0,
   spacingQuarter: 4,
   spacingTriple: 48,
