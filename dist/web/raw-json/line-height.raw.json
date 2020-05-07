@@ -4,15 +4,15 @@
     "line-height-base": {
       "type": "number",
       "category": "line-height",
-      "value": 1.5,
-      "originalValue": 1.5,
+      "value": "150%",
+      "originalValue": "150%",
       "name": "line-height-base"
     },
     "line-height-large-text": {
       "type": "number",
       "category": "line-height",
-      "value": 1.25,
-      "originalValue": 1.25,
+      "value": "125%",
+      "originalValue": "125%",
       "name": "line-height-large-text"
     }
   }

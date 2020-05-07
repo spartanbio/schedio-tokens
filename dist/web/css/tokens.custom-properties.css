@@ -74,8 +74,8 @@
   --font-weight-demi: 600;
   --font-weight-light: 300;
   --font-weight-regular: 400;
-  --line-height-base: 1.5;
-  --line-height-large-text: 1.25;
+  --line-height-base: 150%;
+  --line-height-large-text: 125%;
 
   /* Shadow values are intended to be used with colors added to them */
   --shadow-border: 0 0 1px;

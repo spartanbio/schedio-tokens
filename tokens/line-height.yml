@@ -1,8 +1,8 @@
 props:
   line-height-base:
-    value: 1.5
+    value: 150%
   line-height-large-text:
-    value: 1.25
+    value: 125%
 global:
   type: number
   category: line-height

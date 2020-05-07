@@ -73,8 +73,8 @@ module.exports = {
   fontWeightDemi: 600,
   fontWeightLight: 300,
   fontWeightRegular: 400,
-  lineHeightBase: 1.5,
-  lineHeightLargeText: 1.25,
+  lineHeightBase: '150%',
+  lineHeightLargeText: '125%',
   /* Shadow values are intended to be used with colors added to them */
   shadowBorder: '0 0 1px',
   /* Shadow values are intended to be used with colors added to them */
