@@ -1,3 +1,10 @@
+# [2.0.0-alpha.4](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.3...v2.0.0-alpha.4) (2020-05-07)
+
+
+### Bug Fixes
+
+* **react-native:** uses % for `line-height` ([5989dbe](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/5989dbe6dc9ac3a182c30bf61cbda139e709f343))
+
 # [2.0.0-alpha.3](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.2...v2.0.0-alpha.3) (2020-05-06)
 
 
