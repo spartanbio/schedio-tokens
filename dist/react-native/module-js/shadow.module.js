@@ -3,10 +3,10 @@
  */
 
 /* Shadow values are intended to be used with colors added to them */
-export const border = '0 0 1'
+export const border = null
 /* Shadow values are intended to be used with colors added to them */
-export const light = '0'
+export const light = 0
 /* Shadow values are intended to be used with colors added to them */
-export const base = '0'
+export const base = 0
 /* Shadow values are intended to be used with colors added to them */
-export const heavy = '0'
+export const heavy = 0

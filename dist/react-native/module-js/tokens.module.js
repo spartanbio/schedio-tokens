@@ -2,12 +2,12 @@
  * All tokens
  */
 
-export const borderRadiusSmall = '4'
-export const borderRadiusBase = '8'
+export const borderRadiusSmall = 4
+export const borderRadiusBase = 8
 export const borderRadiusCircle = '50%'
-export const borderWidthBase = '1'
-export const borderWidthThick = '2'
-export const borderWidthThickest = '4'
+export const borderWidthBase = 1
+export const borderWidthThick = 2
+export const borderWidthThickest = 4
 export const colorTurquoiseLight = 'rgb(71, 202, 245)'
 export const colorGoldLighter = 'rgb(254, 226, 170)'
 export const colorIce = 'rgb(242, 245, 247)'
@@ -64,14 +64,14 @@ export const easingOvershoot = 'cubic-bezier(0.07, 0.28, 0.32, 1.22)'
 export const easingAnticipate = 'cubic-bezier(0.38, -0.4, 0.88, 0.65)'
 export const fontFamilySansSerif = "'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
 export const fontFamilyMonospaced = "'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace"
-export const fontSizeBase = '16'
-export const fontSize1 = '80'
-export const fontSize2 = '54'
-export const fontSize3 = '36'
-export const fontSize4 = '24'
-export const fontSize5 = '16'
-export const fontSize6 = '12'
-export const fontSize7 = '8'
+export const fontSizeBase = 16
+export const fontSize1 = 80
+export const fontSize2 = 54
+export const fontSize3 = 36
+export const fontSize4 = 24
+export const fontSize5 = 16
+export const fontSize6 = 12
+export const fontSize7 = 8
 export const fontWeightBold = 700
 export const fontWeightDemi = 600
 export const fontWeightLight = 300
@@ -79,19 +79,19 @@ export const fontWeightRegular = 400
 export const lineHeightBase = '150%'
 export const lineHeightLargeText = '125%'
 /* Shadow values are intended to be used with colors added to them */
-export const shadowBorder = '0 0 1'
+export const shadowBorder = null
 /* Shadow values are intended to be used with colors added to them */
-export const shadowLight = '0'
+export const shadowLight = 0
 /* Shadow values are intended to be used with colors added to them */
-export const shadowBase = '0'
+export const shadowBase = 0
 /* Shadow values are intended to be used with colors added to them */
-export const shadowHeavy = '0'
+export const shadowHeavy = 0
 export const spacingNone = 0
-export const spacingQuarter = '4'
-export const spacingTriple = '48'
-export const spacingLoose = '24'
-export const spacingTight = '12'
-export const spacingQuadruple = '64'
-export const spacingDouble = '32'
-export const spacingBase = '16'
-export const spacingHalf = '8'
+export const spacingQuarter = 4
+export const spacingTriple = 48
+export const spacingLoose = 24
+export const spacingTight = 12
+export const spacingQuadruple = 64
+export const spacingDouble = 32
+export const spacingBase = 16
+export const spacingHalf = 8
