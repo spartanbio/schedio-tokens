@@ -44,6 +44,7 @@ const webFormats = [
   { transformType: 'web', formatType: 'map.scss', language: 'scss' },
   { transformType: 'web', formatType: 'raw.json', language: 'raw-json' },
   { transformType: 'js', formatType: 'common.js', language: 'common-js' },
+  { transformType: 'js', formatType: 'module.js', language: 'module-js' },
 ]
 
 const mobileFormats = [
