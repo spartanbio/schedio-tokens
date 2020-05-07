@@ -25,7 +25,7 @@ Tokens are organized with the path structure `dist/<platform>/<language>/<token>
 
 ### JS
 
-Examples use JSON, but Common JS modules are available in `dist/web/common-js`.
+Examples use JSON, but JS modules are available in `dist/js/`.
 
 Common JS:
 
