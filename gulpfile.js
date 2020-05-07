@@ -56,7 +56,7 @@ const mobileFormats = [
 const colorFormats = [
   { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
   { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
-  { transformType: 'web/js', formatType: 'color-map.common.js', language: 'common-js' },
+  { transformType: 'js', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
   { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
