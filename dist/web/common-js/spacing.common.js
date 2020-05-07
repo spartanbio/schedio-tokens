@@ -1,11 +1,14 @@
+/**
+ * spacing tokens
+ */
 module.exports = {
-  spacingNone: 0,
-  spacingQuarter: '0.25rem',
-  spacingTriple: '3rem',
-  spacingLoose: '1.5rem',
-  spacingTight: '0.75rem',
-  spacingQuadruple: '4rem',
-  spacingDouble: '2rem',
-  spacingBase: '1rem',
-  spacingHalf: '0.5rem',
+  none: 0,
+  quarter: '0.25rem',
+  triple: '3rem',
+  loose: '1.5rem',
+  tight: '0.75rem',
+  quadruple: '4rem',
+  double: '2rem',
+  base: '1rem',
+  half: '0.5rem',
 }

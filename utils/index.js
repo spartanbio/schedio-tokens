@@ -1,3 +1,4 @@
+const path = require('path')
 const _ = require('lodash')
 
 const getShade = (name) => {
@@ -20,3 +21,14 @@ const generateColorMap = ({ props }) => {
   return colors
 }
 exports.generateColorMap = generateColorMap
+
+const getTokenName = ({ file }) => path.basename(file, '.yml')
+exports.getTokenName = getTokenName
+
+const generateTokenKey = (category, name) => {
+  let tokenKey = name.replace(`${category}-`, '')
+  if (!isNaN(tokenKey)) tokenKey = category.split('-')[1] + '-' + tokenKey
+
+  return _.camelCase(tokenKey)
+}
+exports.generateTokenKey = generateTokenKey

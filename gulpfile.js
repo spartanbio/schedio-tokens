@@ -24,6 +24,8 @@ theo.registerTransform('react-native', [
 // Formats
 theo.registerFormat('map.scss', require('./formats/map.scss.js'))
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
+theo.registerFormat('common.js', require('./formats/common.js'))
+theo.registerFormat('module.js', require('./formats/module.js'))
 theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'))
 theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'))
 theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
@@ -41,6 +43,8 @@ const webFormats = [
 
 const mobileFormats = [
   { transformType: 'react-native', formatType: 'json', language: 'json' },
+  { transformType: 'react-native', formatType: 'common.js', language: 'common-js' },
+  { transformType: 'react-native', formatType: 'module.js', language: 'module-js' },
 ]
 
 // Setup token-specific formats

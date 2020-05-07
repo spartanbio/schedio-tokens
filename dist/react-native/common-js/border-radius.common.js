@@ -2,7 +2,7 @@
  * border-radius tokens
  */
 module.exports = {
-  small: '0.25rem',
-  base: '0.5rem',
+  small: '4',
+  base: '8',
   circle: '50%',
 }
