@@ -1,3 +1,26 @@
+# [2.0.0-alpha.5](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-05-07)
+
+
+### Bug Fixes
+
+* **color:** uses correct transform name ([e86dbac](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/e86dbac6b2f7784ca4694da2b41a4ab0e4cd9b34))
+* **react-native:** ensure tokens that should be numbers are ([ede8217](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/ede8217c39d6f6a27b43cd0acddaac568e987e9a))
+
+
+### Features
+
+* **easing:** converts easing to array for js ([6bcc5cb](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/6bcc5cb13bd7a4532849575cd10b9071054e7c01))
+* **shadow:** adds react-native shadow object ([8dcd6b9](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/8dcd6b965cdf02aa1b66da504f4bbb6f79c67952))
+* **web:** adds es modules ([700e4ff](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/700e4ff4d9118609683a5a9c1eb9e95a24119b84))
+
+
+* feat(duration)!: adds unitless duration for js ([d645771](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/d645771d45c0bbfa58b77f06bd22356f53f1d30a))
+
+
+### BREAKING CHANGES
+
+* web JS files moved to `dist/web/js/common-js/`
+
 # [2.0.0-alpha.4](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.3...v2.0.0-alpha.4) (2020-05-07)
 
 
