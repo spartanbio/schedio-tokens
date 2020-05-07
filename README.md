@@ -46,7 +46,7 @@ import * as schedioTokens from '@spartanbio/scedio-tokens'
 // kebab-case tokens with meta data
 import { props as schedioTokens } from '@spartanbio/schedio-tokens/dist/web/raw-json/tokens.raw.json'
 // Importing raw colors from JSON
-import { props as colors } from '@spartanbio/schedio-tokens/dist/web/raw-json/colors.raw.json'
+import { props as colors } from '@spartanbio/schedio-tokens/dist/web/raw-json/color.raw.json'
 ```
 
 ### SCSS
@@ -67,12 +67,12 @@ All variables and keys are kebab-case.
 @import '~@spartanbio/schedio/dist/web/scss/<token-category>.map';
 
 // Colors, grouped by hue
-@import '~@spartanbio/schedio/dist/web/scss/colors.color-map';
+@import '~@spartanbio/schedio/dist/web/scss/color.color-map';
 ```
 
 ### Flutter
 
-Only color swatches are supported at this time. Copy `dist/flutter/dart/colors.color-swatches.dart` into your project.
+Only color swatches are supported at this time. Copy `dist/flutter/dart/color.color-swatches.dart` into your project.
 
 ### React Native
 
@@ -82,12 +82,12 @@ Color objects are available as well. Note that these objects are in `PascalCase`
 
 ```js
 // common js
-const colors = require('@spartanbio/schedio-tokens/dist/react-native/common-js/colors.colors-map.common')
+const colors = require('@spartanbio/schedio-tokens/dist/react-native/common-js/color.colors-map.common')
 
 // es modules
-import * as colors from '@spartanbio/schedio-tokens/dist/react-native/module-js/colors.colors-map.module')
+import * as colors from '@spartanbio/schedio-tokens/dist/react-native/module-js/color.colors-map.module')
 ```
 
 ### Adobe Creative Cloud Applications
 
-CC applications that support swatch files can import `dist/web/adobe/colors.ase` to use colors. Note they are imported without groups.
+CC applications that support swatch files can import `dist/web/adobe/color.ase` to use color. Note they are imported without groups.

@@ -4,7 +4,7 @@ const fs = require('fs-extra')
 const path = require('path')
 
 const dist = path.resolve(__dirname, '../dist/web/adobe/')
-const props = require(path.join(dist, 'colors.ase.json'))
+const props = require(path.join(dist, 'color.ase.json'))
 const propsBuffer = Buffer.from(ase.encode(props), 'utf8')
 
 fs.outputFile(path.join(dist, 'colors.ase'), propsBuffer)

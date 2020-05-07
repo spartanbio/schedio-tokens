@@ -56,7 +56,7 @@ const colorFormats = [
 // Build design system artifacts
 gulp.task('web-formats', buildFormats(webFormats))
 gulp.task('mobile-formats', buildFormats(mobileFormats))
-gulp.task('color-formats', buildFormats(colorFormats, 'tokens/colors.yml'))
+gulp.task('color-formats', buildFormats(colorFormats, 'tokens/color.yml'))
 
 // Build docs and styles
 gulp.task('docs:styles', (done) => {

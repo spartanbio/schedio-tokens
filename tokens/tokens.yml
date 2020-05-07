@@ -1,7 +1,7 @@
 imports:
   - ./border-radius.yml
   - ./border-width.yml
-  - ./colors.yml
+  - ./color.yml
   - ./duration.yml
   - ./easing.yml
   - ./font.yml
