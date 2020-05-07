@@ -26,6 +26,8 @@ theo.registerTransform('react-native', [
   ...jsTransforms,
   'unit/rnRelativePixelValue',
   'unit/rnAbsolutePixelValue',
+  'unit/rnRelativeShadow',
+  'unit/rnAbsoluteShadow',
 ])
 
 // Formats

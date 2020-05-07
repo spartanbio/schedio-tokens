@@ -3,11 +3,11 @@
  */
 module.exports = {
   /* Shadow values are intended to be used with colors added to them */
-  border: null,
+  border: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 1 },
   /* Shadow values are intended to be used with colors added to them */
-  light: 0,
+  light: { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 },
   /* Shadow values are intended to be used with colors added to them */
-  base: 0,
+  base: { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 },
   /* Shadow values are intended to be used with colors added to them */
-  heavy: 0,
+  heavy: { shadowOffset: { width: 0, height: 8 }, shadowRadius: 24 },
 }

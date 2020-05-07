@@ -1,6 +1,30 @@
 {
-  "shadow-border": null,
-  "shadow-light": 0,
-  "shadow-base": 0,
-  "shadow-heavy": 0
+  "shadow-border": {
+    "shadowOffset": {
+      "width": 0,
+      "height": 0
+    },
+    "shadowRadius": 1
+  },
+  "shadow-light": {
+    "shadowOffset": {
+      "width": 0,
+      "height": 4
+    },
+    "shadowRadius": 16
+  },
+  "shadow-base": {
+    "shadowOffset": {
+      "width": 0,
+      "height": 4
+    },
+    "shadowRadius": 16
+  },
+  "shadow-heavy": {
+    "shadowOffset": {
+      "width": 0,
+      "height": 8
+    },
+    "shadowRadius": 24
+  }
 }

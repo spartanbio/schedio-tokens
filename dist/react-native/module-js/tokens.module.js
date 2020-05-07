@@ -79,13 +79,13 @@ export const fontWeightRegular = 400
 export const lineHeightBase = '150%'
 export const lineHeightLargeText = '125%'
 /* Shadow values are intended to be used with colors added to them */
-export const shadowBorder = null
+export const shadowBorder = { shadowOffset: { width: 0, height: 0 }, shadowRadius: 1 }
 /* Shadow values are intended to be used with colors added to them */
-export const shadowLight = 0
+export const shadowLight = { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 }
 /* Shadow values are intended to be used with colors added to them */
-export const shadowBase = 0
+export const shadowBase = { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 }
 /* Shadow values are intended to be used with colors added to them */
-export const shadowHeavy = 0
+export const shadowHeavy = { shadowOffset: { width: 0, height: 8 }, shadowRadius: 24 }
 export const spacingNone = 0
 export const spacingQuarter = 4
 export const spacingTriple = 48

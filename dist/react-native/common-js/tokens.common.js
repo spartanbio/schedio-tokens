@@ -79,13 +79,13 @@ module.exports = {
   lineHeightBase: '150%',
   lineHeightLargeText: '125%',
   /* Shadow values are intended to be used with colors added to them */
-  shadowBorder: null,
+  shadowBorder: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 1 },
   /* Shadow values are intended to be used with colors added to them */
-  shadowLight: 0,
+  shadowLight: { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 },
   /* Shadow values are intended to be used with colors added to them */
-  shadowBase: 0,
+  shadowBase: { shadowOffset: { width: 0, height: 4 }, shadowRadius: 16 },
   /* Shadow values are intended to be used with colors added to them */
-  shadowHeavy: 0,
+  shadowHeavy: { shadowOffset: { width: 0, height: 8 }, shadowRadius: 24 },
   spacingNone: 0,
   spacingQuarter: 4,
   spacingTriple: 48,
