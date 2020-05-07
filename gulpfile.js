@@ -14,9 +14,14 @@ Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
 })
 
 // Transforms
+const jsTransforms = [
+  'color/rgb',
+  'unit/timingUnitless',
+]
+theo.registerTransform('js', jsTransforms)
 theo.registerTransform('flutter', ['color/dartHex8argb'])
 theo.registerTransform('react-native', [
-  'color/rgb',
+  ...jsTransforms,
   'unit/rnRelativePixelValue',
   'unit/rnAbsolutePixelValue',
 ])
@@ -34,11 +39,11 @@ theo.registerFormat('ase.json', require('./formats/ase.json.js'))
 // Setup default `theo` formats
 const webFormats = [
   { transformType: 'web', formatType: 'scss', language: 'scss' },
-  { transformType: 'web', formatType: 'common.js', language: 'common-js' },
   { transformType: 'web', formatType: 'json', language: 'json' },
   { transformType: 'web', formatType: 'custom-properties.css', language: 'css' },
   { transformType: 'web', formatType: 'map.scss', language: 'scss' },
   { transformType: 'web', formatType: 'raw.json', language: 'raw-json' },
+  { transformType: 'js', formatType: 'common.js', language: 'common-js' },
 ]
 
 const mobileFormats = [
@@ -50,8 +55,8 @@ const mobileFormats = [
 // Setup token-specific formats
 const colorFormats = [
   { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
-  { transformType: 'web', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
+  { transformType: 'web/js', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
   { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },

@@ -3,6 +3,7 @@ const {
   isAbsoluteSpacing,
   remToPx,
 } = require('theo/lib/util')
+const ms = require('ms')
 
 // copied from 'theo/lib/util' as it's not exported
 const convertRemToPx = (prop) => {
@@ -18,6 +19,10 @@ const convertRemToPx = (prop) => {
 }
 
 module.exports = {
+  'unit/timingUnitless': {
+    predicate: prop => prop.get('type') === 'time',
+    transform: prop => prop.get('value') === 0 ? 0 : ms(prop.get('value')),
+  },
   // React native units are prefixed with 'unit/rn'
   'unit/rnRelativePixelValue': {
     predicate: prop => isRelativeSpacing(prop.get('value')),
