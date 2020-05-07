@@ -1,9 +1,9 @@
 props:
   easing-base:
     value: cubic-bezier(0.64, 0, 0.35, 1)
-  easing-in:
+  easing-ease-in:
     value: cubic-bezier(0.36, 0, 1, 1)
-  easing-out:
+  easing-ease-out:
     value: cubic-bezier(0, 0, 0.42, 1)
   easing-excite:
     value: cubic-bezier(0.18, 0.67, 0.6, 1.22)

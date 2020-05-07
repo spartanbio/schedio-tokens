@@ -8,19 +8,19 @@
       "originalValue": "cubic-bezier(0.64, 0, 0.35, 1)",
       "name": "easing-base"
     },
-    "easing-in": {
+    "easing-ease-in": {
       "type": "function",
       "category": "easing",
       "value": "cubic-bezier(0.36, 0, 1, 1)",
       "originalValue": "cubic-bezier(0.36, 0, 1, 1)",
-      "name": "easing-in"
+      "name": "easing-ease-in"
     },
-    "easing-out": {
+    "easing-ease-out": {
       "type": "function",
       "category": "easing",
       "value": "cubic-bezier(0, 0, 0.42, 1)",
       "originalValue": "cubic-bezier(0, 0, 0.42, 1)",
-      "name": "easing-out"
+      "name": "easing-ease-out"
     },
     "easing-excite": {
       "type": "function",
