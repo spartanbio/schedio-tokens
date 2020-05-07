@@ -2,9 +2,9 @@
   "spacing-none": 0,
   "spacing-quarter": "4",
   "spacing-triple": "48",
-  "spacing-4x": "64",
   "spacing-loose": "24",
   "spacing-tight": "12",
+  "spacing-quadruple": "64",
   "spacing-double": "32",
   "spacing-base": "16",
   "spacing-half": "8"

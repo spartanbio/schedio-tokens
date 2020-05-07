@@ -22,13 +22,6 @@
       "originalValue": "3rem",
       "name": "spacing-triple"
     },
-    "spacing-4x": {
-      "type": "number",
-      "category": "spacing",
-      "value": "4rem",
-      "originalValue": "4rem",
-      "name": "spacing-4x"
-    },
     "spacing-loose": {
       "type": "number",
       "category": "spacing",
@@ -42,6 +35,13 @@
       "value": "0.75rem",
       "originalValue": "0.75rem",
       "name": "spacing-tight"
+    },
+    "spacing-quadruple": {
+      "type": "number",
+      "category": "spacing",
+      "value": "4rem",
+      "originalValue": "4rem",
+      "name": "spacing-quadruple"
     },
     "spacing-double": {
       "type": "number",

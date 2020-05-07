@@ -15,7 +15,7 @@ props:
     value: 2rem
   spacing-triple:
     value: 3rem
-  spacing-4x:
+  spacing-quadruple:
     value: 4rem
 global:
   type: number
