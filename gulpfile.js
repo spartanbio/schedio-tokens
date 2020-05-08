@@ -38,6 +38,8 @@ theo.registerFormat('common.js', require('./formats/common.js'))
 theo.registerFormat('module.js', require('./formats/module.js'))
 // Custom formats
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
+theo.registerFormat('d.ts', require('./formats/d.ts.js'))
+theo.registerFormat('color-map.d.ts', require('./formats/color-map.d.ts.js'))
 theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'))
 theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'))
 theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
@@ -50,6 +52,7 @@ const webFormats = [
   { transformType: 'web', formatType: 'custom-properties.css', language: 'css' },
   { transformType: 'web', formatType: 'map.scss', language: 'scss' },
   { transformType: 'web', formatType: 'raw.json', language: 'raw-json' },
+  { transformType: 'js', formatType: 'd.ts', language: 'types' },
   { transformType: 'js', formatType: 'common.js', language: 'common-js' },
   { transformType: 'js', formatType: 'module.js', language: 'module-js' },
 ]
@@ -64,11 +67,13 @@ const mobileFormats = [
 const colorFormats = [
   { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
   { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
+  { transformType: 'js', formatType: 'color-map.d.ts', language: 'types' },
   { transformType: 'js', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'js', formatType: 'color-map.module.js', language: 'module-js' },
   { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
   { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
+  { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
 ]
 
 // Build design system artifacts
