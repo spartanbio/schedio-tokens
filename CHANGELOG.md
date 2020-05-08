@@ -1,3 +1,10 @@
+# [2.0.0-alpha.10](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.9...v2.0.0-alpha.10) (2020-05-08)
+
+
+### Features
+
+* adds types for react native ([b96c138](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/b96c138a46fe9904cdb81f7cafbfc188516f07ad))
+
 # [2.0.0-alpha.9](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.8...v2.0.0-alpha.9) (2020-05-08)
 
 
