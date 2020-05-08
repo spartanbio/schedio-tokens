@@ -1,3 +1,11 @@
+# [2.0.0-alpha.6](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2020-05-08)
+
+
+### Features
+
+* removes prefixes from JSON tokens ([b02055a](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/b02055af96a03600d777be46db49757580876194))
+* **color:** adss es module map ([4264889](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/42648894906a946b73d3a7a71eac9cb7a244005e))
+
 # [2.0.0-alpha.5](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-05-07)
 
 
