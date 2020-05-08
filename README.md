@@ -78,7 +78,7 @@ Only color swatches are supported at this time. Copy `dist/flutter/dart/color.co
 
 All tokens except are available in `dist/react-native/`.
 
-Color objects are available as well. Note that these objects are in `PascalCase`.
+Color objects are available as well. Note that these objects are in `camelCase`.
 
 ```js
 // common js
