@@ -25,10 +25,10 @@ exports.generateColorMap = generateColorMap
 const getTokenName = ({ file }) => path.basename(file, '.yml')
 exports.getTokenName = getTokenName
 
-const generateTokenKey = (category, name) => {
+const generateTokenKey = (category, name, renameMethod = _.camelCase) => {
   let tokenKey = name.replace(`${category}-`, '')
   if (!isNaN(tokenKey)) tokenKey = category.split('-')[1] + '-' + tokenKey
 
-  return _.camelCase(tokenKey)
+  return renameMethod(tokenKey)
 }
 exports.generateTokenKey = generateTokenKey

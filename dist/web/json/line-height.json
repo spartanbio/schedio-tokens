@@ -1,4 +1,4 @@
 {
-  "line-height-base": "150%",
-  "line-height-large-text": "125%"
+  "base": "150%",
+  "large-text": "125%"
 }

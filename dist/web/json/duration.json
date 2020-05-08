@@ -1,8 +1,8 @@
 {
-  "duration-none": 0,
-  "duration-fast": "100ms",
-  "duration-base": "200ms",
-  "duration-slow": "300ms",
-  "duration-slower": "400ms",
-  "duration-slowest": "500ms"
+  "none": 0,
+  "fast": "100ms",
+  "base": "200ms",
+  "slow": "300ms",
+  "slower": "400ms",
+  "slowest": "500ms"
 }

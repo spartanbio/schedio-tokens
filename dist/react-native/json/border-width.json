@@ -1,5 +1,5 @@
 {
-  "border-width-base": 1,
-  "border-width-thick": 2,
-  "border-width-thickest": 4
+  "base": 1,
+  "thick": 2,
+  "thickest": 4
 }

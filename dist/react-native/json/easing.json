@@ -1,35 +1,35 @@
 {
-  "easing-base": [
+  "base": [
     0.64,
     0,
     0.35,
     1
   ],
-  "easing-ease-in": [
+  "ease-in": [
     0.36,
     0,
     1,
     1
   ],
-  "easing-ease-out": [
+  "ease-out": [
     0,
     0,
     0.42,
     1
   ],
-  "easing-excite": [
+  "excite": [
     0.18,
     0.67,
     0.6,
     1.22
   ],
-  "easing-overshoot": [
+  "overshoot": [
     0.07,
     0.28,
     0.32,
     1.22
   ],
-  "easing-anticipate": [
+  "anticipate": [
     0.38,
     -0.4,
     0.88,

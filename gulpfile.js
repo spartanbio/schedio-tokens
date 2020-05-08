@@ -31,10 +31,13 @@ theo.registerTransform('react-native', [
 ])
 
 // Formats
+// Overridden formats
+theo.registerFormat('json', require('./formats/json.js'))
 theo.registerFormat('map.scss', require('./formats/map.scss.js'))
-theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
 theo.registerFormat('common.js', require('./formats/common.js'))
 theo.registerFormat('module.js', require('./formats/module.js'))
+// Custom formats
+theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
 theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'))
 theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'))
 theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
