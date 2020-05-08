@@ -39,6 +39,15 @@ export const magenta = {
   base: 'rgb(230, 0, 115)',
 }
 
+/** Color blue */
+export const blue = {
+  base: 'rgb(0, 76, 153)',
+  light: 'rgb(0, 107, 214)',
+  lightest: 'rgb(100, 173, 247)',
+  lighter: 'rgb(37, 138, 239)',
+  dark: 'rgb(0, 36, 71)',
+}
+
 /** Color night */
 export const night = {
   lighter: 'rgb(98, 122, 147)',
@@ -46,15 +55,6 @@ export const night = {
   lightest: 'rgb(151, 168, 186)',
   dark: 'rgb(14, 18, 22)',
   light: 'rgb(64, 84, 104)',
-}
-
-/** Color spartanBlue */
-export const spartanBlue = {
-  lighter: 'rgb(37, 138, 239)',
-  lightest: 'rgb(100, 173, 247)',
-  base: 'rgb(0, 76, 153)',
-  dark: 'rgb(0, 36, 71)',
-  light: 'rgb(0, 107, 214)',
 }
 
 /** Color grey */

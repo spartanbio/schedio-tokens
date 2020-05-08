@@ -68,6 +68,19 @@ class SpartanColors {
   );
   static const int _magentaPrimaryValue = 0xFFE60073;
 
+  /// blue and swatches
+  static const SpartanColor blue = SpartanColor(
+    _bluePrimaryValue,
+    <String, Color>{
+      'base': Color(0xFF004C99),
+      'light': Color(0xFF006BD6),
+      'lightest': Color(0xFF64ADF7),
+      'lighter': Color(0xFF258AEF),
+      'dark': Color(0xFF002447),
+    },
+  );
+  static const int _bluePrimaryValue = 0xFF004C99;
+
   /// night and swatches
   static const SpartanColor night = SpartanColor(
     _nightPrimaryValue,
@@ -80,19 +93,6 @@ class SpartanColors {
     },
   );
   static const int _nightPrimaryValue = 0xFF212B36;
-
-  /// blue and swatches
-  static const SpartanColor blue = SpartanColor(
-    _bluePrimaryValue,
-    <String, Color>{
-      'lighter': Color(0xFF258AEF),
-      'lightest': Color(0xFF64ADF7),
-      'base': Color(0xFF004C99),
-      'dark': Color(0xFF002447),
-      'light': Color(0xFF006BD6),
-    },
-  );
-  static const int _bluePrimaryValue = 0xFF004C99;
 
   /// grey and swatches
   static const SpartanColor grey = SpartanColor(

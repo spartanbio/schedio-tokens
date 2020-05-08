@@ -83,6 +83,14 @@
       "originalValue": "hsla(330, 100%, 31%, 1)",
       "name": "color-magenta-dark"
     },
+    "color-blue": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 76, 153)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 100%, 30%, 1)",
+      "name": "color-blue"
+    },
     "color-night-lighter": {
       "type": "color",
       "category": "background-color",
@@ -90,14 +98,6 @@
       "paletteType": "main",
       "originalValue": "hsla(210, 20%, 48%, 1)",
       "name": "color-night-lighter"
-    },
-    "color-spartan_blue-lighter": {
-      "type": "color",
-      "category": "background-color",
-      "value": "rgb(37, 138, 239)",
-      "paletteType": "main",
-      "originalValue": "hsla(210, 86%, 54%, 1)",
-      "name": "color-spartan_blue-lighter"
     },
     "color-gold-darker": {
       "type": "color",
@@ -171,14 +171,6 @@
       "originalValue": "hsla(195, 100%, 32%, 1)",
       "name": "color-turquoise-dark"
     },
-    "color-spartan_blue-lightest": {
-      "type": "color",
-      "category": "background-color",
-      "value": "rgb(100, 173, 247)",
-      "paletteType": "main",
-      "originalValue": "hsla(210, 90%, 68%, 1)",
-      "name": "color-spartan_blue-lightest"
-    },
     "color-turquoise-lighter": {
       "type": "color",
       "category": "background-color",
@@ -186,6 +178,14 @@
       "paletteType": "accent",
       "originalValue": "hsla(195, 90%, 78%, 1)",
       "name": "color-turquoise-lighter"
+    },
+    "color-blue-light": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 107, 214)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 100%, 42%, 1)",
+      "name": "color-blue-light"
     },
     "color-night": {
       "type": "color",
@@ -211,14 +211,6 @@
       "originalValue": "hsla(144, 68%, 50%, 1)",
       "name": "color-green-lighter"
     },
-    "color-spartan_blue": {
-      "type": "color",
-      "category": "background-color",
-      "value": "rgb(0, 76, 153)",
-      "paletteType": "main",
-      "originalValue": "hsla(210, 100%, 30%, 1)",
-      "name": "color-spartan_blue"
-    },
     "color-red-light": {
       "type": "color",
       "category": "background-color",
@@ -242,14 +234,6 @@
       "paletteType": "main",
       "originalValue": "hsla(210, 16%, 86%, 1)",
       "name": "color-grey-light"
-    },
-    "color-spartan_blue-dark": {
-      "type": "color",
-      "category": "background-color",
-      "value": "rgb(0, 36, 71)",
-      "paletteType": "main",
-      "originalValue": "hsla(210, 100%, 14%, 1)",
-      "name": "color-spartan_blue-dark"
     },
     "color-gold-light": {
       "type": "color",
@@ -307,14 +291,6 @@
       "originalValue": "hsla(144, 92%, 28%, 1)",
       "name": "color-green"
     },
-    "color-spartan_blue-light": {
-      "type": "color",
-      "category": "background-color",
-      "value": "rgb(0, 107, 214)",
-      "paletteType": "main",
-      "originalValue": "hsla(210, 100%, 42%, 1)",
-      "name": "color-spartan_blue-light"
-    },
     "color-gold-dark": {
       "type": "color",
       "category": "background-color",
@@ -322,6 +298,14 @@
       "paletteType": "accent",
       "originalValue": "hsla(40, 100%, 50%, 1)",
       "name": "color-gold-dark"
+    },
+    "color-blue-lightest": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(100, 173, 247)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 90%, 68%, 1)",
+      "name": "color-blue-lightest"
     },
     "color-turquoise-darker": {
       "type": "color",
@@ -338,6 +322,14 @@
       "paletteType": "main",
       "originalValue": "hsla(210, 14%, 60%, 1)",
       "name": "color-grey-dark"
+    },
+    "color-blue-lighter": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(37, 138, 239)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 86%, 54%, 1)",
+      "name": "color-blue-lighter"
     },
     "color-red-dark": {
       "type": "color",
@@ -378,6 +370,14 @@
       "paletteType": "main",
       "originalValue": "hsla(210, 16%, 92%, 1)",
       "name": "color-grey-lighter"
+    },
+    "color-blue-dark": {
+      "type": "color",
+      "category": "background-color",
+      "value": "rgb(0, 36, 71)",
+      "paletteType": "main",
+      "originalValue": "hsla(210, 100%, 14%, 1)",
+      "name": "color-blue-dark"
     },
     "duration-none": {
       "type": "time",

@@ -1,18 +1,18 @@
 props:
   # Spartan blue
-  color-spartan_blue-dark:
+  color-blue-dark:
     value: 'hsla(210, 100%, 14%, 1)'
     paletteType: 'main'
-  color-spartan_blue:
+  color-blue:
     value: 'hsla(210, 100%, 30%, 1)'
     paletteType: 'main'
-  color-spartan_blue-light:
+  color-blue-light:
     value: 'hsla(210, 100%, 42%, 1)'
     paletteType: 'main'
-  color-spartan_blue-lighter:
+  color-blue-lighter:
     value: 'hsla(210, 86%, 54%, 1)'
     paletteType: 'main'
-  color-spartan_blue-lightest:
+  color-blue-lightest:
     value: 'hsla(210, 90%, 68%, 1)'
     paletteType: 'main'
 
