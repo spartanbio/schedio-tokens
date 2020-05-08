@@ -1,3 +1,10 @@
+# [2.0.0-alpha.8](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.7...v2.0.0-alpha.8) (2020-05-08)
+
+
+### Features
+
+* **color:** sorts shades ([7b85273](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/7b852733cdc6ea4c846627f84694ae723c010454))
+
 # [2.0.0-alpha.7](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.6...v2.0.0-alpha.7) (2020-05-08)
 
 
