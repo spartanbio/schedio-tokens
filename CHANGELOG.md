@@ -1,3 +1,13 @@
+# [2.0.0-alpha.7](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.6...v2.0.0-alpha.7) (2020-05-08)
+
+
+* feat(color)!: renames `spartan_blue` as `blue` ([c9552db](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/c9552db60b6c2a0dab6649ed8207e280b8c99fee))
+
+
+### BREAKING CHANGES
+
+* `spartan_blue` is now `blue`
+
 # [2.0.0-alpha.6](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2020-05-08)
 
 
