@@ -1,3 +1,10 @@
+# [2.0.0-alpha.9](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.8...v2.0.0-alpha.9) (2020-05-08)
+
+
+### Features
+
+* **ts:** adds types ([d5179be](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/d5179be702a4b81499e0556c92c30089f1dbe4a1))
+
 # [2.0.0-alpha.8](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.7...v2.0.0-alpha.8) (2020-05-08)
 
 
