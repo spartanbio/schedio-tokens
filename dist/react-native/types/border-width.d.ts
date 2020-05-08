@@ -2,9 +2,9 @@
  * BorderWidthTokens
  */
 declare interface BorderWidth {
-  base: '1px';
-  thick: '2px';
-  thickest: '4px';
+  base: 1;
+  thick: 2;
+  thickest: 4;
 }
 
 declare const tokens: BorderWidth;

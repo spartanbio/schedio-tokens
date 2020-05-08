@@ -12,7 +12,7 @@
     "build:ase": "node ./scripts/ase-encode.js",
     "build:docs": "gulp docs",
     "build:format:style": "stylelint ./{docs,dist}/**/*.{scss,css} --fix",
-    "build:format:js": "eslint ./{docs,dist}/**/*.js --fix --no-error-on-unmatched-pattern",
+    "build:format:js": "eslint ./{docs,dist}/**/*.{js,ts} --fix --no-error-on-unmatched-pattern",
     "clean": "rimraf ./dist",
     "docs": "run-s build:docs build:format:js build:format:style",
     "lint:js": "eslint .",
@@ -34,6 +34,8 @@
     "@semantic-release/release-notes-generator": "9.0.1",
     "@spartanbio/eslint-config": "1.1.0",
     "@spartanbio/stylelint-config-scss": "1.0.10",
+    "@typescript-eslint/eslint-plugin": "2.31.0",
+    "@typescript-eslint/parser": "2.31.0",
     "ase-utils": "0.1.1",
     "browser-sync": "2.26.7",
     "chalk": "4.0.0",
@@ -62,6 +64,7 @@
     "semantic-release": "17.0.7",
     "stylelint": "13.3.3",
     "theo": "8.1.5",
-    "tinycolor2": "1.4.1"
+    "tinycolor2": "1.4.1",
+    "typescript": "^3.8.3"
   }
 }

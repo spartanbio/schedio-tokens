@@ -3,13 +3,37 @@
  */
 declare interface Shadow {
   /* Shadow values are intended to be used with colors added to them */
-  border: '0 0 1px';
+  border: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 0;
+  };
+  'shadowRadius': 1;
+};
   /* Shadow values are intended to be used with colors added to them */
-  light: '0 0.25rem 1rem';
+  light: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 4;
+  };
+  'shadowRadius': 16;
+};
   /* Shadow values are intended to be used with colors added to them */
-  base: '0 0.25rem 1rem';
+  base: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 4;
+  };
+  'shadowRadius': 16;
+};
   /* Shadow values are intended to be used with colors added to them */
-  heavy: '0 0.5rem 1.5rem 0.25rem';
+  heavy: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 8;
+  };
+  'shadowRadius': 24;
+};
 }
 
 declare const tokens: Shadow;

@@ -10,7 +10,7 @@ module.exports = (result) => {
 /** ${_.upperFirst(hue)}ColorMap */
 export declare interface ${_.upperFirst(hue)}ColorMap {
 ${Object.entries(shade)
-        .map(([name, value]) => `  ${name}: ${JSON.stringify(value)},`)
+        .map(([name, value]) => `  ${name}: ${JSON.stringify(value)};`)
         .join('\n')}
 }
 `)

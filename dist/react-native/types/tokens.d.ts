@@ -2,12 +2,12 @@
  * TokensTokens
  */
 declare interface Tokens {
-  borderRadiusSmall: '0.25rem';
-  borderRadiusBase: '0.5rem';
+  borderRadiusSmall: 4;
+  borderRadiusBase: 8;
   borderRadiusCircle: '50%';
-  borderWidthBase: '1px';
-  borderWidthThick: '2px';
-  borderWidthThickest: '4px';
+  borderWidthBase: 1;
+  borderWidthThick: 2;
+  borderWidthThickest: 4;
   colorTurquoiseLight: 'rgb(71, 202, 245)';
   colorGoldLighter: 'rgb(254, 226, 170)';
   colorIce: 'rgb(242, 245, 247)';
@@ -94,14 +94,14 @@ declare interface Tokens {
 ];
   fontFamilySansSerif: "'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
   fontFamilyMonospaced: "'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace";
-  fontSizeBase: '16px';
-  fontSize1: '5rem';
-  fontSize2: '3.375rem';
-  fontSize3: '2.25rem';
-  fontSize4: '1.5rem';
-  fontSize5: '1rem';
-  fontSize6: '0.75rem';
-  fontSize7: '0.5rem';
+  fontSizeBase: 16;
+  fontSize1: 80;
+  fontSize2: 54;
+  fontSize3: 36;
+  fontSize4: 24;
+  fontSize5: 16;
+  fontSize6: 12;
+  fontSize7: 8;
   fontWeightBold: 700;
   fontWeightDemi: 600;
   fontWeightLight: 300;
@@ -109,22 +109,46 @@ declare interface Tokens {
   lineHeightBase: '150%';
   lineHeightLargeText: '125%';
   /* Shadow values are intended to be used with colors added to them */
-  shadowBorder: '0 0 1px';
+  shadowBorder: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 0;
+  };
+  'shadowRadius': 1;
+};
   /* Shadow values are intended to be used with colors added to them */
-  shadowLight: '0 0.25rem 1rem';
+  shadowLight: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 4;
+  };
+  'shadowRadius': 16;
+};
   /* Shadow values are intended to be used with colors added to them */
-  shadowBase: '0 0.25rem 1rem';
+  shadowBase: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 4;
+  };
+  'shadowRadius': 16;
+};
   /* Shadow values are intended to be used with colors added to them */
-  shadowHeavy: '0 0.5rem 1.5rem 0.25rem';
+  shadowHeavy: {
+  'shadowOffset': {
+    'width': 0;
+    'height': 8;
+  };
+  'shadowRadius': 24;
+};
   spacingNone: 0;
-  spacingQuarter: '0.25rem';
-  spacingTriple: '3rem';
-  spacingLoose: '1.5rem';
-  spacingTight: '0.75rem';
-  spacingQuadruple: '4rem';
-  spacingDouble: '2rem';
-  spacingBase: '1rem';
-  spacingHalf: '0.5rem';
+  spacingQuarter: 4;
+  spacingTriple: 48;
+  spacingLoose: 24;
+  spacingTight: 12;
+  spacingQuadruple: 64;
+  spacingDouble: 32;
+  spacingBase: 16;
+  spacingHalf: 8;
 }
 
 declare const tokens: Tokens;

@@ -58,6 +58,7 @@ const webFormats = [
 ]
 
 const mobileFormats = [
+  { transformType: 'react-native', formatType: 'd.ts', language: 'types' },
   { transformType: 'react-native', formatType: 'json', language: 'json' },
   { transformType: 'react-native', formatType: 'common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'module.js', language: 'module-js' },
