@@ -1,3 +1,16 @@
+declare enum ColorNames {
+  turquoise,
+  gold,
+  ice,
+  green,
+  magenta,
+  blue,
+  night,
+  grey,
+  red,
+  white,
+}
+
 declare interface Shades {
   darkest?: string;
   darker?: string;
@@ -8,11 +21,11 @@ declare interface Shades {
   lightest?: string;
 }
 
-declare interface ColorPallette {
-  [key: string]: Shades;
+declare interface ColorPalette {
+  [hue: keyof typeof ColorNames]: Shades;
 }
 
-declare interface ColorMap extends ColorPallette {
+declare interface ColorMap extends ColorPalette {
   /* turquoise map */
   turquoise: {
     base: 'rgb(0, 180, 240)';
