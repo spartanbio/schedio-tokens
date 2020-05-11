@@ -1,3 +1,10 @@
+# [2.0.0-alpha.11](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2020-05-11)
+
+
+### Features
+
+* **color:** improves color TS maps ([21e3d0e](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/21e3d0e118d549f390af0a49995cfa0537dd9d6a))
+
 # [2.0.0-alpha.10](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.9...v2.0.0-alpha.10) (2020-05-08)
 
 
