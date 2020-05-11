@@ -1,20 +1,42 @@
-const _ = require('lodash')
 const { generateColorMap } = require('../utils')
 
 module.exports = (result) => {
   const js = result.toJS()
-  const content = generateColorMap(js)
+  const map = generateColorMap(js)
 
-  const colors = Object.entries(content)
-    .map(([hue, shade]) => `\
-/** ${_.upperFirst(hue)}ColorMap */
-export declare interface ${_.upperFirst(hue)}ColorMap {
-${Object.entries(shade)
-        .map(([name, value]) => `  ${name}: ${JSON.stringify(value)};`)
-        .join('\n')}
+  const content = Object.entries(map).map(([color, shades]) => {
+    const shadeStr = Object.entries(shades)
+      .map(([name, value]) => `    ${name}: '${value}';`)
+      .join('\n\n')
+
+    return `\
+  /* ${color} map */
+  ${color}: {
+${shadeStr}
+  };`
+  })
+    .join('\n\n')
+
+  return `\
+declare interface Shades {
+  darkest?: string;
+  darker?: string;
+  dark?: string;
+  base: string;
+  light?: string;
+  lighter?: string;
+  lightest?: string;
 }
-`)
-    .join('\n')
 
-  return colors
+declare interface ColorPallette {
+  [key: string]: Shades;
+}
+
+declare interface ColorMap extends ColorPallette {
+${content}
+}
+
+declare const colors: ColorMap;
+export = colors
+`
 }
