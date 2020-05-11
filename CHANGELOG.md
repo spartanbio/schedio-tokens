@@ -1,3 +1,10 @@
+# [2.0.0-alpha.12](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.11...v2.0.0-alpha.12) (2020-05-11)
+
+
+### Bug Fixes
+
+* **color:** improves ts type ([1fb714c](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/1fb714c1cc1af946ec21846e5cbb02310201e2f4))
+
 # [2.0.0-alpha.11](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2020-05-11)
 
 
