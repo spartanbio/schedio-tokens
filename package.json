@@ -62,7 +62,7 @@
     "onchange": "7.0.2",
     "rimraf": "3.0.2",
     "semantic-release": "17.0.7",
-    "stylelint": "13.4.1",
+    "stylelint": "13.5.0",
     "theo": "8.1.5",
     "tinycolor2": "1.4.1",
     "typescript": "3.9.2"
