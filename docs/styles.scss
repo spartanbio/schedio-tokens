@@ -1,4 +1,4 @@
-@import '../dist/tokens';
+@import '../dist/web/scss/tokens';
 
 html,
 body {
@@ -91,7 +91,7 @@ hr {
 
 .metric-box,
 .radius-box {
-  background: $color-spartan-blue;
+  background: $color-blue;
   display: inline-block;
   vertical-align: middle;
 }
@@ -106,7 +106,10 @@ hr {
 }
 
 .line-height-example {
-  background-image: -webkit-linear-gradient($color-grey-lighter 1px, transparent 1px);
+  background-image: -webkit-linear-gradient(
+    $color-grey-lighter 1px,
+    transparent 1px
+  );
   background-image: linear-gradient($color-grey-lighter 1px, transparent 1px);
   background-size: 100% $spacing-base;
   border-bottom: 1px solid $color-grey-lighter;

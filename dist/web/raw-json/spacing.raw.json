@@ -1,0 +1,68 @@
+{
+  "aliases": {},
+  "props": {
+    "spacing-none": {
+      "type": "number",
+      "category": "spacing",
+      "value": 0,
+      "originalValue": 0,
+      "name": "spacing-none"
+    },
+    "spacing-quarter": {
+      "type": "number",
+      "category": "spacing",
+      "value": "0.25rem",
+      "originalValue": "0.25rem",
+      "name": "spacing-quarter"
+    },
+    "spacing-triple": {
+      "type": "number",
+      "category": "spacing",
+      "value": "3rem",
+      "originalValue": "3rem",
+      "name": "spacing-triple"
+    },
+    "spacing-loose": {
+      "type": "number",
+      "category": "spacing",
+      "value": "1.5rem",
+      "originalValue": "1.5rem",
+      "name": "spacing-loose"
+    },
+    "spacing-tight": {
+      "type": "number",
+      "category": "spacing",
+      "value": "0.75rem",
+      "originalValue": "0.75rem",
+      "name": "spacing-tight"
+    },
+    "spacing-quadruple": {
+      "type": "number",
+      "category": "spacing",
+      "value": "4rem",
+      "originalValue": "4rem",
+      "name": "spacing-quadruple"
+    },
+    "spacing-double": {
+      "type": "number",
+      "category": "spacing",
+      "value": "2rem",
+      "originalValue": "2rem",
+      "name": "spacing-double"
+    },
+    "spacing-base": {
+      "type": "number",
+      "category": "spacing",
+      "value": "1rem",
+      "originalValue": "1rem",
+      "name": "spacing-base"
+    },
+    "spacing-half": {
+      "type": "number",
+      "category": "spacing",
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
+      "name": "spacing-half"
+    }
+  }
+}

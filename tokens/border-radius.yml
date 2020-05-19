@@ -1,8 +1,8 @@
 props:
   border-radius-small:
-    value: 0.25em
+    value: 0.25rem
   border-radius-base:
-    value: 0.5em
+    value: 0.5rem
   border-radius-circle:
     value: 50%
 global:

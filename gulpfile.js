@@ -1,39 +1,86 @@
 const gulp = require('gulp')
 const gulpLoadPlugins = require('gulp-load-plugins')
 const theo = require('theo')
-const transforms = require('./transforms/color')
+const transforms = {
+  ...require('./transforms/color'),
+  ...require('./transforms/unit'),
+  ...require('./transforms/easing'),
+}
 
 const $ = gulpLoadPlugins()
-
-// Setup default `theo` formats
-const webFormats = [
-  { transformType: 'web', formatType: 'scss' },
-  { transformType: 'web', formatType: 'common.js' },
-  { transformType: 'web', formatType: 'json' },
-  { transformType: 'web', formatType: 'custom-properties.css' },
-  { transformType: 'web', formatType: 'map.scss' },
-  { transformType: 'web', formatType: 'raw.json' },
-]
 
 // Setup and register custom formats/transforms
 Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
   theo.registerValueTransform(name, predicate, transform)
 })
+
+// Transforms
+const jsTransforms = [
+  'color/rgb',
+  'unit/timingUnitless',
+  'easing/array',
+]
+theo.registerTransform('js', jsTransforms)
 theo.registerTransform('flutter', ['color/dartHex8argb'])
+theo.registerTransform('react-native', [
+  ...jsTransforms,
+  'unit/rnRelativePixelValue',
+  'unit/rnAbsolutePixelValue',
+  'unit/rnRelativeShadow',
+  'unit/rnAbsoluteShadow',
+])
+
+// Formats
+// Overridden formats
+theo.registerFormat('json', require('./formats/json.js'))
 theo.registerFormat('map.scss', require('./formats/map.scss.js'))
+theo.registerFormat('common.js', require('./formats/common.js'))
+theo.registerFormat('module.js', require('./formats/module.js'))
+// Custom formats
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
+theo.registerFormat('d.ts', require('./formats/d.ts.js'))
+theo.registerFormat('color-map.d.ts', require('./formats/color-map.d.ts.js'))
+theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'))
+theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'))
 theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
 theo.registerFormat('ase.json', require('./formats/ase.json.js'))
 
+// Setup default `theo` formats
+const webFormats = [
+  { transformType: 'web', formatType: 'scss', language: 'scss' },
+  { transformType: 'web', formatType: 'json', language: 'json' },
+  { transformType: 'web', formatType: 'custom-properties.css', language: 'css' },
+  { transformType: 'web', formatType: 'map.scss', language: 'scss' },
+  { transformType: 'web', formatType: 'raw.json', language: 'raw-json' },
+  { transformType: 'js', formatType: 'd.ts', language: 'types' },
+  { transformType: 'js', formatType: 'common.js', language: 'common-js' },
+  { transformType: 'js', formatType: 'module.js', language: 'module-js' },
+]
+
+const mobileFormats = [
+  { transformType: 'react-native', formatType: 'd.ts', language: 'types' },
+  { transformType: 'react-native', formatType: 'json', language: 'json' },
+  { transformType: 'react-native', formatType: 'common.js', language: 'common-js' },
+  { transformType: 'react-native', formatType: 'module.js', language: 'module-js' },
+]
+
+// Setup token-specific formats
 const colorFormats = [
-  { transformType: 'flutter', formatType: 'color-swatches.dart' },
-  { transformType: 'web', formatType: 'color-map.scss' },
-  { transformType: 'web', formatType: 'ase.json' },
+  { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
+  { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
+  { transformType: 'js', formatType: 'color-map.d.ts', language: 'types' },
+  { transformType: 'js', formatType: 'color-map.common.js', language: 'common-js' },
+  { transformType: 'js', formatType: 'color-map.module.js', language: 'module-js' },
+  { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
+  { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
+  { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
+  { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
 ]
 
 // Build design system artifacts
 gulp.task('web-formats', buildFormats(webFormats))
-gulp.task('color-formats', buildFormats(colorFormats, 'tokens/colors.yml'))
+gulp.task('mobile-formats', buildFormats(mobileFormats))
+gulp.task('color-formats', buildFormats(colorFormats, 'tokens/color.yml'))
 
 // Build docs and styles
 gulp.task('docs:styles', (done) => {
@@ -62,6 +109,7 @@ gulp.task(
 // Setup batched tasks
 const defaultTasks = [
   'web-formats',
+  'mobile-formats',
   'color-formats',
 ]
 
@@ -84,7 +132,11 @@ gulp.task(
 // Helpers for building design system
 function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) {
   return (done) => {
-    formats.forEach(({ transformType, formatType }) => {
+    formats.forEach(({ transformType, formatType, language }) => {
+      let destPath = `dist/${transformType}`
+
+      if (language) destPath += `/${language}`
+
       gulp
         .src(glob)
         .pipe(
@@ -94,7 +146,7 @@ function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) 
           }),
         )
         .on('error', errorHandler)
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(destPath))
     })
 
     done()

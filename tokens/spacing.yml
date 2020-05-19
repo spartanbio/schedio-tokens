@@ -2,21 +2,21 @@ props:
   spacing-none:
     value: 0
   spacing-quarter:
-    value: '0.25em'
+    value: 0.25rem
   spacing-half:
-    value: '0.5em'
+    value: 0.5rem
   spacing-tight:
-    value: '0.75em'
+    value: 0.75rem
   spacing-base:
-    value: '1em'
+    value: 1rem
   spacing-loose:
-    value: '1.5em'
+    value: 1.5rem
   spacing-double:
-    value: '2em'
+    value: 2rem
   spacing-triple:
-    value: '3em'
-  spacing-4x:
-    value: '4em'
+    value: 3rem
+  spacing-quadruple:
+    value: 4rem
 global:
   type: number
   category: spacing

@@ -13,6 +13,7 @@ build:
   stage: build
   only:
     - master
+    - alpha
   script:
     - yarn --frozen-lockfile --non-interactive
     - yarn build
@@ -26,6 +27,7 @@ npm:
   stage: deploy
   only:
     - master
+    - alpha
   script:
     - yarn semantic-release
   artifacts:
