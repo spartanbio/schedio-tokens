@@ -1,3 +1,43 @@
+# [2.0.0](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.2.0...v2.0.0) (2020-05-19)
+
+
+### Bug Fixes
+
+* **color:** improves ts type ([1fb714c](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/1fb714c1cc1af946ec21846e5cbb02310201e2f4))
+* **color:** uses correct transform name ([e86dbac](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/e86dbac6b2f7784ca4694da2b41a4ab0e4cd9b34))
+* **flutter:** updates whitespace ([9d27afa](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/9d27afae03e1586204c77c4ec0253c887d07b0c4))
+* **react-native:** ensure tokens that should be numbers are ([ede8217](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/ede8217c39d6f6a27b43cd0acddaac568e987e9a))
+* **react-native:** uses % for `line-height` ([5989dbe](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/5989dbe6dc9ac3a182c30bf61cbda139e709f343))
+
+
+### Features
+
+* **color:** improves color TS maps ([21e3d0e](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/21e3d0e118d549f390af0a49995cfa0537dd9d6a))
+* adds types for react native ([b96c138](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/b96c138a46fe9904cdb81f7cafbfc188516f07ad))
+* **color:** adss es module map ([4264889](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/42648894906a946b73d3a7a71eac9cb7a244005e))
+* **color:** sorts shades ([7b85273](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/7b852733cdc6ea4c846627f84694ae723c010454))
+* **colors:** adds js color map ([cef184f](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/cef184f203ed208079ea97d757001f703b171bcc))
+* **react-native:** adds react native `rem` conversion ([b78fd97](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/b78fd97f929cf8b89683002594f3467aceb78829))
+* **ts:** adds types ([d5179be](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/d5179be702a4b81499e0556c92c30089f1dbe4a1))
+* removes prefixes from JSON tokens ([b02055a](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/b02055af96a03600d777be46db49757580876194))
+* **easing:** converts easing to array for js ([6bcc5cb](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/6bcc5cb13bd7a4532849575cd10b9071054e7c01))
+* **shadow:** adds react-native shadow object ([8dcd6b9](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/8dcd6b965cdf02aa1b66da504f4bbb6f79c67952))
+* **web:** adds es modules ([700e4ff](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/700e4ff4d9118609683a5a9c1eb9e95a24119b84))
+* organizes dist by platform and language ([4761d46](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/4761d46ad834fda7795eb7a163f46f11ffc2a7e1))
+* uses `rem` ([8e34713](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/8e34713ce06b093a0be7a64576e23f49395e09f8))
+
+
+* feat(color)!: renames `spartan_blue` as `blue` ([c9552db](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/c9552db60b6c2a0dab6649ed8207e280b8c99fee))
+* feat(duration)!: adds unitless duration for js ([d645771](https://gitlab.com/spartanbio-ux/schedio-tokens/commit/d645771d45c0bbfa58b77f06bd22356f53f1d30a))
+
+
+### BREAKING CHANGES
+
+* `spartan_blue` is now `blue`
+* web JS files moved to `dist/web/js/common-js/`
+* new units
+* restructured
+
 # [2.0.0-alpha.12](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v2.0.0-alpha.11...v2.0.0-alpha.12) (2020-05-11)
 
 
