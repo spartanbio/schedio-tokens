@@ -32,7 +32,7 @@
     "@semantic-release/git": "9.0.0",
     "@semantic-release/gitlab": "6.0.4",
     "@semantic-release/release-notes-generator": "9.0.1",
-    "@spartanbio/eslint-config": "1.1.0",
+    "@spartanbio/eslint-config": "1.1.1",
     "@spartanbio/stylelint-config-scss": "1.0.10",
     "@typescript-eslint/eslint-plugin": "2.33.0",
     "@typescript-eslint/parser": "2.33.0",
