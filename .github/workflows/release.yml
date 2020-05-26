@@ -12,6 +12,8 @@ jobs:
     continue-on-error: false
     env:
       LATEST_VERSION_TAG: ''
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
