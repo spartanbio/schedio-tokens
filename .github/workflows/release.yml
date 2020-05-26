@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+      - alpha
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    steps:
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: | # uses partial matches
+            ${{ runner.os }}-yarn-
+      - uses: actions/checkout@v2
+
+      - name: Install
+        run: yarn --check-files --frozen-lockfile --non-interactive
+
+      - name: Build
+        run: yarn build
+
+      - name: Release
+        run: yarn semantic-release
+
+      - run: echo "::set-env LATEST_VERSION_TAG=$(git describe --tags $(git rev-list --tags='v[0-9].[0-9]*' --max-count=1))"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: schedio-tokens@${{ env.LATEST_VERSION_TAG }}
+          path: dist/
