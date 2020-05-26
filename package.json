@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Design tokens used by @spartanbio/schedio",
   "main": "index.js",
-  "repository": "gitlab:spartanbio-ux/schedio-tokens",
+  "repository": "github:spartanbio/schedio-tokens",
   "author": "Spartan Bioscience Inc.",
   "license": "MIT",
   "scripts": {
