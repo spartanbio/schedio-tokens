@@ -12,7 +12,7 @@ module.exports = {
       {
         assets: [
           { path: 'dist/**/*', label: 'tokens' },
-          { path: 'public/**/*', label: 'docs' },
+          { path: 'docs/**/*', label: 'docs' },
         ],
       },
     ],
