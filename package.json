@@ -17,6 +17,7 @@
     "docs": "run-s build:docs build:format:js build:format:style",
     "lint:js": "eslint .",
     "lint:style": "stylelint ./**/*.{scss,css}",
+    "prepublishOnly": "yarn build",
     "semantic-release": "semantic-release",
     "watch": "gulp watch"
   },
