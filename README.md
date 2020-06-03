@@ -2,7 +2,7 @@
 
 Built with [Theo](https://github.com/salesforce-ux/theo) for [@spartanbio/schedio](https://gitlab.com/spartanbio-ux/schedio).
 
-A full list of tokens is available at https://spartanbio-ux.gitlab.io/schedio-tokens/.
+A full list of tokens is available at https://spartanbio.github.io/schedio-tokens/.
 
 - [Schédio design tokens](#sch%c3%a9dio-design-tokens)
   - [Installation](#installation)
