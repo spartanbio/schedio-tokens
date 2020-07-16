@@ -1,1 +1,1 @@
-module.exports = require('./dist/tokens.common.js')
+module.exports = require('./dist/tokens.common.js');

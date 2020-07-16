@@ -2,27 +2,27 @@ const {
   isRelativeSpacing,
   isAbsoluteSpacing,
   remToPx,
-} = require('theo/lib/util')
-const ms = require('ms')
+} = require('theo/lib/util');
+const ms = require('ms');
 
 // copied from 'theo/lib/util' as it's not exported
 const convertRemToPx = (prop) => {
   const baseFontPercentage = prop.getIn && typeof prop.getIn(['meta', 'baseFontPercentage']) === 'number'
     ? prop.getIn(['meta', 'baseFontPercentage'])
-    : 100
+    : 100;
   const baseFontPixel = prop.getIn && typeof prop.getIn(['meta', 'baseFontPixel']) === 'number'
     ? prop.getIn(['meta', 'baseFontPixel'])
-    : 16
+    : 16;
 
-  return remToPx(prop.get ? prop.get('value') : prop, baseFontPercentage, baseFontPixel)
-}
+  return remToPx(prop.get ? prop.get('value') : prop, baseFontPercentage, baseFontPixel);
+};
 
-const isBoxShadow = prop => prop === 'box-shadow'
-const replacePx = str => str.replace(/px$/g, '')
+const isBoxShadow = prop => prop === 'box-shadow';
+const replacePx = str => str.replace(/px$/g, '');
 const generateShadow = (width, height, radius) => ({
   shadowOffset: { width, height },
   ...(radius && { shadowRadius: radius }),
-})
+});
 
 module.exports = {
   'unit/timingUnitless': {
@@ -57,4 +57,4 @@ module.exports = {
         .map(Number),
     ),
   },
-}
+};

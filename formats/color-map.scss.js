@@ -1,29 +1,29 @@
-const { getShade } = require('../utils')
-const groupBy = require('lodash/groupBy')
+const { getShade } = require('../utils');
+const groupBy = require('lodash/groupBy');
 
 class ColorMap {
   constructor ({ props }) {
     const propsWithPalette = props.reduce((palettes, prop) => {
-      if (prop.type !== 'color') return palettes
+      if (prop.type !== 'color') return palettes;
 
-      const [, color] = prop.name.split('-')
-      prop.palette = color
-      palettes.push(prop)
+      const [, color] = prop.name.split('-');
+      prop.palette = color;
+      palettes.push(prop);
 
-      return palettes
-    }, [])
+      return palettes;
+    }, []);
 
-    this.palettes = groupBy(propsWithPalette, 'palette')
-    this.colors = props.filter(prop => prop.type === 'color')
+    this.palettes = groupBy(propsWithPalette, 'palette');
+    this.colors = props.filter(prop => prop.type === 'color');
   }
 
   renderPalette (palette) {
-    const props = this.palettes[palette]
+    const props = this.palettes[palette];
     return `'${palette}': (\n${props
       // `    ` formats indent
       .map(prop => `    '${getShade(prop.name)}': ${prop.value}`)
       .join(',\n')}
-  )`
+  )`;
   }
 
   render () {
@@ -32,11 +32,11 @@ class ColorMap {
       // `\n  ` formats indent
       .join(',\n  ')}
 );
-`
+`;
   }
 }
 
 module.exports = function (result) {
-  const colorMap = new ColorMap(result.toJS())
-  return colorMap.render()
-}
+  const colorMap = new ColorMap(result.toJS());
+  return colorMap.render();
+};

@@ -1,9 +1,9 @@
 
-const tinycolor = require('tinycolor2')
+const tinycolor = require('tinycolor2');
 
-const isType = type => prop => prop.get('type') === type
+const isType = type => prop => prop.get('type') === type;
 
-const toColor = prop => tinycolor(prop.get('value'))
+const toColor = prop => tinycolor(prop.get('value'));
 
 module.exports = {
   'color/dartHex8argb': {
@@ -12,4 +12,4 @@ module.exports = {
       .replace(/^#(.{6})(.{2})/, '$2$1')
       .toUpperCase(),
   },
-}
+};

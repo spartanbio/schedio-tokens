@@ -1,17 +1,17 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const groupBy = require('lodash/groupBy')
-const camelCase = require('lodash/camelCase')
-const upperfirst = require('lodash/upperFirst')
-const tinycolor = require('tinycolor2')
+const groupBy = require('lodash/groupBy');
+const camelCase = require('lodash/camelCase');
+const upperfirst = require('lodash/upperFirst');
+const tinycolor = require('tinycolor2');
 
-const byPropName = (a, b) => a.name.localeCompare(b.name)
-const byValue = (a, b) => parseFloat(a.value) > parseFloat(b.value) ? 1 : -1
+const byPropName = (a, b) => a.name.localeCompare(b.name);
+const byValue = (a, b) => parseFloat(a.value) > parseFloat(b.value) ? 1 : -1;
 class Styleguide {
   constructor ({ props, options }) {
-    this.options = options
-    this.categories = groupBy([...props].sort(byPropName), 'category')
+    this.options = options;
+    this.categories = groupBy([...props].sort(byPropName), 'category');
   }
 
   renderRowHeader (id, heading) {
@@ -24,7 +24,7 @@ class Styleguide {
     <th scope="col">Usage</th>
   </tr>
 </thead>
-`
+`;
   }
 
   renderRow (prop, example) {
@@ -39,11 +39,11 @@ class Styleguide {
   ${example}
   <td>${prop.comment ? prop.comment : ''}</td>
 </tr>
-`
+`;
   }
 
   renderSpacing (props) {
-    const _props = [...props].sort(byValue)
+    const _props = [...props].sort(byValue);
     return _props.map((prop) => {
       const example = `
 <td>
@@ -52,9 +52,9 @@ class Styleguide {
     style="width: ${prop.value}; height: ${prop.value};"
   ></div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderSizing (props) {
@@ -66,9 +66,9 @@ class Styleguide {
     style="width: ${prop.value}; height: ${prop.value};"
   ></div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderFont (props) {
@@ -79,9 +79,9 @@ class Styleguide {
     The quick brown fox jumps over the lazy dog.
   </div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderFontStyle (props) {
@@ -92,13 +92,13 @@ class Styleguide {
     The quick brown fox jumps over the lazy dog.
   </div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderFontWeight (props) {
-    const _props = [...props].sort(byValue)
+    const _props = [...props].sort(byValue);
     return _props.map((prop) => {
       const example = `
 <td>
@@ -106,9 +106,9 @@ class Styleguide {
     The quick brown fox jumps over the lazy dog.
   </div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderFontSize (props) {
@@ -119,14 +119,14 @@ class Styleguide {
     The quick brown fox jumps over the lazy dog.
   </div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderLineHeight (props) {
     return props.map((prop) => {
-      const vHeight = !isNaN(prop.value) ? `${prop.value}em` : prop.value
+      const vHeight = !isNaN(prop.value) ? `${prop.value}em` : prop.value;
       const example = `
 <td>
   <div
@@ -140,9 +140,9 @@ class Styleguide {
     id feugiat at, venenatis quis erat.
   </div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderFontFamily (props) {
@@ -153,38 +153,38 @@ class Styleguide {
     The quick brown fox jumps over the lazy dog.
   </div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderBorderStyle (props) {
     return props.map((prop) => {
-      const example = `<td style="border: ${prop.value};"></td>`
-      return this.renderRow(prop, example)
-    })
+      const example = `<td style="border: ${prop.value};"></td>`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderBorderColor (props) {
     return props.map((prop) => {
-      const color = tinycolor(prop.value)
-      prop.value = color.getAlpha() < 1 ? color : color.toHexString(prop.value)
-      const example = `<td style="border: 2px solid ${prop.value};"></td>`
-      return this.renderRow(prop, example)
-    })
+      const color = tinycolor(prop.value);
+      prop.value = color.getAlpha() < 1 ? color : color.toHexString(prop.value);
+      const example = `<td style="border: 2px solid ${prop.value};"></td>`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderHrColor (props) {
     return props.map((prop) => {
-      const color = tinycolor(prop.value)
-      prop.value = color.getAlpha() < 1 ? color : color.toHexString(prop.value)
+      const color = tinycolor(prop.value);
+      prop.value = color.getAlpha() < 1 ? color : color.toHexString(prop.value);
       const example = `
 <td>
   <hr style="border-top-color: ${prop.value};" />
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderRadius (props) {
@@ -196,9 +196,9 @@ class Styleguide {
     style="border-radius: ${prop.value};"
   ></div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderBorderRadius (props) {
@@ -210,60 +210,60 @@ class Styleguide {
     style="border-radius: ${prop.value};"
   ></div>
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderBackgroundColor (props) {
     return props.map((prop) => {
-      const color = tinycolor(prop.value)
-      prop.value = color.getAlpha() < 1 ? color : color.toHexString(prop.value)
+      const color = tinycolor(prop.value);
+      prop.value = color.getAlpha() < 1 ? color : color.toHexString(prop.value);
       // eslint-disable-next-line max-len
-      const example = `<td style="background-color: ${prop.value}; border: 1px solid #f6f6f6;"></td>`
-      return this.renderRow(prop, example)
-    })
+      const example = `<td style="background-color: ${prop.value}; border: 1px solid #f6f6f6;"></td>`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderGradient (props) {
     return props.map((prop) => {
-      const example = `<td style="background: ${prop.value};"></td>`
-      return this.renderRow(prop, example)
-    })
+      const example = `<td style="background: ${prop.value};"></td>`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderBackgroundGradient (props) {
     return props.map((prop) => {
-      const example = `<td style="background-image: ${prop.value};"></td>`
-      return this.renderRow(prop, example)
-    })
+      const example = `<td style="background-image: ${prop.value};"></td>`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderDropShadow (props) {
     return props.map((prop) => {
-      const example = `<td style="box-shadow: ${prop.value};"></td>`
-      return this.renderRow(prop, example)
-    })
+      const example = `<td style="box-shadow: ${prop.value};"></td>`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderBoxShadow (props) {
     return props.map((prop) => {
-      const example = `<td style="box-shadow: ${prop.value};"></td>`
-      return this.renderRow(prop, example)
-    })
+      const example = `<td style="box-shadow: ${prop.value};"></td>`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderTextColor (props) {
     return props.map((prop) => {
-      const color = tinycolor(prop.value)
-      prop.value = color.getAlpha < 1 ? color : color.toHexString(prop.value)
+      const color = tinycolor(prop.value);
+      prop.value = color.getAlpha < 1 ? color : color.toHexString(prop.value);
       const example = `
 <td style="background-color: #f6f6f6; color: ${prop.value};">
   The quick brown fox jumps over the lazy dog.
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderTextShadow (props) {
@@ -272,41 +272,41 @@ class Styleguide {
 <td style="text-shadow: ${prop.value};">
   The quick brown fox jumps over the lazy dog.
 </td>
-`
-      return this.renderRow(prop, example)
-    })
+`;
+      return this.renderRow(prop, example);
+    });
   }
 
   renderTime (props) {
-    props = props.sort(byValue)
+    props = props.sort(byValue);
     return props.map((prop) => {
-      const example = '<td></td>'
-      return this.renderRow(prop, example)
-    })
+      const example = '<td></td>';
+      return this.renderRow(prop, example);
+    });
   }
 
   renderEasing (props) {
-    props = props.sort(byPropName)
+    props = props.sort(byPropName);
     return props.map((prop) => {
-      const example = '<td></td>'
-      return this.renderRow(prop, example)
-    })
+      const example = '<td></td>';
+      return this.renderRow(prop, example);
+    });
   }
 
   renderMediaQuery (props) {
     return props.map((prop) => {
-      const example = '<td></td>'
-      return this.renderRow(prop, example)
-    })
+      const example = '<td></td>';
+      return this.renderRow(prop, example);
+    });
   }
 
   renderSection (type, heading, fn) {
-    const props = this.categories[type]
+    const props = this.categories[type];
     if (!props) {
-      return ''
+      return '';
     }
-    const name = upperfirst(camelCase(type))
-    const render = typeof fn === 'function' ? fn : this[`render${name}`]
+    const name = upperfirst(camelCase(type));
+    const render = typeof fn === 'function' ? fn : this[`render${name}`];
     return `
 <section>
   <table>
@@ -320,7 +320,7 @@ class Styleguide {
   </table>
   <hr />
 </section>
-`
+`;
   }
 
   render () {
@@ -396,11 +396,11 @@ class Styleguide {
 </body>
 
 </html>
-`
+`;
   }
 }
 
 module.exports = (result) => {
-  const styleguide = new Styleguide(result.toJS())
-  return styleguide.render()
-}
+  const styleguide = new Styleguide(result.toJS());
+  return styleguide.render();
+};
