@@ -1,6 +1,6 @@
 const { readdir, outputFile } = require('fs-extra');
 const path = require('path');
-const camelCase = require('lodash/camelCase');
+const { camelCase, upperFirst } = require('lodash');
 
 const BASE_DIR = path.resolve(__dirname, '../dist');
 
@@ -88,7 +88,21 @@ ${body}\
 async function tsIndex (dir) {
   const importMap = await getImportMap(dir + '/types');
 
-  return importMap.map(([name, filePath]) => `\
-export { default as ${name} } from './${filePath}';
+  const imports = importMap.map(([name, filePath]) => `\
+import { ${upperFirst(name)} } from './${filePath}';
 `).join('');
+
+  return `\
+${imports}\
+
+export interface SchedioTokens {
+${importMap.map(([name]) => `\
+  ${name}: ${upperFirst(name)};
+`).join('')}\
+}
+
+const tokens: SchedioTokens;
+
+export default tokens;
+`;
 };
