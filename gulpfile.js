@@ -59,7 +59,6 @@ const webFormats = [
 
 const mobileFormats = [
   { transformType: 'react-native', formatType: 'd.ts', language: 'types' },
-  { transformType: 'react-native', formatType: 'json', language: 'json' },
   { transformType: 'react-native', formatType: 'common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'module.js', language: 'module-js' },
 ];
@@ -72,8 +71,8 @@ const colorFormats = [
   { transformType: 'js', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'js', formatType: 'color-map.module.js', language: 'module-js' },
   { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
-  { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
+  { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
 ];
 
