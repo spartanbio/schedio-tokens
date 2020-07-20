@@ -2,10 +2,11 @@
   "name": "@spartanbio/schedio-tokens",
   "version": "2.0.0",
   "description": "Design tokens used by @spartanbio/schedio",
-  "main": "dist/react-native/module-js/index.js",
+  "main": "dist/js/common-js/index.js",
+  "module": "dist/js/module-js/index.js",
+  "types": "dist/js/types/index.d.ts",
   "repository": "github:spartanbio/schedio-tokens",
   "author": "Spartan Bioscience Inc.",
-  "types": "dist/react-native/types/index.d.ts",
   "license": "MIT",
   "scripts": {
     "build": "run-s clean build:**:*",

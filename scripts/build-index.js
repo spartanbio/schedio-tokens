@@ -1,11 +1,24 @@
 const { readdir, outputFile } = require('fs-extra');
 const path = require('path');
 const { camelCase, upperFirst } = require('lodash');
+const { default: chalk } = require('chalk');
 
 const BASE_DIR = path.resolve(__dirname, '../dist');
 
+/**
+ * Create indexes for JS/TS files
+ * @param dir Directory to create index files in
+ */
 async function writeIndexes (dir) {
-  const typesIndex = "export * from '../types';\n";
+  const typesIndex = `\
+import tokens, { SchedioTokens } from '../types';
+
+export {
+  SchedioTokens,
+};
+
+export default tokens;
+`;
 
   return Promise.all([
     outputFile(path.resolve(BASE_DIR, dir, 'module-js', 'index.js'), await es6Index(dir)),
@@ -19,12 +32,13 @@ async function writeIndexes (dir) {
 Promise.all([
   writeIndexes('react-native'),
   writeIndexes('js'),
-]);
+])
+  .then(() => console.log(chalk.green('Index files written')))
+  .error(err => console.error(chalk.red(err)));
 
 /**
  * Creates a map of import names and paths
- * @param {string} dir path to directory where index should be generated
- * @returns {[string, string][]}
+ * @param dir path to directory where index should be generated
  */
 async function getImportMap (dir) {
   const files = await readdir(path.resolve(BASE_DIR, dir));
@@ -45,6 +59,7 @@ async function getImportMap (dir) {
 
 /**
  * Create ES Module index.js
+ * @param dir path to directory where index should be generated
  */
 async function es6Index (dir) {
   const importMap = await getImportMap(dir + '/module-js');
@@ -67,6 +82,7 @@ ${exports}\
 
 /**
  * Create CommonJS index.js
+ * @param dir path to directory where index should be generated
  */
 async function commonIndex (dir) {
   const importMap = await getImportMap(dir + '/common-js');
@@ -84,6 +100,7 @@ ${body}\
 
 /**
  * Create TypeScript index.d.ts
+ * @param dir path to directory where index should be generated
  */
 async function tsIndex (dir) {
   const importMap = await getImportMap(dir + '/types');
