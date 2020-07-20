@@ -1,7 +1,7 @@
 const { readdir, outputFile } = require('fs-extra');
 const path = require('path');
 const { camelCase, upperFirst } = require('lodash');
-const { default: chalk } = require('chalk');
+const chalk = require('chalk');
 
 const BASE_DIR = path.resolve(__dirname, '../dist');
 
@@ -34,7 +34,7 @@ Promise.all([
   writeIndexes('js'),
 ])
   .then(() => console.log(chalk.green('Index files written')))
-  .error(err => console.error(chalk.red(err)));
+  .catch(err => console.error(chalk.red(err)));
 
 /**
  * Creates a map of import names and paths
