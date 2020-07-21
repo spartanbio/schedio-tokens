@@ -1,6 +1,6 @@
 {
   "name": "@spartanbio/schedio-tokens",
-  "version": "2.0.0",
+  "version": "2.0.1-alpha.1",
   "description": "Design tokens used by @spartanbio/schedio",
   "main": "dist/js/common-js/index.js",
   "module": "dist/js/module-js/index.js",
