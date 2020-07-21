@@ -38,7 +38,7 @@ declare interface ColorPalette {
   [hue: keyof typeof ColorNames]: Shades;
 }
 
-declare interface ColorMap extends ColorPalette {
+export declare interface ColorMap extends ColorPalette {
 ${colors}
 }
 

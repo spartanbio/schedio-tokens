@@ -25,11 +25,12 @@ module.exports = (result) => {
 /**
  * ${baseName === 'tokens' ? '' : baseName}Tokens
  */
-declare interface ${baseName} {
+export declare interface ${baseName} {
 ${content.join('\n')}
 }
 
 declare const tokens: ${baseName};
-export = tokens;
+
+export default tokens;
 `;
 };
