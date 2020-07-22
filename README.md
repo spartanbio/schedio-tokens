@@ -9,9 +9,8 @@ A full list of tokens is available at https://spartanbio.github.io/schedio-token
   - [Installation](#installation)
   - [Usage](#usage)
     - [JS](#js)
+      - [React Native](#react-native)
     - [SCSS](#scss)
-    - [Flutter](#flutter)
-    - [React Native](#react-native)
     - [Adobe Creative Cloud Applications](#adobe-creative-cloud-applications)
 
 ## Installation
@@ -26,18 +25,30 @@ Tokens are organized with the path structure `dist/<platform>/<language>/<token>
 
 ### JS
 
-Common JS:
+Standard usage:
 
 ```js
-// camelCase tokens
-const schedioTokens = require('@spartanbio/schedio-tokens');
+import SchedioTokens from '@spartanbio/schedio-tokens';
+
+const Schedio = new SchedioTokens();
+const blue = Schedio.color('blue');
 ```
 
-ES6 Modules:
+#### React Native
+
+All CommonJS and ESModule tokens are available in `dist/react-native/`. Each includes TypeScript typings.
 
 ```js
-// camelCase tokens
-import schedioTokens from '@spartanbio/scedio-tokens';
+// JS tokens
+import SchedioTokens, { nativeTokens } from '@spartanbio/schedio-tokens';
+
+const Schedio = new SchedioTokens(nativeTokens);
+const blue = Schedio.color('blue');
+```
+
+```ts
+// TS interface if needed
+import { SchedioTokensNative } from '@spartanbio/schedio-tokens';
 ```
 
 ### SCSS
@@ -59,24 +70,6 @@ All variables and keys are kebab-case.
 
 // Colors, grouped by hue
 @import '~@spartanbio/schedio/dist/web/scss/color.color-map';
-```
-
-### Flutter
-
-Only color swatches are supported at this time. Copy `dist/flutter/dart/color.color-swatches.dart` into your project.
-
-### React Native
-
-All CommonJS and ESModule tokens are available in `dist/react-native/`. Each includes TypeScript typings.
-
-```js
-// JS tokens
-import schedioTokens from '@spartanbio/schedio-tokens/dist/react-native/module-js';
-```
-
-```ts
-// TS interface
-import { SchedioTokens } from '@spartanbio/schedio-tokens/dist/react-native/module-js';
 ```
 
 ### Adobe Creative Cloud Applications
