@@ -22,7 +22,17 @@ module.exports = {
         '@spartanbio',
       ],
       rules: {
+        'no-useless-constructor': 'off',
         semi: ['error', 'always'],
+        '@typescript-eslint/no-useless-constructor': 'error',
+      },
+    },
+    {
+      files: [
+        '**/*.d.ts',
+      ],
+      rules: {
+        'max-len': 'off',
       },
     },
   ],
