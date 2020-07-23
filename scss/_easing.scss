@@ -1,0 +1,13 @@
+/// Returns the timing-function value for a given variant.
+///
+/// @param {String} $variant - The key for the given variant.
+/// @return {String} The cubic-bezier function (string) for the variant.
+@function easing($variant: base) {
+  $fetched-value: map-get($easing-data, $variant);
+
+  @if type-of($fetched-value) == string {
+    @return $fetched-value;
+  } @else {
+    @error 'Easing variant `#{$variant}` not found. Available variants: #{available-names($easing-data)}';
+  }
+}

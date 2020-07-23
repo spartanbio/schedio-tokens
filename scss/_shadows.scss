@@ -1,0 +1,27 @@
+/// Returns the shadow for the specified depth
+/// @param {String} $depth [base] - The shadow’s depth.
+/// @param {Color} $color [color('night')] - The shadow’s depth.
+/// @param {Number} $alpha [base] - The shadow’s depth.
+/// @return {List} The shadow value.
+@function shadow($depth: 'base', $color: color('night'), $alpha: null) {
+  $fetched-value: map-get($shadow-data, $depth);
+  $_alpha: if($alpha, $alpha, if($depth != 'light', 0.15, 0.1));
+
+  @if type-of($fetched-value) == list {
+    @return $fetched-value rgba($color, $_alpha);
+  } @else {
+    @error 'Shadow variant `#{$depth}` not found. Available variants: #{available-names($shadows-data)}';
+  }
+}
+
+@mixin shadow-overlay($direction: 0deg) {
+  background: linear-gradient($direction, rgba(color('night'), 0.15) -1rem, transparent 0.75rem);
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}

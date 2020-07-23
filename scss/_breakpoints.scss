@@ -1,0 +1,75 @@
+$container-breakpoints: (
+  sm: 32rem,
+  md: 44rem,
+  lg: 60rem,
+  xl: 72rem
+);
+
+$media-breakpoints: (
+  sm: 36rem,
+  md: 48rem,
+  lg: 64rem,
+  xl: 76rem
+);
+
+@mixin after-breakpoint($name, $breakpoints: $media-breakpoints) {
+  $min: map-get($breakpoints, $name);
+
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin until-breakpoint($name, $breakpoints: $media-breakpoints) {
+  $max: map-get($breakpoints, $name);
+
+  @media (max-width: $max - 0.2/16) {
+    @content;
+  }
+}
+
+@mixin generate-all-breakpoints-until($infix: null) {
+  @content;
+
+  @if (type-of($infix) == string) {
+    $infix: '-' + $infix;
+  }
+
+  @each $breakpoint in map-keys($media-breakpoints) {
+    &#{$infix}-#{$breakpoint} {
+      @include until-breakpoint($breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin generate-all-breakpoints-after($infix: null, $suffix: null) {
+  @content;
+
+  @if (type-of($infix) == string) {
+    $infix: '-' + $infix;
+  }
+
+  @if (type-of($suffix) == string) {
+    $suffix: '-' + $suffix;
+  }
+
+  @each $breakpoint in map-keys($media-breakpoints) {
+    &#{$infix}-#{$breakpoint}#{$suffix} {
+      @include after-breakpoint($breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin generate-all-breakpoints {
+  @include generate-all-breakpoints-after('after') {
+    @content;
+  }
+
+  @include generate-all-breakpoints-until('until') {
+    @content;
+  }
+}

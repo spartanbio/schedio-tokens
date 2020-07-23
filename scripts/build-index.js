@@ -32,6 +32,7 @@ export default tokens;
 Promise.all([
   writeIndexes('react-native'),
   writeIndexes('js'),
+  writeScssIndex(),
 ])
   .then(() => console.log(chalk.green('Index files written')))
   .catch(err => console.error(chalk.red(err)));
@@ -123,3 +124,12 @@ const tokens: SchedioTokens;
 export default tokens;
 `;
 };
+
+/** Write SCSS index */
+async function writeScssIndex () {
+  const scssDir = path.resolve(BASE_DIR, 'web/scss');
+  const files = await readdir(scssDir);
+  const body = files.map(file => `@import '${file.replace('.scss', '')}';\n`).join('');
+
+  return outputFile(path.resolve(scssDir, 'all-tokens.scss'), body);
+}

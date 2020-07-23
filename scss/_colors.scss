@@ -1,0 +1,45 @@
+$color-palette-data: $palettes;
+
+/// Returns the color value for a given color name and group.
+///
+/// @param {String} $hue - The color’s hue.
+/// @param {String} $value - The darkness/lightness of the color. Defaults to
+/// base.
+/// @return {Color} The color value.
+@function color($hue, $value: 'base') {
+  @if map-has-key($color-palette-data, $hue) {
+    $fetched-palette: map-get($color-palette-data, $hue);
+    $fetched-color: map-get($fetched-palette, $value);
+
+    @if type-of($fetched-color) == color {
+      @return $fetched-color;
+    } @else {
+      // stylelint-disable string-no-newline
+      $error: "\
+    Color `#{$hue}, #{$value}` not found. Arguments must be strings.\
+    GOOD: color('night')\
+    BAD: color(night)\
+    Available options: #{available-names($color-palette-data)}\
+    ";
+      // stylelint-enable
+
+      @error $error;
+    }
+  } @else {
+    // stylelint-disable string-no-newline
+    $error: "\
+  Color `#{$hue}, #{$value}` not found. Arguments must be strings.\
+  GOOD: color('night')\
+  BAD: color(night)\
+  Available options: #{available-names($color-palette-data)}\
+  ";
+    // stylelint-enable
+
+    @error $error;
+  }
+}
+
+$button-colors: map-keys($color-palette-data);
+$hero-colors: map-keys($color-palette-data);
+$icon-colors: map-keys($color-palette-data);
+$text-colors: map-keys($color-palette-data);
