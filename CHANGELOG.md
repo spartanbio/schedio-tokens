@@ -1,3 +1,10 @@
+# [2.1.0-alpha.2](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.1...v2.1.0-alpha.2) (2020-07-23)
+
+
+### Features
+
+* adds scss utility functions ([14b04e8](https://github.com/spartanbio/schedio-tokens/commit/14b04e8efe9fc730f0796167d8082e76245c99a5))
+
 # [2.1.0-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.0.1-alpha.1...v2.1.0-alpha.1) (2020-07-23)
 
 
