@@ -11,6 +11,7 @@
   "files": [
     "dist/**/*",
     "lib/**/*",
+    "scss/**/*",
     "src/**/*"
   ],
   "scripts": {
