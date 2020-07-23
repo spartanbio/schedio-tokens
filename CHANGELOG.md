@@ -1,3 +1,10 @@
+# [2.1.0-alpha.3](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.2...v2.1.0-alpha.3) (2020-07-23)
+
+
+### Bug Fixes
+
+* includes `scss` in `files` ([b14c33a](https://github.com/spartanbio/schedio-tokens/commit/b14c33a2911cd2e25b5b52245e99a90c7cde8b0a))
+
 # [2.1.0-alpha.2](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.1...v2.1.0-alpha.2) (2020-07-23)
 
 
