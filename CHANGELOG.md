@@ -1,3 +1,10 @@
+# [2.1.0-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.0.1-alpha.1...v2.1.0-alpha.1) (2020-07-23)
+
+
+### Features
+
+* makes primary JS interface `Schedio` class ([b4c8bbe](https://github.com/spartanbio/schedio-tokens/commit/b4c8bbed14d899c65b6df9ed6fd8532d0ef03ec1))
+
 ## [2.0.1-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.0.0...v2.0.1-alpha.1) (2020-07-21)
 
 
