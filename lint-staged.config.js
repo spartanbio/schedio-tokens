@@ -5,4 +5,4 @@ module.exports = {
   '*.{css,scss}': [
     'yarn lint:style --fix',
   ],
-}
+};

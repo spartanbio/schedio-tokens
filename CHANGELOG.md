@@ -1,3 +1,42 @@
+# [2.1.0-alpha.4](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.3...v2.1.0-alpha.4) (2020-09-22)
+
+
+### Features
+
+* simplifies font sizes ([829239e](https://github.com/spartanbio/schedio-tokens/commit/829239e1aea00e6d3d14507983c8773f03797c7a))
+
+# [2.1.0-alpha.3](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.2...v2.1.0-alpha.3) (2020-07-23)
+
+
+### Bug Fixes
+
+* includes `scss` in `files` ([b14c33a](https://github.com/spartanbio/schedio-tokens/commit/b14c33a2911cd2e25b5b52245e99a90c7cde8b0a))
+
+# [2.1.0-alpha.2](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.1...v2.1.0-alpha.2) (2020-07-23)
+
+
+### Features
+
+* adds scss utility functions ([14b04e8](https://github.com/spartanbio/schedio-tokens/commit/14b04e8efe9fc730f0796167d8082e76245c99a5))
+
+# [2.1.0-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.0.1-alpha.1...v2.1.0-alpha.1) (2020-07-23)
+
+
+### Features
+
+* makes primary JS interface `Schedio` class ([b4c8bbe](https://github.com/spartanbio/schedio-tokens/commit/b4c8bbed14d899c65b6df9ed6fd8532d0ef03ec1))
+
+## [2.0.1-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.0.0...v2.0.1-alpha.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* adds typings properly ([c91bd27](https://github.com/spartanbio/schedio-tokens/commit/c91bd271004192d976521d6b6c3f841c0ed697e5))
+* exports `ColorMap` definition ([0cb7e6a](https://github.com/spartanbio/schedio-tokens/commit/0cb7e6aa8cf5df5cc7801e470a9871984802e590))
+* exports `SchedioTokens` interface ([8aafc85](https://github.com/spartanbio/schedio-tokens/commit/8aafc8565f6dca15150854d2310b97e02e2188cd))
+* simplifies react-native exports ([61bb504](https://github.com/spartanbio/schedio-tokens/commit/61bb504c77562eceac79c53b85288668aa22c27a))
+* updates main/module/type in `package.json` ([eb1eed1](https://github.com/spartanbio/schedio-tokens/commit/eb1eed10ad219cf788e8e0c4d6ee399806964019))
+
 # [2.0.0](https://gitlab.com/spartanbio-ux/schedio-tokens/compare/v1.2.0...v2.0.0) (2020-05-19)
 
 

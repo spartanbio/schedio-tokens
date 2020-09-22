@@ -1,7 +1,7 @@
-const { generateColorMap } = require('../utils')
+const { generateColorMap } = require('../utils');
 
 module.exports = (result) => {
-  const swatches = generateColorMap(result.toJS())
+  const swatches = generateColorMap(result.toJS());
 
-  return `module.exports = ${JSON.stringify(swatches, null, 2)}`
-}
+  return `module.exports = ${JSON.stringify(swatches, null, 2)}`;
+};

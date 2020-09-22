@@ -1,49 +1,49 @@
-const gulp = require('gulp')
-const gulpLoadPlugins = require('gulp-load-plugins')
-const theo = require('theo')
+const gulp = require('gulp');
+const gulpLoadPlugins = require('gulp-load-plugins');
+const theo = require('theo');
 const transforms = {
   ...require('./transforms/color'),
   ...require('./transforms/unit'),
   ...require('./transforms/easing'),
-}
+};
 
-const $ = gulpLoadPlugins()
+const $ = gulpLoadPlugins();
 
 // Setup and register custom formats/transforms
 Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
-  theo.registerValueTransform(name, predicate, transform)
-})
+  theo.registerValueTransform(name, predicate, transform);
+});
 
 // Transforms
 const jsTransforms = [
   'color/rgb',
   'unit/timingUnitless',
   'easing/array',
-]
-theo.registerTransform('js', jsTransforms)
-theo.registerTransform('flutter', ['color/dartHex8argb'])
+];
+theo.registerTransform('js', jsTransforms);
+theo.registerTransform('flutter', ['color/dartHex8argb']);
 theo.registerTransform('react-native', [
   ...jsTransforms,
   'unit/rnRelativePixelValue',
   'unit/rnAbsolutePixelValue',
   'unit/rnRelativeShadow',
   'unit/rnAbsoluteShadow',
-])
+]);
 
 // Formats
 // Overridden formats
-theo.registerFormat('json', require('./formats/json.js'))
-theo.registerFormat('map.scss', require('./formats/map.scss.js'))
-theo.registerFormat('common.js', require('./formats/common.js'))
-theo.registerFormat('module.js', require('./formats/module.js'))
+theo.registerFormat('json', require('./formats/json.js'));
+theo.registerFormat('map.scss', require('./formats/map.scss.js'));
+theo.registerFormat('common.js', require('./formats/common.js'));
+theo.registerFormat('module.js', require('./formats/module.js'));
 // Custom formats
-theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'))
-theo.registerFormat('d.ts', require('./formats/d.ts.js'))
-theo.registerFormat('color-map.d.ts', require('./formats/color-map.d.ts.js'))
-theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'))
-theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'))
-theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'))
-theo.registerFormat('ase.json', require('./formats/ase.json.js'))
+theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'));
+theo.registerFormat('d.ts', require('./formats/d.ts.js'));
+theo.registerFormat('color-map.d.ts', require('./formats/color-map.d.ts.js'));
+theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'));
+theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'));
+theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'));
+theo.registerFormat('ase.json', require('./formats/ase.json.js'));
 
 // Setup default `theo` formats
 const webFormats = [
@@ -55,14 +55,13 @@ const webFormats = [
   { transformType: 'js', formatType: 'd.ts', language: 'types' },
   { transformType: 'js', formatType: 'common.js', language: 'common-js' },
   { transformType: 'js', formatType: 'module.js', language: 'module-js' },
-]
+];
 
 const mobileFormats = [
   { transformType: 'react-native', formatType: 'd.ts', language: 'types' },
-  { transformType: 'react-native', formatType: 'json', language: 'json' },
   { transformType: 'react-native', formatType: 'common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'module.js', language: 'module-js' },
-]
+];
 
 // Setup token-specific formats
 const colorFormats = [
@@ -72,15 +71,15 @@ const colorFormats = [
   { transformType: 'js', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'js', formatType: 'color-map.module.js', language: 'module-js' },
   { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
-  { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
+  { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
-]
+];
 
 // Build design system artifacts
-gulp.task('web-formats', buildFormats(webFormats))
-gulp.task('mobile-formats', buildFormats(mobileFormats))
-gulp.task('color-formats', buildFormats(colorFormats, 'tokens/color.yml'))
+gulp.task('web-formats', buildFormats(webFormats));
+gulp.task('mobile-formats', buildFormats(mobileFormats));
+gulp.task('color-formats', buildFormats(colorFormats, 'tokens/color.yml'));
 
 // Build docs and styles
 gulp.task('docs:styles', (done) => {
@@ -93,10 +92,10 @@ gulp.task('docs:styles', (done) => {
       }).on('error', $.sass.logError),
     )
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('docs'))
+    .pipe(gulp.dest('docs'));
 
-  done()
-})
+  done();
+});
 
 gulp.task(
   'docs',
@@ -104,38 +103,38 @@ gulp.task(
     'docs:styles',
     buildDocs,
   ]),
-)
+);
 
 // Setup batched tasks
 const defaultTasks = [
   'web-formats',
   'mobile-formats',
   'color-formats',
-]
+];
 
 gulp.task(
   'default',
   gulp.series(defaultTasks),
-)
+);
 
 const runOnWatch = [
   ...defaultTasks,
   'docs',
   gulp.series(serve, watch),
-]
+];
 
 gulp.task(
   'watch',
   gulp.series(runOnWatch),
-)
+);
 
 // Helpers for building design system
 function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) {
   return (done) => {
     formats.forEach(({ transformType, formatType, language }) => {
-      let destPath = `dist/${transformType}`
+      let destPath = `dist/${transformType}`;
 
-      if (language) destPath += `/${language}`
+      if (language) destPath += `/${language}`;
 
       gulp
         .src(glob)
@@ -146,15 +145,15 @@ function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) 
           }),
         )
         .on('error', errorHandler)
-        .pipe(gulp.dest(destPath))
-    })
+        .pipe(gulp.dest(destPath));
+    });
 
-    done()
-  }
+    done();
+  };
 }
 
 function buildDocs (done) {
-  theo.registerFormat('docs.html', require('./formats/docs.html.js'))
+  theo.registerFormat('docs.html', require('./formats/docs.html.js'));
 
   gulp.src('tokens/tokens.yml')
     .pipe(
@@ -165,38 +164,38 @@ function buildDocs (done) {
     )
     .pipe($.rename('index.html'))
     .on('error', logError)
-    .pipe(gulp.dest('docs'))
+    .pipe(gulp.dest('docs'));
 
-  done()
+  done();
 }
 
 function logError (err) {
-  throw new Error(err)
+  throw new Error(err);
 }
 
 // `gulp watch` setup
 function watch () {
-  gulp.watch(['tokens/*.yml'], gulp.series(runOnWatch))
-  gulp.watch('docs/**/*.scss', gulp.series('docs:styles'))
-  gulp.watch(['formats/**/*.*', 'gulpfile.js'], gulp.series($.restart))
-  gulp.watch(['docs/**/*.html'], gulp.series(reload))
+  gulp.watch(['tokens/*.yml'], gulp.series(runOnWatch));
+  gulp.watch('docs/**/*.scss', gulp.series('docs:styles'));
+  gulp.watch(['formats/**/*.*', 'gulpfile.js'], gulp.series($.restart));
+  gulp.watch(['docs/**/*.html'], gulp.series(reload));
 }
 
 // BrowserSync setup
-const browserSync = require('browser-sync')
+const browserSync = require('browser-sync');
 
 function serve (done) {
   browserSync.init({
     open: false,
     notify: false,
     server: 'docs',
-  })
+  });
 
-  done()
+  done();
 }
 
 function reload (done) {
-  browserSync.reload()
+  browserSync.reload();
 
-  done()
+  done();
 }

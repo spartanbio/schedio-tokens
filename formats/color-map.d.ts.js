@@ -1,26 +1,26 @@
-const { generateColorMap } = require('../utils')
+const { generateColorMap } = require('../utils');
 
 module.exports = (result) => {
-  const js = result.toJS()
-  const map = generateColorMap(js)
+  const js = result.toJS();
+  const map = generateColorMap(js);
 
-  const colorNames = Object.keys(map)
+  const colorNames = Object.keys(map);
 
   const colors = Object.entries(map).map(([color, shades]) => {
     const shadeStr = Object.entries(shades)
       .map(([name, value]) => `    ${name}: '${value}';`)
-      .join('\n\n')
+      .join('\n\n');
 
     return `\
   /* ${color} map */
   ${color}: {
 ${shadeStr}
-  };`
+  };`;
   })
-    .join('\n\n')
+    .join('\n\n');
 
   return `\
-declare enum ColorNames {
+declare interface ColorNames {
 ${colorNames.map(color => `  ${color},`).join('\n')}
 }
 
@@ -35,14 +35,14 @@ declare interface Shades {
 }
 
 declare interface ColorPalette {
-  [hue: keyof typeof ColorNames]: Shades;
+  [hue: keyof ColorNames]: Shades;
 }
 
-declare interface ColorMap extends ColorPalette {
+export declare interface ColorMap extends ColorPalette {
 ${colors}
 }
 
 declare const colors: ColorMap;
 export = colors
-`
-}
+`;
+};

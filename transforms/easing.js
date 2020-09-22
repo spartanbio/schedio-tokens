@@ -1,4 +1,4 @@
-const functionRegExp = /.*\((.*)\)/
+const functionRegExp = /.*\((.*)\)/;
 
 module.exports = {
   'easing/array': {
@@ -9,4 +9,4 @@ module.exports = {
       .split(',')
       .map(el => Number(el.trim())),
   },
-}
+};

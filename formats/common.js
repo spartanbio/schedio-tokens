@@ -1,24 +1,24 @@
-const { getTokenName, generateTokenKey } = require('../utils')
+const { getTokenName, generateTokenKey } = require('../utils');
 
 const generateObject = ({ props, meta }) => {
-  const tokenName = getTokenName(meta)
+  const tokenName = getTokenName(meta);
 
   return props.map(({ name, value, comment }) => {
-    const tokenKey = generateTokenKey(tokenName, name)
-    const result = []
+    const tokenKey = generateTokenKey(tokenName, name);
+    const result = [];
 
-    if (comment) result.push(`  /* ${comment} */`)
+    if (comment) result.push(`  /* ${comment} */`);
 
-    result.push(`  ${tokenKey}: ${JSON.stringify(value, null, 2)},`)
+    result.push(`  ${tokenKey}: ${JSON.stringify(value, null, 2)},`);
 
-    return result.join('\n')
-  })
-}
+    return result.join('\n');
+  });
+};
 
 module.exports = (result) => {
-  const js = result.toJS()
-  const content = generateObject(js)
-  const baseName = getTokenName(js.meta)
+  const js = result.toJS();
+  const content = generateObject(js);
+  const baseName = getTokenName(js.meta);
 
   return `\
 /**
@@ -27,5 +27,5 @@ module.exports = (result) => {
 module.exports = {
 ${content.join('\n')}
 }
-`
-}
+`;
+};

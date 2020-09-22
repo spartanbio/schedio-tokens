@@ -1,11 +1,19 @@
 {
   "name": "@spartanbio/schedio-tokens",
-  "version": "2.0.0",
+  "version": "2.1.0-alpha.4",
   "description": "Design tokens used by @spartanbio/schedio",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "github:spartanbio/schedio-tokens",
   "author": "Spartan Bioscience Inc.",
   "license": "MIT",
+  "files": [
+    "dist/**/*",
+    "lib/**/*",
+    "scss/**/*",
+    "src/**/*"
+  ],
   "scripts": {
     "build": "run-s clean build:**:*",
     "build:theo": "gulp",
@@ -13,7 +21,9 @@
     "build:docs": "gulp docs",
     "build:format:style": "stylelint ./{docs,dist}/**/*.{scss,css} --fix",
     "build:format:js": "eslint ./{docs,dist}/**/*.{js,ts} --fix --no-error-on-unmatched-pattern",
-    "clean": "rimraf ./dist",
+    "build:index": "node scripts/build-index.js",
+    "build:ts": "tsc",
+    "clean": "rimraf ./dist ./lib",
     "docs": "run-s build:docs build:format:js build:format:style",
     "lint:js": "eslint .",
     "lint:style": "stylelint ./**/*.{scss,css}",
@@ -26,8 +36,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
@@ -35,8 +45,8 @@
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@spartanbio/eslint-config": "^1.1.1",
     "@spartanbio/stylelint-config-scss": "^1.0.10",
-    "@typescript-eslint/eslint-plugin": "^3.0.1",
-    "@typescript-eslint/parser": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
     "ase-utils": "^0.1.1",
     "browser-sync": "^2.26.7",
     "chalk": "^4.0.0",
@@ -66,6 +76,6 @@
     "stylelint": "^13.5.0",
     "theo": "^8.1.5",
     "tinycolor2": "^1.4.1",
-    "typescript": "^3.9.3"
+    "typescript": "^4.0.2"
   }
 }

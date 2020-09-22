@@ -1,16 +1,16 @@
 # Schédio design tokens
 
-Built with [Theo](https://github.com/salesforce-ux/theo) for [@spartanbio/schedio](https://gitlab.com/spartanbio-ux/schedio).
+Built with [Theo](https://github.com/salesforce-ux/theo) for
+[@spartanbio/schedio](https://gitlab.com/spartanbio-ux/schedio).
 
-A full list of tokens is available at https://spartanbio-ux.gitlab.io/schedio-tokens/.
+A full list of tokens is available at https://spartanbio.github.io/schedio-tokens/.
 
-- [Schédio design tokens](#sch%c3%a9dio-design-tokens)
+- [Schédio design tokens](#schédio-design-tokens)
   - [Installation](#installation)
   - [Usage](#usage)
     - [JS](#js)
+      - [React Native](#react-native)
     - [SCSS](#scss)
-    - [Flutter](#flutter)
-    - [React Native](#react-native)
     - [Adobe Creative Cloud Applications](#adobe-creative-cloud-applications)
 
 ## Installation
@@ -25,28 +25,30 @@ Tokens are organized with the path structure `dist/<platform>/<language>/<token>
 
 ### JS
 
-Examples use JSON, but JS modules are available in `dist/js/`.
-
-Common JS:
+Standard usage:
 
 ```js
-// camelCase tokens
-const schedioTokens = require('@spartanbio/schedio-tokens')
-// kebab-case tokens with meta data
-const {
-  props: schedioTokens
-} = require('@spartanbio/schedio-tokens/dist/web/raw-json/tokens.raw.json')
+import SchedioTokens from '@spartanbio/schedio-tokens';
+
+const Schedio = new SchedioTokens();
+const blue = Schedio.color('blue');
 ```
 
-ES6 Modules:
+#### React Native
+
+All CommonJS and ESModule tokens are available in `dist/react-native/`. Each includes TypeScript typings.
 
 ```js
-// camelCase tokens
-import * as schedioTokens from '@spartanbio/scedio-tokens'
-// kebab-case tokens with meta data
-import { props as schedioTokens } from '@spartanbio/schedio-tokens/dist/web/raw-json/tokens.raw.json'
-// Importing raw colors from JSON
-import { props as colors } from '@spartanbio/schedio-tokens/dist/web/raw-json/color.raw.json'
+// JS tokens
+import SchedioTokens, { nativeTokens } from '@spartanbio/schedio-tokens';
+
+const Schedio = new SchedioTokens(nativeTokens);
+const blue = Schedio.color('blue');
+```
+
+```ts
+// TS interface if needed
+import { SchedioTokensNative } from '@spartanbio/schedio-tokens';
 ```
 
 ### SCSS
@@ -70,24 +72,7 @@ All variables and keys are kebab-case.
 @import '~@spartanbio/schedio/dist/web/scss/color.color-map';
 ```
 
-### Flutter
-
-Only color swatches are supported at this time. Copy `dist/flutter/dart/color.color-swatches.dart` into your project.
-
-### React Native
-
-All tokens except are available in `dist/react-native/`.
-
-Color objects are available as well. Note that these objects are in `camelCase`.
-
-```js
-// common js
-const colors = require('@spartanbio/schedio-tokens/dist/react-native/common-js/color.colors-map.common')
-
-// es modules
-import * as colors from '@spartanbio/schedio-tokens/dist/react-native/module-js/color.colors-map.module')
-```
-
 ### Adobe Creative Cloud Applications
 
-CC applications that support swatch files can import `dist/web/adobe/color.ase` to use color. Note they are imported without groups.
+CC applications that support swatch files can import `dist/web/adobe/color.ase` to use color. Note they are imported
+without groups.
