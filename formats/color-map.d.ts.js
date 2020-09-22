@@ -20,7 +20,7 @@ ${shadeStr}
     .join('\n\n');
 
   return `\
-declare enum ColorNames {
+declare interface ColorNames {
 ${colorNames.map(color => `  ${color},`).join('\n')}
 }
 
@@ -35,7 +35,7 @@ declare interface Shades {
 }
 
 declare interface ColorPalette {
-  [hue: keyof typeof ColorNames]: Shades;
+  [hue: keyof ColorNames]: Shades;
 }
 
 export declare interface ColorMap extends ColorPalette {
