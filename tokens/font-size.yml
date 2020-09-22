@@ -4,9 +4,9 @@ props:
   font-size-1:
     value: 5rem
   font-size-2:
-    value: 3.375rem
+    value: 3rem
   font-size-3:
-    value: 2.25rem
+    value: 2rem
   font-size-4:
     value: 1.5rem
   font-size-5:
