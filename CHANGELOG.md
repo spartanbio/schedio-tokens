@@ -1,3 +1,10 @@
+# [2.1.0-alpha.4](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.3...v2.1.0-alpha.4) (2020-09-22)
+
+
+### Features
+
+* simplifies font sizes ([829239e](https://github.com/spartanbio/schedio-tokens/commit/829239e1aea00e6d3d14507983c8773f03797c7a))
+
 # [2.1.0-alpha.3](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0-alpha.2...v2.1.0-alpha.3) (2020-07-23)
 
 
