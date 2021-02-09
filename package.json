@@ -65,7 +65,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-theo": "^2.0.1",
-    "husky": "^4.2.5",
+    "husky": "^5.0.9",
     "lint-staged": "^10.2.6",
     "lodash": "^4.17.15",
     "ms": "^2.1.2",
