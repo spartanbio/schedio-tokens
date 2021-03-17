@@ -1,6 +1,6 @@
 {
   "name": "@spartanbio/schedio-tokens",
-  "version": "2.1.0",
+  "version": "2.1.1-alpha.1",
   "description": "Design tokens used by @spartanbio/schedio",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -29,15 +29,16 @@
     "lint:style": "stylelint ./**/*.{scss,css}",
     "prepublishOnly": "yarn build",
     "semantic-release": "semantic-release",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "prepare": "husky install"
   },
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/cli": "^12.0.0",
+    "@commitlint/config-conventional": "^12.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
@@ -55,7 +56,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-standard": "^5.0.0",
     "fs-extra": "^9.0.0",
     "gulp": "^4.0.2",
     "gulp-load-plugins": "^2.0.3",
@@ -63,9 +64,9 @@
     "gulp-rename": "^2.0.0",
     "gulp-restart": "^0.1.1",
     "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-theo": "^2.0.1",
-    "husky": "^4.2.5",
+    "husky": "^5.0.9",
     "lint-staged": "^10.2.6",
     "lodash": "^4.17.15",
     "ms": "^2.1.2",

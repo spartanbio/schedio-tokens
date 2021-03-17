@@ -113,9 +113,10 @@ class Styleguide {
 
   renderFontSize (props) {
     return props.map((prop) => {
+      const lineHeight = parseFloat(prop.value.replace('rem', '')) >= 3 ? 1.25 : 1.5;
       const example = `
 <td>
-  <div style="font-size: ${prop.value};">
+  <div style="font-size: ${prop.value}; line-height: ${lineHeight};">
     The quick brown fox jumps over the lazy dog.
   </div>
 </td>
@@ -131,9 +132,7 @@ class Styleguide {
 <td>
   <div
     class="line-height-example"
-    style="line-height: ${
-        prop.value
-        }; background-size: 100% ${vHeight};"
+    style="line-height: ${prop.value}; background-size: 100% ${vHeight};"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
     elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
