@@ -28,6 +28,7 @@ theo.registerTransform('react-native', [
   'unit/rnAbsolutePixelValue',
   'unit/rnRelativeShadow',
   'unit/rnAbsoluteShadow',
+  'unit/percentLineHeight',
 ]);
 
 // Formats
