@@ -1,3 +1,10 @@
+## [2.1.1-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0...v2.1.1-alpha.1) (2021-03-17)
+
+
+### Bug Fixes
+
+* uses unitless `line-height` for web, % for react-native ([788c914](https://github.com/spartanbio/schedio-tokens/commit/788c91476e7182e761cc51cb692fd8ef7632c74f))
+
 # [2.1.0](https://github.com/spartanbio/schedio-tokens/compare/v2.0.0...v2.1.0) (2020-09-22)
 
 
