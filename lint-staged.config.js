@@ -1,8 +1,8 @@
 module.exports = {
-  '*.js': [
-    'yarn lint:js --fix',
+  '*.{js,ts}': [
+    'yarn eslint --fix',
   ],
   '*.{css,scss}': [
-    'yarn lint:style --fix',
+    'yarn stylelint --fix',
   ],
 };

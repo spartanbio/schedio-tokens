@@ -23,11 +23,16 @@ const generateShadow = (width, height, radius) => ({
   shadowOffset: { width, height },
   ...(radius && { shadowRadius: radius }),
 });
+const floatToPercent = prop => `${prop * 100}%`;
 
 module.exports = {
   'unit/timingUnitless': {
     predicate: prop => prop.get('type') === 'time',
     transform: prop => prop.get('value') === 0 ? 0 : ms(prop.get('value')),
+  },
+  'unit/percentLineHeight': {
+    predicate: prop => prop.get('category') === 'line-height',
+    transform: prop => floatToPercent(prop.get('value')),
   },
   // React native units are prefixed with 'unit/rn'
   'unit/rnRelativePixelValue': {
