@@ -29,7 +29,8 @@
     "lint:style": "stylelint ./**/*.{scss,css}",
     "prepublishOnly": "yarn build",
     "semantic-release": "semantic-release",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "prepare": "husky install"
   },
   "private": false,
   "publishConfig": {
