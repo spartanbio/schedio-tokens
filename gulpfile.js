@@ -169,7 +169,6 @@ function watchFn (done) {
     docTasks,
   ));
   watch('docs/**/*.scss', series(docStyles));
-  watch(['formats/**/*.*', 'gulpfile.js'], series($.restart));
   watch(['docs/**/*.html'], series(reload));
   done();
 }
