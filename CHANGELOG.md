@@ -1,3 +1,17 @@
+# [3.0.0-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.1.1...v3.0.0-alpha.1) (2021-03-18)
+
+
+### Features
+
+* changes `font-weight-demi` to `font-weight-semi` ([22767ed](https://github.com/spartanbio/schedio-tokens/commit/22767ede6f8343bf9ce989052046c78364dbd154))
+* changes primary font face to Inter ([9a95342](https://github.com/spartanbio/schedio-tokens/commit/9a95342a33951993d2b5aa7ad573d14e0a03f5c9))
+* sets JetBrains Mono as primary monospaced font ([3872c6f](https://github.com/spartanbio/schedio-tokens/commit/3872c6f97cc563cc00cbbd1eefb14e283fc0e8cf))
+
+
+### BREAKING CHANGES
+
+* The font weight tokens have been updated to match Inter's convention
+
 ## [2.1.1](https://github.com/spartanbio/schedio-tokens/compare/v2.1.0...v2.1.1) (2021-03-17)
 
 
