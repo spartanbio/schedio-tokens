@@ -1,4 +1,5 @@
 @import '../dist/web/scss/tokens';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&family=JetBrains+Mono:wght@300&display=swap');
 
 html,
 body {
@@ -7,6 +8,7 @@ body {
   color: $color-night;
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
+  font-weight: $font-weight-light;
   line-height: $line-height-base;
 }
 
@@ -58,13 +60,13 @@ td {
 }
 
 th {
-  font-weight: normal;
+  font-weight: $font-weight-light;
   text-align: left;
 }
 
 thead th {
   border-bottom: 1px solid $color-grey-lighter;
-  font-weight: $font-weight-demi;
+  font-weight: $font-weight-semi;
   padding-bottom: $spacing-half;
 
   &:first-child {
@@ -106,10 +108,7 @@ hr {
 }
 
 .line-height-example {
-  background-image: -webkit-linear-gradient(
-    $color-grey-lighter 1px,
-    transparent 1px
-  );
+  background-image: -webkit-linear-gradient($color-grey-lighter 1px, transparent 1px);
   background-image: linear-gradient($color-grey-lighter 1px, transparent 1px);
   background-size: 100% $spacing-base;
   border-bottom: 1px solid $color-grey-lighter;

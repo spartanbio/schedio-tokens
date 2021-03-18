@@ -1,7 +1,7 @@
 props:
   font-weight-bold:
     value: 700
-  font-weight-demi:
+  font-weight-semi:
     value: 600
   font-weight-light:
     value: 300
