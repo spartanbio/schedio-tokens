@@ -19,6 +19,13 @@ A full list of tokens is available at https://spartanbio.github.io/schedio-token
 yarn add @spartanbio/schedio-tokens
 ```
 
+This package DOES NOT load brand fonts. To load them from Google Fonts, add the following line to your CSS:
+
+```css
+/* Customize accordingly to fit your needs. Inter Italic is not on google fonts and most be loaded separately. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@300&display=swap');
+```
+
 ## Usage
 
 Tokens are organized with the path structure `dist/<platform>/<language>/<token>.<format>.<ext>`
