@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+const { dest, src, series, watch } = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const theo = require('theo');
 const transforms = {
@@ -77,14 +77,9 @@ const colorFormats = [
   { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
 ];
 
-// Build design system artifacts
-gulp.task('web-formats', buildFormats(webFormats));
-gulp.task('mobile-formats', buildFormats(mobileFormats));
-gulp.task('color-formats', buildFormats(colorFormats, 'tokens/color.yml'));
-
 // Build docs and styles
-gulp.task('docs:styles', (done) => {
-  gulp.src('docs/*.scss')
+function docStyles () {
+  return src('docs/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe(
@@ -93,52 +88,20 @@ gulp.task('docs:styles', (done) => {
       }).on('error', $.sass.logError),
     )
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('docs'));
-
-  done();
-});
-
-gulp.task(
-  'docs',
-  gulp.series([
-    'docs:styles',
-    buildDocs,
-  ]),
-);
-
-// Setup batched tasks
-const defaultTasks = [
-  'web-formats',
-  'mobile-formats',
-  'color-formats',
-];
-
-gulp.task(
-  'default',
-  gulp.series(defaultTasks),
-);
-
-const runOnWatch = [
-  ...defaultTasks,
-  'docs',
-  gulp.series(serve, watch),
-];
-
-gulp.task(
-  'watch',
-  gulp.series(runOnWatch),
-);
+    .pipe(dest('docs'));
+}
 
 // Helpers for building design system
 function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) {
-  return (done) => {
+  return function (done) {
     formats.forEach(({ transformType, formatType, language }) => {
       let destPath = `dist/${transformType}`;
 
-      if (language) destPath += `/${language}`;
+      if (language) {
+        destPath += `/${language}`;
+      }
 
-      gulp
-        .src(glob)
+      src(glob)
         .pipe(
           $.theo({
             transform: { type: transformType },
@@ -146,17 +109,17 @@ function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) 
           }),
         )
         .on('error', errorHandler)
-        .pipe(gulp.dest(destPath));
+        .pipe(dest(destPath));
     });
 
     done();
   };
 }
 
-function buildDocs (done) {
+function buildDocs () {
   theo.registerFormat('docs.html', require('./formats/docs.html.js'));
 
-  gulp.src('tokens/tokens.yml')
+  return src('tokens/tokens.yml')
     .pipe(
       $.theo({
         transform: { type: 'web' },
@@ -165,22 +128,17 @@ function buildDocs (done) {
     )
     .pipe($.rename('index.html'))
     .on('error', logError)
-    .pipe(gulp.dest('docs'));
-
-  done();
+    .pipe(dest('docs'));
 }
 
 function logError (err) {
   throw new Error(err);
 }
 
-// `gulp watch` setup
-function watch () {
-  gulp.watch(['tokens/*.yml'], gulp.series(runOnWatch));
-  gulp.watch('docs/**/*.scss', gulp.series('docs:styles'));
-  gulp.watch(['formats/**/*.*', 'gulpfile.js'], gulp.series($.restart));
-  gulp.watch(['docs/**/*.html'], gulp.series(reload));
-}
+const docTasks = series(
+  docStyles,
+  buildDocs,
+);
 
 // BrowserSync setup
 const browserSync = require('browser-sync');
@@ -188,15 +146,36 @@ const browserSync = require('browser-sync');
 function serve (done) {
   browserSync.init({
     open: false,
-    notify: false,
     server: 'docs',
   });
-
   done();
 }
 
 function reload (done) {
   browserSync.reload();
-
   done();
 }
+
+const defaultTasks = series(
+  buildFormats(webFormats),
+  buildFormats(mobileFormats),
+  buildFormats(colorFormats, 'tokens/color.yml'),
+);
+
+// `gulp watch` setup
+function watchFn (done) {
+  watch(['tokens/*.yml'], series(
+    defaultTasks,
+    docTasks,
+  ));
+  watch('docs/**/*.scss', series(docStyles));
+  watch(['formats/**/*.*', 'gulpfile.js'], series($.restart));
+  watch(['docs/**/*.html'], series(reload));
+  done();
+}
+
+module.exports = {
+  default: series(defaultTasks),
+  docs: docTasks,
+  watch: series(defaultTasks, serve, watchFn),
+};
