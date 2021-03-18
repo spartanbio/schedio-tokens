@@ -93,27 +93,23 @@ function docStyles () {
 
 // Helpers for building design system
 function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) {
-  return function (done) {
-    formats.forEach(({ transformType, formatType, language }) => {
-      let destPath = `dist/${transformType}`;
+  return formats.map(({ transformType, formatType, language }) => {
+    let destPath = `dist/${transformType}`;
 
-      if (language) {
-        destPath += `/${language}`;
-      }
+    if (language) {
+      destPath += `/${language}`;
+    }
 
-      src(glob)
-        .pipe(
-          $.theo({
-            transform: { type: transformType },
-            format: { type: formatType },
-          }),
-        )
-        .on('error', errorHandler)
-        .pipe(dest(destPath));
-    });
-
-    done();
-  };
+    return () => src(glob)
+      .pipe(
+        $.theo({
+          transform: { type: transformType },
+          format: { type: formatType },
+        }),
+      )
+      .on('error', errorHandler)
+      .pipe(dest(destPath));
+  });
 }
 
 function buildDocs () {
@@ -135,11 +131,6 @@ function logError (err) {
   throw new Error(err);
 }
 
-const docTasks = series(
-  docStyles,
-  buildDocs,
-);
-
 // BrowserSync setup
 const browserSync = require('browser-sync');
 
@@ -156,25 +147,28 @@ function reload (done) {
   done();
 }
 
-const defaultTasks = series(
-  buildFormats(webFormats),
-  buildFormats(mobileFormats),
-  buildFormats(colorFormats, 'tokens/color.yml'),
-);
+const defaultTasks = [
+  ...buildFormats(webFormats),
+  ...buildFormats(mobileFormats),
+  ...buildFormats(colorFormats, 'tokens/color.yml'),
+];
+
+const docTasks = [
+  docStyles,
+  buildDocs,
+];
 
 // `gulp watch` setup
 function watchFn (done) {
-  watch(['tokens/*.yml'], series(
-    defaultTasks,
-    docTasks,
-  ));
+  watch(['tokens/*.yml'], series(defaultTasks));
+  watch(['dist/'], series(docTasks));
   watch('docs/**/*.scss', series(docStyles));
-  watch(['docs/**/*.html'], series(reload));
+  watch(['docs/'], series(reload));
   done();
 }
 
 module.exports = {
   default: series(defaultTasks),
-  docs: docTasks,
-  watch: series(defaultTasks, serve, watchFn),
+  docs: series(docTasks),
+  watch: series(defaultTasks, docTasks, serve, watchFn),
 };
