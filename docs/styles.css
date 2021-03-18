@@ -64,7 +64,7 @@ td {
 }
 
 th {
-  font-weight: normal;
+  font-weight: 300;
   text-align: left;
 }
 
@@ -79,7 +79,7 @@ thead th:first-child {
 }
 
 code {
-  font-family: 'SFMono-Regular', Consolas, 'Fira Sans', 'Liberation Mono', Menlo, 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 }
 
 hr {
