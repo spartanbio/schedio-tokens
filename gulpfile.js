@@ -1,5 +1,6 @@
 const { dest, src, series, watch } = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
+const merge2 = require('merge2');
 const theo = require('theo');
 const transforms = {
   ...require('./transforms/color'),
@@ -92,7 +93,7 @@ function docStyles () {
 }
 
 // Helpers for building design system
-function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) {
+function prepareTokenBuilders (formats, glob = 'tokens/*.yml', errorHandler = logError) {
   return formats.map(({ transformType, formatType, language }) => {
     let destPath = `dist/${transformType}`;
 
@@ -100,7 +101,7 @@ function buildFormats (formats, glob = 'tokens/*.yml', errorHandler = logError) 
       destPath += `/${language}`;
     }
 
-    return () => src(glob)
+    return src(glob)
       .pipe(
         $.theo({
           transform: { type: transformType },
@@ -147,11 +148,11 @@ function reload (done) {
   done();
 }
 
-const defaultTasks = [
-  ...buildFormats(webFormats),
-  ...buildFormats(mobileFormats),
-  ...buildFormats(colorFormats, 'tokens/color.yml'),
-];
+const buildTokens = () => merge2(
+  prepareTokenBuilders(webFormats),
+  prepareTokenBuilders(mobileFormats),
+  prepareTokenBuilders(colorFormats, 'tokens/color.yml'),
+);
 
 const docTasks = [
   docStyles,
@@ -160,7 +161,7 @@ const docTasks = [
 
 // `gulp watch` setup
 function watchFn (done) {
-  watch(['tokens/*.yml'], series(defaultTasks));
+  watch(['tokens/*.yml'], series(buildTokens));
   watch(['dist/'], series(docTasks));
   watch('docs/**/*.scss', series(docStyles));
   watch(['docs/'], series(reload));
@@ -168,7 +169,7 @@ function watchFn (done) {
 }
 
 module.exports = {
-  default: series(defaultTasks),
+  default: series(buildTokens),
   docs: series(docTasks),
-  watch: series(defaultTasks, docTasks, serve, watchFn),
+  watch: series(buildTokens, docTasks, serve, watchFn),
 };
