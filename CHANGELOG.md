@@ -1,3 +1,15 @@
+# [3.0.0-alpha.2](https://github.com/spartanbio/schedio-tokens/compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2021-03-19)
+
+
+### Features
+
+* removes Flutter tokens ([5672a9f](https://github.com/spartanbio/schedio-tokens/commit/5672a9fb525bd0f27e5d2f210877c403e905d94e))
+
+
+### BREAKING CHANGES
+
+* Dart and Flutter support has been removed
+
 # [3.0.0-alpha.1](https://github.com/spartanbio/schedio-tokens/compare/v2.1.1...v3.0.0-alpha.1) (2021-03-18)
 
 
