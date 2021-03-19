@@ -1,5 +1,6 @@
 const { dest, src, series, watch } = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
+const browserSync = require('browser-sync');
 const merge2 = require('merge2');
 const theo = require('theo');
 const transforms = {
@@ -10,12 +11,11 @@ const transforms = {
 
 const $ = gulpLoadPlugins();
 
-// Setup and register custom formats/transforms
+// TRANSFORMS
 Object.entries(transforms).forEach(([name, { predicate, transform }]) => {
   theo.registerValueTransform(name, predicate, transform);
 });
 
-// Transforms
 const jsTransforms = [
   'color/rgb',
   'unit/timingUnitless',
@@ -32,7 +32,7 @@ theo.registerTransform('react-native', [
   'unit/percentLineHeight',
 ]);
 
-// Formats
+// FORMATS
 // Overridden formats
 theo.registerFormat('json', require('./formats/json.js'));
 theo.registerFormat('map.scss', require('./formats/map.scss.js'));
@@ -48,6 +48,14 @@ theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dar
 theo.registerFormat('ase.json', require('./formats/ase.json.js'));
 
 // Setup default `theo` formats
+/**
+ * @typedef FormatData
+ * @prop {string} transformType
+ * @prop {string} formatType
+ * @prop {string} [language]
+ */
+
+/** @type {FormatData[]} */
 const webFormats = [
   { transformType: 'web', formatType: 'scss', language: 'scss' },
   { transformType: 'web', formatType: 'json', language: 'json' },
@@ -59,6 +67,7 @@ const webFormats = [
   { transformType: 'js', formatType: 'module.js', language: 'module-js' },
 ];
 
+/** @type {FormatData[]} */
 const mobileFormats = [
   { transformType: 'react-native', formatType: 'd.ts', language: 'types' },
   { transformType: 'react-native', formatType: 'common.js', language: 'common-js' },
@@ -66,6 +75,7 @@ const mobileFormats = [
 ];
 
 // Setup token-specific formats
+/** @type {FormatData[]} */
 const colorFormats = [
   { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
   { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
@@ -78,21 +88,23 @@ const colorFormats = [
   { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
 ];
 
-// Build docs and styles
-function docStyles () {
-  return src('docs/*.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe(
-      $.sass.sync({
-        precision: 10,
-      }).on('error', $.sass.logError),
-    )
-    .pipe($.sourcemaps.write('.'))
-    .pipe(dest('docs'));
+/**
+ * Error handler for gulp
+ * @param {Error} err The error
+ */
+function logError (err) {
+  throw new Error(err);
 }
 
-// Helpers for building design system
+// TASK FUNCTIONS
+// Token tasks
+/**
+ * Generates tasks for token formats
+ * @param {FormatData[]}} formats Theo formats to build
+ * @param {string} glob Glob pattern to match
+ * @param {Function} errorHandler
+ * @returns {NodeJS.ReadWriteStream}
+ */
 function prepareTokenBuilders (formats, glob = 'tokens/*.yml', errorHandler = logError) {
   return formats.map(({ transformType, formatType, language }) => {
     let destPath = `dist/${transformType}`;
@@ -113,6 +125,40 @@ function prepareTokenBuilders (formats, glob = 'tokens/*.yml', errorHandler = lo
   });
 }
 
+/**
+ * Compiles all tokens into their final formats
+ * @returns {merge2.Merge2Stream} Merged gulp tasks
+ */
+function buildTokens () {
+  return merge2(
+    prepareTokenBuilders(webFormats),
+    prepareTokenBuilders(mobileFormats),
+    prepareTokenBuilders(colorFormats, 'tokens/color.yml'),
+  );
+}
+
+// Doc tasks
+/**
+ * Compile sass for documentation
+ * @returns {NodeJS.ReadWriteStream}
+ */
+function docStyles () {
+  return src('docs/*.scss')
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe(
+      $.sass.sync({
+        precision: 10,
+      }).on('error', $.sass.logError),
+    )
+    .pipe($.sourcemaps.write('.'))
+    .pipe(dest('docs'));
+}
+
+/**
+ * Build documentation
+ * @returns {NodeJS.ReadWriteStream}
+ */
 function buildDocs () {
   theo.registerFormat('docs.html', require('./formats/docs.html.js'));
 
@@ -128,13 +174,16 @@ function buildDocs () {
     .pipe(dest('docs'));
 }
 
-function logError (err) {
-  throw new Error(err);
-}
+const docTasks = [
+  docStyles,
+  buildDocs,
+];
 
-// BrowserSync setup
-const browserSync = require('browser-sync');
-
+// `browser-sync` setup
+/**
+ * Initiate `browser-sync` server
+ * @param {import('gulp').TaskFunctionCallback} done Gulp callback
+ */
 function serve (done) {
   browserSync.init({
     open: false,
@@ -143,24 +192,20 @@ function serve (done) {
   done();
 }
 
+/**
+ * Reload `browser-sync` server
+ * @param {import('gulp').TaskFunctionCallback} done Gulp callback
+ */
 function reload (done) {
   browserSync.reload();
   done();
 }
 
-const buildTokens = () => merge2(
-  prepareTokenBuilders(webFormats),
-  prepareTokenBuilders(mobileFormats),
-  prepareTokenBuilders(colorFormats, 'tokens/color.yml'),
-);
-
-const docTasks = [
-  docStyles,
-  buildDocs,
-];
-
-// `gulp watch` setup
-function watchFn (done) {
+/**
+ * Gulp watcher
+ * @param {import('gulp').TaskFunctionCallback} done Gulp callback
+ */
+function watchTokens (done) {
   watch(['tokens/*.yml'], series(buildTokens));
   watch(['dist/'], series(docTasks));
   watch('docs/**/*.scss', series(docStyles));
@@ -171,5 +216,5 @@ function watchFn (done) {
 module.exports = {
   default: series(buildTokens),
   docs: series(docTasks),
-  watch: series(buildTokens, docTasks, serve, watchFn),
+  watch: series(buildTokens, docTasks, serve, watchTokens),
 };
