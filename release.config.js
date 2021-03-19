@@ -11,8 +11,8 @@ module.exports = {
       '@semantic-release/github',
       {
         assets: [
-          { path: 'dist/**/*', label: 'tokens' },
-          { path: 'docs/**/*', label: 'docs' },
+          'dist/**/*',
+          'docs/**/*',
         ],
       },
     ],
@@ -24,7 +24,6 @@ module.exports = {
           'yarn.lock',
           'CHANGELOG.md',
           'docs/',
-          'dist/',
         ],
       },
     ],
