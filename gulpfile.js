@@ -4,7 +4,6 @@ const browserSync = require('browser-sync');
 const merge2 = require('merge2');
 const theo = require('theo');
 const transforms = {
-  ...require('./transforms/color'),
   ...require('./transforms/unit'),
   ...require('./transforms/easing'),
 };
@@ -22,7 +21,6 @@ const jsTransforms = [
   'easing/array',
 ];
 theo.registerTransform('js', jsTransforms);
-theo.registerTransform('flutter', ['color/dartHex8argb']);
 theo.registerTransform('react-native', [
   ...jsTransforms,
   'unit/rnRelativePixelValue',
@@ -44,7 +42,6 @@ theo.registerFormat('d.ts', require('./formats/d.ts.js'));
 theo.registerFormat('color-map.d.ts', require('./formats/color-map.d.ts.js'));
 theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'));
 theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'));
-theo.registerFormat('color-swatches.dart', require('./formats/color-swatches.dart.js'));
 theo.registerFormat('ase.json', require('./formats/ase.json.js'));
 
 // Setup default `theo` formats
@@ -82,7 +79,6 @@ const colorFormats = [
   { transformType: 'js', formatType: 'color-map.d.ts', language: 'types' },
   { transformType: 'js', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'js', formatType: 'color-map.module.js', language: 'module-js' },
-  { transformType: 'flutter', formatType: 'color-swatches.dart', language: 'dart' },
   { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
   { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
   { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
