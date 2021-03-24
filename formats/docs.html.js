@@ -116,7 +116,7 @@ class Styleguide {
   renderFontSize (props) {
     const _props = [...props].sort(byPropNameIndex);
     return _props.map((prop) => {
-      const lineHeight = parseFloat(prop.value.replace('rem', '')) >= 3 ? 1.25 : 1.5;
+      const lineHeight = parseFloat(prop.value.replace('rem', '')) >= 3 && prop.value !== '16px' ? 1.25 : 1.5;
       const example = `
 <td>
   <div style="font-size: ${prop.value}; line-height: ${lineHeight};">
