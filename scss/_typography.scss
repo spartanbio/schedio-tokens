@@ -14,7 +14,7 @@
   @if type-of($fetched-value) == number {
     @return $fetched-value;
   } @else {
-    @error 'Font weight weight `#{$weight}` not found. Available weights: #{available-names($spacing-data)}';
+    @error 'Font weight weight `#{$weight}` not found. Available weights: #{available-names($font-weight-data)}';
   }
 }
 
