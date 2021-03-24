@@ -2,7 +2,7 @@ props:
   font-size-base:
     value: 16px
   font-size-8:
-    value: 5rem
+    value: 4rem
   font-size-7:
     value: 3rem
   font-size-6:
