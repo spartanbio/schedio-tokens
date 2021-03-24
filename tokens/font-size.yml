@@ -1,19 +1,26 @@
 props:
   font-size-base:
     value: 16px
-  font-size-1:
+    comment: Use this for the root font size.
+  font-size-9:
     value: 5rem
-  font-size-2:
-    value: 3rem
-  font-size-3:
-    value: 2rem
-  font-size-4:
-    value: 1.5rem
-  font-size-5:
-    value: 1rem
-  font-size-6:
-    value: 0.75rem
+    comment: <code>font-size-9</code> should only be used on large viewports.
+  font-size-8:
+    value: 4rem
+    comment: <code>font-size-8</code> should only be used on large viewports.
   font-size-7:
+    value: 3rem
+  font-size-6:
+    value: 2rem
+  font-size-5:
+    value: 1.5rem
+  font-size-4:
+    value: 1.25rem
+  font-size-3:
+    value: 1rem
+  font-size-2:
+    value: 0.75rem
+  font-size-1:
     value: 0.5rem
 global:
   type: number

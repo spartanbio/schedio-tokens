@@ -14,59 +14,64 @@
   @if type-of($fetched-value) == number {
     @return $fetched-value;
   } @else {
-    @error 'Font weight weight `#{$weight}` not found. Available weights: #{available-names($spacing-data)}';
+    @error 'Font weight weight `#{$weight}` not found. Available weights: #{available-names($font-weight-data)}';
   }
 }
 
 $size-1: (
   'size': $font-size-1,
-  'leading': $line-height-large-text,
-  'tracking': 0.125rem,
-  'weight': font-weight('light')
+  'leading': $line-height-base,
+  'tracking': normal,
 );
 
 $size-2: (
   'size': $font-size-2,
-  'leading': $line-height-large-text,
-  'tracking': 0.125rem,
-  'weight': font-weight('light')
+  'leading': $line-height-base,
+  'tracking': normal,
 );
 
 $size-3: (
   'size': $font-size-3,
   'leading': $line-height-base,
   'tracking': normal,
-  'weight': font-weight('light')
 );
 
 $size-4: (
   'size': $font-size-4,
   'leading': $line-height-base,
   'tracking': normal,
-  'weight': font-weight('regular')
 );
 
 $size-5: (
   'size': $font-size-5,
   'leading': $line-height-base,
   'tracking': normal,
-  'weight': font-weight('regular')
 );
 
 $size-6: (
   'size': $font-size-6,
   'leading': $line-height-base,
   'tracking': normal,
-  'weight': font-weight('regular')
 );
 
 $size-7: (
   'size': $font-size-7,
-  'leading': $line-height-base,
-  'tracking': normal,
-  'weight': font-weight('regular')
+  'leading': $line-height-large-text,
+  'tracking': 0.125em,
 );
 
-$sizes: ($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7);
+$size-8: (
+  'size': $font-size-8,
+  'leading': $line-height-large-text,
+  'tracking': 0.125em,
+);
+
+$size-9: (
+  'size': $font-size-9,
+  'leading': $line-height-large-text,
+  'tracking': 0.125em,
+);
+
+$sizes: ($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9);
 
 $text-alignments: (left, right, center, justify);

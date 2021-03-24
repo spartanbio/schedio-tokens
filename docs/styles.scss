@@ -1,14 +1,14 @@
-@import '../dist/web/scss/tokens';
+@import '../scss/schedio-tokens';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&family=JetBrains+Mono:wght@300&display=swap');
 
 html,
 body {
-  background: $color-ice;
+  background: color('ice');
   box-sizing: border-box;
-  color: $color-night;
+  color: color('night');
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
-  font-weight: $font-weight-light;
+  font-weight: font-weight('light');
   line-height: $line-height-base;
 }
 
@@ -20,34 +20,34 @@ body {
 
 .banner,
 .contentinfo {
-  background: $color-ice;
+  background: color('ice');
 }
 
 .banner {
-  padding: $spacing-base 0;
+  padding: spacing('base') 0;
 }
 
 .container {
   margin: 0 auto;
-  margin-bottom: $spacing-double;
+  margin-bottom: spacing('double');
   max-width: 80rem;
-  padding: $spacing-half $spacing-base;
+  padding: spacing('half') spacing('base');
 
   &--card {
-    background-color: $color-white;
-    border-radius: $spacing-half;
-    box-shadow: 0 $spacing-half $spacing-base rgba($color-night, 0.15);
+    background-color: color('white');
+    border-radius: spacing('half');
+    box-shadow: 0 spacing('half') spacing('base') rgba(color('night'), 0.15);
   }
 }
 
 h1 {
-  font-weight: $font-weight-bold;
+  font-weight: font-weight('bold');
   margin: 0;
 }
 
 table {
   border-collapse: separate;
-  border-spacing: $spacing-base;
+  border-spacing: spacing('base');
   table-layout: fixed;
   width: 100%;
 }
@@ -60,17 +60,17 @@ td {
 }
 
 th {
-  font-weight: $font-weight-light;
+  font-weight: font-weight('light');
   text-align: left;
 }
 
 thead th {
-  border-bottom: 1px solid $color-grey-lighter;
-  font-weight: $font-weight-semi;
-  padding-bottom: $spacing-half;
+  border-bottom: 1px solid color('grey', 'lighter');
+  font-weight: font-weight('semi');
+  padding-bottom: spacing('half');
 
   &:first-child {
-    font-size: $font-size-4;
+    @include font-size(4);
   }
 }
 
@@ -80,10 +80,10 @@ code {
 
 hr {
   border: 0;
-  border-top: 1px solid $color-grey-lighter;
+  border-top: 1px solid color('grey', 'lighter');
   display: block;
   height: 1px;
-  margin: $spacing-double 0;
+  margin: spacing('double') 0;
   padding: 0;
 
   &:last-child {
@@ -93,23 +93,23 @@ hr {
 
 .metric-box,
 .radius-box {
-  background: $color-blue;
+  background: color('blue');
   display: inline-block;
   vertical-align: middle;
 }
 
 .radius-box {
-  height: $spacing-triple;
+  height: spacing('triple');
   width: 100%;
 }
 
 .radius-box.borderRadiusCircle {
-  width: $spacing-triple;
+  width: spacing('triple');
 }
 
 .line-height-example {
-  background-image: -webkit-linear-gradient($color-grey-lighter 1px, transparent 1px);
-  background-image: linear-gradient($color-grey-lighter 1px, transparent 1px);
-  background-size: 100% $spacing-base;
-  border-bottom: 1px solid $color-grey-lighter;
+  background-image: -webkit-linear-gradient(color('grey', 'lighter') 1px, transparent 1px);
+  background-image: linear-gradient(color('grey', 'lighter') 1px, transparent 1px);
+  background-size: 100% spacing('base');
+  border-bottom: 1px solid color('grey', 'lighter');
 }
