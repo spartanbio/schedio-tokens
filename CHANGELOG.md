@@ -1,3 +1,26 @@
+# [3.0.0-alpha.3](https://github.com/spartanbio/schedio-tokens/compare/v3.0.0-alpha.2...v3.0.0-alpha.3) (2021-03-24)
+
+
+### Bug Fixes
+
+* `font-weight` function uses correct map for available weights ([e557eff](https://github.com/spartanbio/schedio-tokens/commit/e557eff490671bf4e7c221c4d48e8b2d76084e8b))
+
+
+### Features
+
+* adds `font-size-9` at `5rem` ([657edf8](https://github.com/spartanbio/schedio-tokens/commit/657edf89529f7cda065aafb58a461fce4865e709))
+* introduces `1.25rem` font size as `font-size-4` ([4f0fe49](https://github.com/spartanbio/schedio-tokens/commit/4f0fe49ca381deb78f37befb21d1108d80f439ec))
+* reorders font-size tokens from smallest to largest ([abcace5](https://github.com/spartanbio/schedio-tokens/commit/abcace513ac520720eb690d5e79807547b4591f9))
+* updates `font-size-8` to `4rem` ([feb1b17](https://github.com/spartanbio/schedio-tokens/commit/feb1b17988f6955995704e7e869e0e2b62af33d9))
+* updates SCSS utilities to match new font sizes ([bd9edb0](https://github.com/spartanbio/schedio-tokens/commit/bd9edb09aebd3b053388e32c3ae008f7772702e0))
+
+
+### BREAKING CHANGES
+
+* `font-size-4` is now `1.25rem`. Font size tokens now range from 1-8.
+* Larger font-size tokens now end with larger numbers
+(i.e: `$font-size-7: 5rem;` and `$font-size-1: 0.5rem;`)
+
 # [3.0.0-alpha.2](https://github.com/spartanbio/schedio-tokens/compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2021-03-19)
 
 
