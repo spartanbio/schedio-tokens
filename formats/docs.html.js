@@ -7,6 +7,8 @@ const upperfirst = require('lodash/upperFirst');
 const tinycolor = require('tinycolor2');
 
 const byPropName = (a, b) => a.name.localeCompare(b.name);
+const parseNameIndex = name => parseInt(name.split('-').pop(), 10);
+const byPropNameIndex = (a, b) => parseNameIndex(a.name) > parseNameIndex(b.name) ? 1 : -1;
 const byValue = (a, b) => parseFloat(a.value) > parseFloat(b.value) ? 1 : -1;
 class Styleguide {
   constructor ({ props, options }) {
@@ -112,7 +114,8 @@ class Styleguide {
   }
 
   renderFontSize (props) {
-    return props.map((prop) => {
+    const _props = [...props].sort(byPropNameIndex);
+    return _props.map((prop) => {
       const lineHeight = parseFloat(prop.value.replace('rem', '')) >= 3 ? 1.25 : 1.5;
       const example = `
 <td>
