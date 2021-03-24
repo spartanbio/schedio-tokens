@@ -7,6 +7,7 @@ const transforms = {
   ...require('./transforms/unit'),
   ...require('./transforms/easing'),
 };
+const exec = require('child_process').exec;
 
 const $ = gulpLoadPlugins();
 
@@ -152,6 +153,17 @@ function docStyles () {
 }
 
 /**
+ * Lint docs css output
+ * @param {import('gulp').TaskFunctionCallback} done Gulp callback
+ */
+function lintDocStyles (done) {
+  exec('yarn stylelint --fix ./docs/**/*.css', (err, stdout, stderr) => {
+    if (stderr) console.log(stderr);
+    done(err);
+  });
+}
+
+/**
  * Build documentation
  * @returns {NodeJS.ReadWriteStream}
  */
@@ -172,6 +184,7 @@ function buildDocs () {
 
 const docTasks = [
   docStyles,
+  lintDocStyles,
   buildDocs,
 ];
 
@@ -204,7 +217,7 @@ function reload (done) {
 function watchTokens (done) {
   watch(['tokens/*.yml'], series(buildTokens));
   watch(['dist/'], series(docTasks));
-  watch('docs/**/*.scss', series(docStyles));
+  watch(['docs/**/*.scss'], series(docStyles, lintDocStyles));
   watch(['docs/'], series(reload));
   done();
 }
