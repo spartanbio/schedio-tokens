@@ -1,10 +1,9 @@
-import webTokens, { SchedioTokens as SchedioTokensWeb } from '../dist/js/module-js';
-import nativeTokens, { SchedioTokens as SchedioTokensNative } from '../dist/react-native/module-js';
-import { ColorMap } from '../dist/js/types/color.color-map';
+import webTokens, { SchedioTokens as SchedioTokensWeb } from '../dist';
+import nativeTokens, { SchedioTokens as SchedioTokensNative } from '../dist/react-native';
 
 type Base = 'base';
 
-export default class Schedio<Tokens extends (SchedioTokensWeb | SchedioTokensNative) = SchedioTokensWeb> {
+export default class SchedioTokens<Tokens extends (SchedioTokensWeb | SchedioTokensNative) = SchedioTokensWeb> {
   // This makes typescript assign the type properly
   tokensData: {
     [key in keyof Tokens]: Tokens[key]
@@ -32,10 +31,10 @@ export default class Schedio<Tokens extends (SchedioTokensWeb | SchedioTokensNat
    * Get a color by hue and shade
    * @returns RGB color string (e.g.: `rgb(255,255,255)`)
    */
-  color<Hue extends keyof ColorMap, Shade extends keyof ColorMap[Hue] = Base> (
+  color<Hue extends keyof Tokens['colorMap'], Shade extends keyof Tokens['colorMap'][Hue]> (
     hue: Hue,
     shade: Shade | Base = 'base',
-  ): ColorMap[Hue][Shade] {
+  ): Tokens['colorMap'][Hue][Shade] {
     return this.tokensData.colorMap[hue][shade as Shade];
   }
 

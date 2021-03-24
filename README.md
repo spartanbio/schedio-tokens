@@ -8,7 +8,7 @@ A full list of tokens is available at https://spartanbio.github.io/schedio-token
 - [Schédio design tokens](#schédio-design-tokens)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [JS](#js)
+    - [JS and Typescript](#js-and-typescript)
       - [React Native](#react-native)
     - [SCSS](#scss)
     - [Adobe Creative Cloud Applications](#adobe-creative-cloud-applications)
@@ -28,29 +28,30 @@ This package DOES NOT load brand fonts. To load them from Google Fonts, add the 
 
 ## Usage
 
-Tokens are organized with the path structure `dist/<platform>/<language>/<token>.<format>.<ext>`
+Tokens are available for the following platforms:
 
-### JS
+### JS and Typescript
 
 Standard usage:
 
 ```js
+// Fully typed for use in TS
 import SchedioTokens from '@spartanbio/schedio-tokens';
 
-const Schedio = new SchedioTokens();
-const blue = Schedio.color('blue');
+const Tokens = new SchedioTokens();
+const blue = Tokens.color('blue');
 ```
 
 #### React Native
 
-All CommonJS and ESModule tokens are available in `dist/react-native/`. Each includes TypeScript typings.
+Simply import `nativeTokens` and pass it to `SchedioTokens`.
 
 ```js
 // JS tokens
 import SchedioTokens, { nativeTokens } from '@spartanbio/schedio-tokens';
 
-const Schedio = new SchedioTokens(nativeTokens);
-const blue = Schedio.color('blue');
+const Tokens = new SchedioTokens(nativeTokens);
+const blue = Tokens.color('blue');
 ```
 
 ```ts
@@ -60,26 +61,24 @@ import { SchedioTokensNative } from '@spartanbio/schedio-tokens';
 
 ### SCSS
 
-All variables and keys are kebab-case.
+All variables and keys are kebab-case. Paths below rely on alias resolution and assume `~` has been aliased to
+`node_modules`.
 
 ```scss
-// All tokens as variables
-@import '~@spartanbio/schedio/dist/web/scss/tokens';
+// All variables, tokens, and utility functions
+@import '~@spartanbio/schedio-tokens/scss/schedio-tokens';
 
-// All tokens as a map
-@import '~@spartanbio/schedio/dist/web/scss/tokens.map';
-
-// All tokens as custom properties (works for CSS too)
-@import '~@spartanbio/schedio/dist/web/css/tokens.custom-properties';
+// All tokens as variables and maps
+@import '~@spartanbio/schedio/dist/scss/all-tokens';
 
 // Unprefixed maps of specific token categories
-@import '~@spartanbio/schedio/dist/web/scss/<token-category>.map';
+@import '~@spartanbio/schedio/dist/scss/<token-category>.map';
 
-// Colors, grouped by hue
-@import '~@spartanbio/schedio/dist/web/scss/color.color-map';
+// All tokens as custom properties (works for CSS too)
+@import '~@spartanbio/schedio/dist/css/<token-category>.custom-properties';
 ```
 
 ### Adobe Creative Cloud Applications
 
-CC applications that support swatch files can import `dist/web/adobe/color.ase` to use color. Note they are imported
-without groups.
+CC applications that support swatch files can import `dist/adobe/color.ase` to use color. Note they are imported without
+groups.

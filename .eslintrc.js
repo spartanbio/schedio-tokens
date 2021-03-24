@@ -23,8 +23,10 @@ module.exports = {
       ],
       rules: {
         'no-useless-constructor': 'off',
+        'no-unsused-vars': 'off',
         semi: ['error', 'always'],
         '@typescript-eslint/no-useless-constructor': 'error',
+        '@typescript-eslint/no-unused-vars': 'error',
       },
     },
     {

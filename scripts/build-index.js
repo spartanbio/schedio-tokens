@@ -9,29 +9,16 @@ const BASE_DIR = path.resolve(__dirname, '../dist');
  * Create indexes for JS/TS files
  * @param dir Directory to create index files in
  */
-async function writeIndexes (dir) {
-  const typesIndex = `\
-import tokens, { SchedioTokens } from '../types';
-
-export {
-  SchedioTokens,
-};
-
-export default tokens;
-`;
-
+async function writeIndexes (dir = '') {
   return Promise.all([
-    outputFile(path.resolve(BASE_DIR, dir, 'module-js', 'index.js'), await es6Index(dir)),
-    outputFile(path.resolve(BASE_DIR, dir, 'common-js', 'index.js'), await commonIndex(dir)),
-    outputFile(path.resolve(BASE_DIR, dir, 'types', 'index.d.ts'), await tsIndex(dir)),
-    outputFile(path.resolve(BASE_DIR, dir, 'module-js', 'index.d.ts'), typesIndex),
-    outputFile(path.resolve(BASE_DIR, dir, 'common-js', 'index.d.ts'), typesIndex),
+    outputFile(path.resolve(BASE_DIR, dir, 'index.js'), await es6Index(dir)),
+    outputFile(path.resolve(BASE_DIR, dir, 'index.d.ts'), await tsIndex(dir)),
   ]);
 }
 
 Promise.all([
   writeIndexes('react-native'),
-  writeIndexes('js'),
+  writeIndexes(),
   writeScssIndex(),
 ])
   .then(() => console.log(chalk.green('Index files written')))
@@ -39,19 +26,20 @@ Promise.all([
 
 /**
  * Creates a map of import names and paths
+ * @param ext The file extension to include in the index
  * @param dir path to directory where index should be generated
  */
-async function getImportMap (dir) {
+async function getImportMap (ext, dir = '') {
   const files = await readdir(path.resolve(BASE_DIR, dir));
 
   const tokens = files
-    .filter(file => !file.includes('tokens') && !file.includes('index'))
+    .filter(file => !file.includes('tokens') && !file.includes('index') && file.includes(ext))
     .map((file) => {
-      const parts = file.split('.');
+      const fileName = file.replace(ext, '');
+      const parts = fileName.split('.');
       const [token, suffix] = parts;
-      const name = camelCase(parts.length >= 4 ? suffix : token);
-      const filePath = file.replace(/(\.d\.ts)|\.js/, '');
-
+      const name = camelCase(parts.length >= 2 ? suffix : token);
+      const filePath = fileName;
       return [name, filePath];
     });
 
@@ -62,8 +50,8 @@ async function getImportMap (dir) {
  * Create ES Module index.js
  * @param dir path to directory where index should be generated
  */
-async function es6Index (dir) {
-  const importMap = await getImportMap(dir + '/module-js');
+async function es6Index (dir = '') {
+  const importMap = await getImportMap('.js', dir);
 
   const imports = importMap.map(([name, filePath]) => `\
 import * as ${name} from './${filePath}';
@@ -82,29 +70,11 @@ ${exports}\
 }
 
 /**
- * Create CommonJS index.js
- * @param dir path to directory where index should be generated
- */
-async function commonIndex (dir) {
-  const importMap = await getImportMap(dir + '/common-js');
-
-  const body = importMap.map(([name, filePath]) => `\
-  ${name}: require('./${filePath}'),
-`).join('');
-
-  return `\
-module.exports = {
-${body}\
-};
-`;
-}
-
-/**
  * Create TypeScript index.d.ts
  * @param dir path to directory where index should be generated
  */
-async function tsIndex (dir) {
-  const importMap = await getImportMap(dir + '/types');
+async function tsIndex (dir = '') {
+  const importMap = await getImportMap('.d.ts', dir);
 
   const imports = importMap.map(([name, filePath]) => `\
 import { ${upperFirst(name)} } from './${filePath}';
@@ -127,7 +97,7 @@ export default tokens;
 
 /** Write SCSS index */
 async function writeScssIndex () {
-  const scssDir = path.resolve(BASE_DIR, 'web/scss');
+  const scssDir = path.resolve(BASE_DIR, 'scss');
   const files = await readdir(scssDir);
   const body = files.map(file => `@import '${file.replace('.scss', '')}';\n`).join('');
 
