@@ -83,7 +83,6 @@ thead th {
 }
 
 thead th:first-child {
-  font-size: 1.25rem;
   letter-spacing: normal;
   line-height: 1.5;
 }

@@ -1,0 +1,15 @@
+@use '../dist/scss/font-weight.map' as *;
+
+/// Returns the font-weight value for a given weight.
+///
+/// @param {String} $weight - The key for the given weight.
+/// @return {Number} The font-weight for the weight.
+@function font-weight($weight) {
+  $fetched-value: map-get($font-weight-data, $weight);
+
+  @if type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'Font weight weight `#{$weight}` not found. Available weights: #{available-names($font-weight-data)}';
+  }
+}
