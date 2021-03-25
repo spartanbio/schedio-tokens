@@ -1,3 +1,25 @@
+# [3.0.0-alpha.5](https://github.com/spartanbio/schedio-tokens/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2021-03-25)
+
+
+### Bug Fixes
+
+* adds `availables-names` sass function ([093df51](https://github.com/spartanbio/schedio-tokens/commit/093df51319d98509657b0c03a7e686d7478c71e2))
+* imports `colors` in shadows scss utils ([6ff0c0d](https://github.com/spartanbio/schedio-tokens/commit/6ff0c0db155f7ccb5e468b8d41fd565cea45085b))
+
+
+### Features
+
+* removes scss for `breakpoints`, `layout` and `typography` ([4fe1b5c](https://github.com/spartanbio/schedio-tokens/commit/4fe1b5cce56d9f2b1354090ecbb82cf022c629d6))
+* replaces scss `[@import](https://github.com/import)` with `[@use](https://github.com/use)` and `[@forward](https://github.com/forward)` ([882dc9c](https://github.com/spartanbio/schedio-tokens/commit/882dc9c3363e94841357aa70aae1641124b596c0)), closes [#244](https://github.com/spartanbio/schedio-tokens/issues/244)
+
+
+### BREAKING CHANGES
+
+* Removes scss for `breakpoints`, `layout` and `typography`. Philosophically, they
+belong more in `@spartanbio/schedio`.
+* Drops support for `node-sass`. Use [`sass`](https://www.npmjs.com/package/sass)
+instead.
+
 # [3.0.0-alpha.4](https://github.com/spartanbio/schedio-tokens/compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2021-03-25)
 
 
