@@ -1,55 +1,9 @@
 @use '../dist/scss/font-size.map' as *;
 @use '../dist/scss/line-height' as *;
 
-$size-1: (
-  'leading': $line-height-base,
-  'tracking': normal,
-);
-
-$size-2: (
-  'leading': $line-height-base,
-  'tracking': normal,
-);
-
-$size-3: (
-  'leading': $line-height-base,
-  'tracking': normal,
-);
-
-$size-4: (
-  'leading': $line-height-base,
-  'tracking': normal,
-);
-
-$size-5: (
-  'leading': $line-height-base,
-  'tracking': normal,
-);
-
-$size-6: (
-  'leading': $line-height-base,
-  'tracking': normal,
-);
-
-$size-7: (
-  'leading': $line-height-large-text,
-  'tracking': 0.125em,
-);
-
-$size-8: (
-  'leading': $line-height-large-text,
-  'tracking': 0.125em,
-);
-
-$size-9: (
-  'leading': $line-height-large-text,
-  'tracking': 0.125em,
-);
-
-$sizes: ($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9);
-
 @mixin font-size($size) {
-  font-size: map-get(nth($sizes, $size), 'size');
-  letter-spacing: map-get(nth($sizes, $size), 'tracking');
-  line-height: map-get(nth($sizes, $size), 'leading');
+  // interpolation used to convert number to string
+  font-size: map-get($font-size-data, #{$size});
+  letter-spacing: if($size > 7, 0.125em, normal);
+  line-height: if($size > 7, $line-height-large-text, $line-height-base);
 }
