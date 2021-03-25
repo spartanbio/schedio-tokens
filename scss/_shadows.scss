@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use 'sass:meta';
 @use '../dist/scss/shadow.map' as *;
+@use 'colors' as *;
 @use 'utils' as *;
 
 /// Returns the shadow for the specified depth
