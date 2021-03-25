@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&family=JetBrains+Mono:wght@300&display=swap');
+
 /* <code>font-size-8</code> should only be used on large viewports. */
 
 /* <code>font-size-9</code> should only be used on large viewports. */
@@ -11,8 +13,6 @@
 /* Shadow values are intended to be used with colors added to them */
 
 /* Shadow values are intended to be used with colors added to them */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&family=JetBrains+Mono:wght@300&display=swap');
-
 html,
 body {
   background: #f2f5f7;

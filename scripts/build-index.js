@@ -101,7 +101,7 @@ async function writeScssIndex () {
   const files = await readdir(scssDir);
   const body = files
     .filter(file => !file.startsWith('tokens'))
-    .map(file => `@import '${file.replace('.scss', '')}';\n`)
+    .map(file => `@forward '${file.replace('.scss', '')}';\n`)
     .join('');
 
   return outputFile(path.resolve(scssDir, 'all-tokens.scss'), body);

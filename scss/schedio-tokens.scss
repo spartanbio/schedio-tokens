@@ -1,13 +1,11 @@
-// import from lowest level to highest
-@import '../dist/scss/all-tokens';
-@import 'utils';
-@import 'border-radius';
-@import 'borders';
-@import 'breakpoints';
-@import 'colors';
-@import 'duration';
-@import 'easing';
-@import 'layout';
-@import 'shadows';
-@import 'spacing';
-@import 'typography';
+@forward '../dist/scss/all-tokens';
+@forward 'borders';
+@forward 'border-radius';
+@forward 'border-width';
+@forward 'colors';
+@forward 'duration';
+@forward 'easing';
+@forward 'font-size';
+@forward 'font-weight';
+@forward 'shadows';
+@forward 'spacing';

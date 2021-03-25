@@ -1,21 +1,18 @@
-/// Returns border width.
-/// @param {String} $variant [base] - The border variant key.
-/// @return {Number} The width for the border.
-@function border-width($variant: 'base') {
-  $fetched-value: map-get($border-width-data, $variant);
+@use 'sass:map';
+@use 'border-width' as *;
+@use 'colors' as *;
+@use 'utils' as *;
 
-  @if $fetched-value {
-    @return $fetched-value;
-  } @else {
-    @return 'Could not find border-width `#{$variant}`. Available widths: #{available-names($borders-width)}';
-  }
-}
+$borders-data: (
+  'base': border-width() solid color('night', 'lightest'),
+  'dark': border-width() solid color('night'),
+);
 
 /// Returns a border.
 /// @param {String} $variant [base] - The border variant key.
 /// @return {List} The border value.
 @function border($variant: 'base') {
-  $fetched-value: map-get($borders-data, $variant);
+  $fetched-value: map.get($borders-data, $variant);
 
   @if $fetched-value {
     @return $fetched-value;
@@ -23,8 +20,3 @@
     @return 'Could not find border `#{$variant}`. Available borders: #{available-names($borders-data)}';
   }
 }
-
-$borders-data: (
-  'base': border-width() solid color('night', 'lightest'),
-  'dark': border-width() solid color('night'),
-);

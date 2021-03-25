@@ -1,3 +1,8 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use '../dist/scss/color.color-map' as *;
+@use 'utils' as *;
+
 $color-palette-data: $palettes;
 
 /// Returns the color value for a given color name and group.
@@ -7,11 +12,11 @@ $color-palette-data: $palettes;
 /// base.
 /// @return {Color} The color value.
 @function color($hue, $value: 'base') {
-  @if map-has-key($color-palette-data, $hue) {
-    $fetched-palette: map-get($color-palette-data, $hue);
-    $fetched-color: map-get($fetched-palette, $value);
+  @if map.has-key($color-palette-data, $hue) {
+    $fetched-palette: map.get($color-palette-data, $hue);
+    $fetched-color: map.get($fetched-palette, $value);
 
-    @if type-of($fetched-color) == color {
+    @if meta.type-of($fetched-color) == color {
       @return $fetched-color;
     } @else {
       // stylelint-disable string-no-newline
@@ -19,7 +24,7 @@ $color-palette-data: $palettes;
     Color `#{$hue}, #{$value}` not found. Arguments must be strings.\
     GOOD: color('night')\
     BAD: color(night)\
-    Available options: #{available-names($color-palette-data)}\
+    Available options: #{available-names($fetched-palette)}\
     ";
       // stylelint-enable
 
@@ -39,7 +44,40 @@ $color-palette-data: $palettes;
   }
 }
 
-$button-colors: map-keys($color-palette-data);
-$hero-colors: map-keys($color-palette-data);
-$icon-colors: map-keys($color-palette-data);
-$text-colors: map-keys($color-palette-data);
+$button-colors: map.keys($color-palette-data);
+$hero-colors: map.keys($color-palette-data);
+$icon-colors: map.keys($color-palette-data);
+$text-colors: map.keys($color-palette-data);
+
+/// Determine whether to use dark or light text on top of given color.
+/// @param {String} $background-color - the desired base color
+/// @param {String} $background-hue ['base'] - the desired hue (default: 'base')
+/// @return {Color} - the most suitable color for the background.
+@function choose-contrast-color($background-color, $background-value: 'base') {
+  $base-color: color($background-color, $background-value);
+  $light-color: color('white');
+  $dark-color: color('night');
+
+  $light-contrast: contrast($base-color, $light-color);
+  $dark-contrast: contrast($base-color, $dark-color);
+
+  @if ($light-contrast > 4.5) {
+    @return $light-color;
+  } @else if($dark-contrast > 4.5) {
+    @return $dark-color;
+  } @else {
+    // stylelint-disable string-no-newline
+    $warning: "\
+  color('#{$background-color}', '#{$background-value}') has no good contrast. \
+  Light contrast: #{$light-contrast} \
+  Dark contrast: #{$dark-contrast}\
+  ";
+    // stylelint-enable
+
+    @warn $warning;
+
+    // fall back to color with best contrast
+
+    @return if($light-contrast > $dark-contrast, $light-color, $dark-color);
+  }
+}

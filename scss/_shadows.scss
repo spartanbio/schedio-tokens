@@ -1,13 +1,19 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use '../dist/scss/shadow.map' as *;
+@use 'colors' as *;
+@use 'utils' as *;
+
 /// Returns the shadow for the specified depth
 /// @param {String} $depth [base] - The shadow’s depth.
 /// @param {Color} $color [color('night')] - The shadow’s depth.
 /// @param {Number} $alpha [base] - The shadow’s depth.
 /// @return {List} The shadow value.
 @function shadow($depth: 'base', $color: color('night'), $alpha: null) {
-  $fetched-value: map-get($shadow-data, $depth);
+  $fetched-value: map.get($shadow-data, $depth);
   $_alpha: if($alpha, $alpha, if($depth != 'light', 0.15, 0.1));
 
-  @if type-of($fetched-value) == list {
+  @if meta.type-of($fetched-value) == list {
     @return $fetched-value rgba($color, $_alpha);
   } @else {
     @error 'Shadow variant `#{$depth}` not found. Available variants: #{available-names($shadows-data)}';
