@@ -35,14 +35,12 @@ theo.registerTransform('react-native', [
 // Overridden formats
 theo.registerFormat('json', require('./formats/json.js'));
 theo.registerFormat('map.scss', require('./formats/map.scss.js'));
-theo.registerFormat('common.js', require('./formats/common.js'));
-theo.registerFormat('module.js', require('./formats/module.js'));
+theo.registerFormat('js', require('./formats/module.js'));
 // Custom formats
 theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'));
 theo.registerFormat('d.ts', require('./formats/d.ts.js'));
 theo.registerFormat('color-map.d.ts', require('./formats/color-map.d.ts.js'));
-theo.registerFormat('color-map.common.js', require('./formats/color-map.common.js.js'));
-theo.registerFormat('color-map.module.js', require('./formats/color-map.module.js.js'));
+theo.registerFormat('color-map.js', require('./formats/color-map.js.js'));
 theo.registerFormat('ase.json', require('./formats/ase.json.js'));
 
 // Setup default `theo` formats
@@ -59,17 +57,15 @@ const webFormats = [
   { transformType: 'web', formatType: 'json', language: 'json' },
   { transformType: 'web', formatType: 'custom-properties.css', language: 'css' },
   { transformType: 'web', formatType: 'map.scss', language: 'scss' },
-  { transformType: 'web', formatType: 'raw.json', language: 'raw-json' },
-  { transformType: 'js', formatType: 'd.ts', language: 'types' },
-  { transformType: 'js', formatType: 'common.js', language: 'common-js' },
-  { transformType: 'js', formatType: 'module.js', language: 'module-js' },
+  { transformType: 'web', formatType: 'raw.json', language: 'json' },
+  { transformType: 'web', formatType: 'js' },
+  { transformType: 'web', formatType: 'd.ts' },
 ];
 
 /** @type {FormatData[]} */
 const mobileFormats = [
-  { transformType: 'react-native', formatType: 'd.ts', language: 'types' },
-  { transformType: 'react-native', formatType: 'common.js', language: 'common-js' },
-  { transformType: 'react-native', formatType: 'module.js', language: 'module-js' },
+  { transformType: 'react-native', formatType: 'd.ts', language: 'react-native' },
+  { transformType: 'react-native', formatType: 'js', language: 'react-native' },
 ];
 
 // Setup token-specific formats
@@ -77,12 +73,10 @@ const mobileFormats = [
 const colorFormats = [
   { transformType: 'web', formatType: 'color-map.scss', language: 'scss' },
   { transformType: 'web', formatType: 'ase.json', language: 'adobe' },
-  { transformType: 'js', formatType: 'color-map.d.ts', language: 'types' },
-  { transformType: 'js', formatType: 'color-map.common.js', language: 'common-js' },
-  { transformType: 'js', formatType: 'color-map.module.js', language: 'module-js' },
-  { transformType: 'react-native', formatType: 'color-map.module.js', language: 'module-js' },
-  { transformType: 'react-native', formatType: 'color-map.common.js', language: 'common-js' },
-  { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'types' },
+  { transformType: 'web', formatType: 'color-map.js' },
+  { transformType: 'web', formatType: 'color-map.d.ts' },
+  { transformType: 'react-native', formatType: 'color-map.js', language: 'react-native' },
+  { transformType: 'react-native', formatType: 'color-map.d.ts', language: 'react-native' },
 ];
 
 /**
@@ -104,10 +98,10 @@ function logError (err) {
  */
 function prepareTokenBuilders (formats, glob = 'tokens/*.yml', errorHandler = logError) {
   return formats.map(({ transformType, formatType, language }) => {
-    let destPath = `dist/${transformType}`;
+    let destPath = 'dist/';
 
     if (language) {
-      destPath += `/${language}`;
+      destPath += language;
     }
 
     return src(glob)

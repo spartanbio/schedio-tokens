@@ -1,4 +1,4 @@
-import Schedio from './SchedioTokens';
+import SchedioTokens from './SchedioTokens';
 
 export * from './SchedioTokens';
-export default Schedio;
+export default SchedioTokens;
