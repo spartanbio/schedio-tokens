@@ -30,14 +30,6 @@
   @return $output;
 }
 
-/// Returns a percentage
-/// @param {Number} $x - The number to divide
-/// @param {Number} $y - The number to divide by
-/// @return {Number} - The percentage
-@function percentage($x, $y) {
-  @return $x / $y * 100%;
-}
-
 /// Calculate the luminance for a color.
 /// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
 /// @param {Color} $color - the color to check
@@ -60,39 +52,6 @@
   $foreLum: luminance($front) + 0.05;
 
   @return max($backLum, $foreLum) / min($backLum, $foreLum);
-}
-
-/// Determine whether to use dark or light text on top of given color.
-/// @param {String} $background-color - the desired base color
-/// @param {String} $background-hue ['base'] - the desired hue (default: 'base')
-/// @return {Color} - the most suitable color for the background.
-@function choose-contrast-color($background-color, $background-value: 'base') {
-  $base-color: color($background-color, $background-value);
-  $light-color: color('white');
-  $dark-color: color('night');
-
-  $light-contrast: contrast($base-color, $light-color);
-  $dark-contrast: contrast($base-color, $dark-color);
-
-  @if ($light-contrast > 4.5) {
-    @return $light-color;
-  } @else if($dark-contrast > 4.5) {
-    @return $dark-color;
-  } @else {
-    // stylelint-disable string-no-newline
-    $warning: "\
-  color('#{$background-color}', '#{$background-value}') has no good contrast. \
-  Light contrast: #{$light-contrast} \
-  Dark contrast: #{$dark-contrast}\
-  ";
-    // stylelint-enable
-
-    @warn $warning;
-
-    // fall back to color with best contrast
-
-    @return if($light-contrast > $dark-contrast, $light-color, $dark-color);
-  }
 }
 
 //  Precomputed linear color channel values, for use in contrast calculations.
