@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use 'border-width' as *;
 @use 'colors' as *;
 @use 'utils' as *;
@@ -11,7 +12,7 @@ $borders-data: (
 /// @param {String} $variant [base] - The border variant key.
 /// @return {List} The border value.
 @function border($variant: 'base') {
-  $fetched-value: map-get($borders-data, $variant);
+  $fetched-value: map.get($borders-data, $variant);
 
   @if $fetched-value {
     @return $fetched-value;

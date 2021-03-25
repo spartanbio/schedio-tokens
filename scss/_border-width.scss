@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../dist/scss/border-width.map' as *;
 @use 'utils' as *;
 
@@ -5,7 +6,7 @@
 /// @param {String} $variant [base] - The border variant key.
 /// @return {Number} The width for the border.
 @function border-width($variant: 'base') {
-  $fetched-value: map-get($border-width-data, $variant);
+  $fetched-value: map.get($border-width-data, $variant);
 
   @if $fetched-value {
     @return $fetched-value;

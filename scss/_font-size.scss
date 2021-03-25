@@ -1,9 +1,10 @@
+@use 'sass:map';
 @use '../dist/scss/font-size.map' as *;
 @use '../dist/scss/line-height' as *;
 
 @mixin font-size($size) {
   // interpolation used to convert number to string
-  font-size: map-get($font-size-data, #{$size});
+  font-size: map.get($font-size-data, #{$size});
   letter-spacing: if($size > 7, 0.125em, normal);
   line-height: if($size > 7, $line-height-large-text, $line-height-base);
 }

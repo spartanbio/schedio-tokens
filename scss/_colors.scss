@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use 'sass:meta';
 @use '../dist/scss/color.color-map' as *;
 @use 'utils' as *;
 
@@ -10,11 +12,11 @@ $color-palette-data: $palettes;
 /// base.
 /// @return {Color} The color value.
 @function color($hue, $value: 'base') {
-  @if map-has-key($color-palette-data, $hue) {
-    $fetched-palette: map-get($color-palette-data, $hue);
-    $fetched-color: map-get($fetched-palette, $value);
+  @if map.has-key($color-palette-data, $hue) {
+    $fetched-palette: map.get($color-palette-data, $hue);
+    $fetched-color: map.get($fetched-palette, $value);
 
-    @if type-of($fetched-color) == color {
+    @if meta.type-of($fetched-color) == color {
       @return $fetched-color;
     } @else {
       // stylelint-disable string-no-newline
@@ -42,10 +44,10 @@ $color-palette-data: $palettes;
   }
 }
 
-$button-colors: map-keys($color-palette-data);
-$hero-colors: map-keys($color-palette-data);
-$icon-colors: map-keys($color-palette-data);
-$text-colors: map-keys($color-palette-data);
+$button-colors: map.keys($color-palette-data);
+$hero-colors: map.keys($color-palette-data);
+$icon-colors: map.keys($color-palette-data);
+$text-colors: map.keys($color-palette-data);
 
 /// Determine whether to use dark or light text on top of given color.
 /// @param {String} $background-color - the desired base color
