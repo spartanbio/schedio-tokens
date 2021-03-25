@@ -1,4 +1,5 @@
 @use '../dist/scss/duration.map' as *;
+@use 'utils' as *;
 
 /// Returns the duration value for a given variant.
 ///

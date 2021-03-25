@@ -1,4 +1,5 @@
 @use '../dist/scss/font-weight.map' as *;
+@use 'utils' as *;
 
 /// Returns the font-weight value for a given weight.
 ///

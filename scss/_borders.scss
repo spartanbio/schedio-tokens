@@ -1,5 +1,6 @@
-@use '_border-width' as *;
-@use '_colors' as *;
+@use 'border-width' as *;
+@use 'colors' as *;
+@use 'utils' as *;
 
 $borders-data: (
   'base': border-width() solid color('night', 'lightest'),

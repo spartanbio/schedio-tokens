@@ -1,4 +1,5 @@
 @use '../dist/scss/spacing.map' as *;
+@use 'utils' as *;
 
 /// Returns the spacing value for a given variant.
 ///

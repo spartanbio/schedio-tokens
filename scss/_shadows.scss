@@ -1,4 +1,5 @@
 @use '../dist/scss/shadow.map' as *;
+@use 'utils' as *;
 
 /// Returns the shadow for the specified depth
 /// @param {String} $depth [base] - The shadow’s depth.

@@ -1,4 +1,5 @@
 @use '../dist/scss/color.color-map' as *;
+@use 'utils' as *;
 
 $color-palette-data: $palettes;
 
@@ -21,7 +22,7 @@ $color-palette-data: $palettes;
     Color `#{$hue}, #{$value}` not found. Arguments must be strings.\
     GOOD: color('night')\
     BAD: color(night)\
-    Available options: #{available-names($color-palette-data)}\
+    Available options: #{available-names($fetched-palette)}\
     ";
       // stylelint-enable
 
