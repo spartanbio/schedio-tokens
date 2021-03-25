@@ -99,7 +99,10 @@ export default tokens;
 async function writeScssIndex () {
   const scssDir = path.resolve(BASE_DIR, 'scss');
   const files = await readdir(scssDir);
-  const body = files.map(file => `@import '${file.replace('.scss', '')}';\n`).join('');
+  const body = files
+    .filter(file => !file.startsWith('tokens'))
+    .map(file => `@import '${file.replace('.scss', '')}';\n`)
+    .join('');
 
   return outputFile(path.resolve(scssDir, 'all-tokens.scss'), body);
 }
