@@ -1,3 +1,21 @@
+# [3.0.0-alpha.4](https://github.com/spartanbio/schedio-tokens/compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2021-03-25)
+
+
+### Bug Fixes
+
+* removes duplicate token imports from SCSS ([78d3c16](https://github.com/spartanbio/schedio-tokens/commit/78d3c16018948605f7c1ecf711195090de77f9a4))
+
+
+### Features
+
+* removes CommonJS, simplifies `dist` ([e93a0b2](https://github.com/spartanbio/schedio-tokens/commit/e93a0b2473d2842fab6d770708c0838ae77c0471))
+
+
+### BREAKING CHANGES
+
+* CommonJS tokens are no longer provided, and the `dist` folder has been
+simplified.
+
 # [3.0.0-alpha.3](https://github.com/spartanbio/schedio-tokens/compare/v3.0.0-alpha.2...v3.0.0-alpha.3) (2021-03-24)
 
 
