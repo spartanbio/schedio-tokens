@@ -2,6 +2,8 @@
 @use '../dist/scss/font-size.map' as *;
 @use '../dist/scss/line-height' as *;
 
+/// Set `font-size`, `letter-spacing`, and `line-height`
+/// @param {String} $size - Which `font-size` token to use
 @mixin font-size($size) {
   // interpolation used to convert number to string
   font-size: map.get($font-size-data, #{$size});
