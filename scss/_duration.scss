@@ -1,3 +1,5 @@
+@use '../dist/scss/duration.map' as *;
+
 /// Returns the duration value for a given variant.
 ///
 /// @param {String} $variant - The key for the given variant.

@@ -10,6 +10,7 @@ const transforms = {
 const exec = require('child_process').exec;
 
 const $ = gulpLoadPlugins();
+$.sass.compiler = require('sass');
 
 // TRANSFORMS
 Object.entries(transforms).forEach(([name, { predicate, transform }]) => {

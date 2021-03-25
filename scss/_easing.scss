@@ -1,3 +1,5 @@
+@use '../dist/scss/easing.map' as *;
+
 /// Returns the timing-function value for a given variant.
 ///
 /// @param {String} $variant - The key for the given variant.

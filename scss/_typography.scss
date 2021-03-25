@@ -1,3 +1,7 @@
+@use '../dist/scss/font-size' as *;
+@use '../dist/scss/font-weight.map' as *;
+@use '../dist/scss/line-height' as *;
+
 @mixin font-size($size) {
   font-size: map-get(nth($sizes, $size), 'size');
   letter-spacing: map-get(nth($sizes, $size), 'tracking');

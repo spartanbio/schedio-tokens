@@ -1,3 +1,5 @@
+@use '../dist/scss/border-radius.map' as *;
+
 /// Returns the border radius of the specified size.
 /// @param {String} $size - The border radius’s size.
 /// @return {Number} The border radius value.

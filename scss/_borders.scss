@@ -1,3 +1,5 @@
+@use '../dist/scss/border-width.map' as *;
+
 /// Returns border width.
 /// @param {String} $variant [base] - The border variant key.
 /// @return {Number} The width for the border.

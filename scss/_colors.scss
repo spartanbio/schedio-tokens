@@ -1,3 +1,5 @@
+@use '../dist/scss/color.color-map' as *;
+
 $color-palette-data: $palettes;
 
 /// Returns the color value for a given color name and group.

@@ -1,3 +1,5 @@
+@use '../dist/scss/shadow.map' as *;
+
 /// Returns the shadow for the specified depth
 /// @param {String} $depth [base] - The shadow’s depth.
 /// @param {Color} $color [color('night')] - The shadow’s depth.

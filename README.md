@@ -66,17 +66,19 @@ All variables and keys are kebab-case. Paths below rely on alias resolution and 
 
 ```scss
 // All variables, tokens, and utility functions
-@import '~@spartanbio/schedio-tokens/scss/schedio-tokens';
+@use '~@spartanbio/schedio-tokens/scss/schedio-tokens';
 
 // All tokens as variables and maps
-@import '~@spartanbio/schedio/dist/scss/all-tokens';
+@use '~@spartanbio/schedio/dist/scss/all-tokens';
 
 // Unprefixed maps of specific token categories
-@import '~@spartanbio/schedio/dist/scss/<token-category>.map';
+@use '~@spartanbio/schedio/dist/scss/<token-category>.map';
 
 // All tokens as custom properties (works for CSS too)
-@import '~@spartanbio/schedio/dist/css/<token-category>.custom-properties';
+@use '~@spartanbio/schedio/dist/css/<token-category>.custom-properties';
 ```
+
+> `@import` has been deprecated by SASS. Avoid using it in favour of `@use`.
 
 ### Adobe Creative Cloud Applications
 

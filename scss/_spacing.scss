@@ -1,3 +1,5 @@
+@use '../dist/scss/spacing.map' as *;
+
 /// Returns the spacing value for a given variant.
 ///
 /// @param {String} $variant - The key for the given variant.
