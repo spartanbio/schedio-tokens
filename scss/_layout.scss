@@ -1,6 +1,0 @@
-$grid-columns: 12 !default;
-
-@mixin column-width($width, $columns: $grid-columns) {
-  flex: 0 0 percentage($width, $columns);
-  max-width: percentage($width, $columns);
-}
