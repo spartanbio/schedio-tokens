@@ -7,7 +7,12 @@ module.exports = {
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
     '@semantic-release/npm',
-    '@semantic-release/github',
+    [
+      '@semantic-release/github',
+      {
+        path: [{ path: 'dist/json/tokens.raw.json', label: 'Token data' }],
+      },
+    ],
     [
       '@semantic-release/git',
       {
